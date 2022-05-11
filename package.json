@@ -1,0 +1,26 @@
+{
+  "name": "stible",
+  "version": "1.0.0",
+  "description": "## FR C'est un Wordle, mais avec les arrêts de la STIB.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/piracope/STIBle.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/piracope/STIBle/issues"
+  },
+  "homepage": "https://github.com/piracope/STIBle#readme",
+  "devDependencies": {
+    "@types/jquery": "^3.5.14"
+  },
+  "dependencies": {
+    "eslint": "^8.15.0"
+  }
+}
