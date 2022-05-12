@@ -36,12 +36,12 @@ async function main() {
     /**
      * All existing stops.
      */
-    const stopsJSON = await $.getJSON("../assets/stops.json");
+    const stopsJSON = await $.getJSON("http://127.0.0.1:5500/assets/datasets/stops.json");
 
     /**
      * All existing lines.
      */
-    const linesJSON = await $.getJSON("../assets/lines.json");
+    const linesJSON = await $.getJSON("http://127.0.0.1:5500/assets/datasets/lines.json");
 
     /**
      * The Secret Stop to find.
@@ -187,8 +187,8 @@ async function main() {
      * @returns {String} the direction the offset is going towards
      */
     function getDirection(offset) {
-        offset.lat *= 100;
-        offset.lon *= 100;
+        offset.lat *= 1000;
+        offset.lon *= 1000;
         const angle = Math.atan2(offset.lat, offset.lon);
 
         const compass = Math.round(8 * angle / (2 * Math.PI) + 8) % 8;
@@ -226,6 +226,10 @@ async function main() {
         const offsetLonSq = (offset.lon * 111.320 * Math.cos(offset.lat)) ** 2;
         return +Math.sqrt(offsetLonSq + offsetLatSq).toFixed(1);
     }
+
+    /**
+     * Builds the required DOM elements and adds the necessary event listeners.
+     */
     function buildPage() {
         buildDatalist();
         $("#lines").text(`Lignes : ${String(secret.lines)}`);
@@ -237,6 +241,7 @@ async function main() {
 
             if (allStops.includes(val)) {
                 processGuess(val);
+                $("#guess").val("");
             }
         });
     }

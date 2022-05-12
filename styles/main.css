@@ -1,0 +1,5 @@
+@import url(Parisine.css);
+@import url(game.css);
+body {
+    font-family: Parisine, Arial, Helvetica, sans-serif;
+}

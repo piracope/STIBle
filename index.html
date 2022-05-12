@@ -6,13 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="scripts/game.js"></script>
+    <link rel="stylesheet" href="styles/main.css">
     <title>STIBle</title>
 </head>
 <body>
     <p style="background-color: black;">L'arrêt secret hihi faut pas spoil !!!! <br><span id="secret"></span></p>
-    <p id="lines"></p>
+    <div id="lines">
+        
+    </div>
+    <div class="line">95</div>
     <form>
-        <input list="stops" name="guess" id="guess">
+        <input list="stops" name="guess" id="guess" autocomplete="off">
         <datalist id="stops"></datalist>
         <button id="submit">Envoyer</button>
     </form>
