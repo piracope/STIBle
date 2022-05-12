@@ -51,18 +51,18 @@ async function main() {
     /**
      * All existing stops.
      */
-    const stopsJSON = await $.getJSON("http://127.0.0.1:5500/assets/datasets/stops.json");
+    const stopsJSON = await $.getJSON("http://192.168.0.8:5500/assets/datasets/stops.json");
 
     /**
      * All existing lines.
      */
-    const linesJSON = await $.getJSON("http://127.0.0.1:5500/assets/datasets/lines.json");
+    const linesJSON = await $.getJSON("http://192.168.0.8:5500/assets/datasets/lines.json");
 
     /**
      * All existing routes
      * @type {Route[]}
      */
-    const routesJSON = await $.getJSON("http://127.0.0.1:5500/assets/datasets/routes.json");
+    const routesJSON = await $.getJSON("http://192.168.0.8:5500/assets/datasets/routes.json");
 
     /**
      * The Secret Stop to find.
@@ -312,30 +312,38 @@ async function main() {
      */
     function processGuess(guess) {
         const verySecret = secret.stop_name;
-        currGuess++;
-        let marker = "❌";
+        let direction = "❌";
         let distance = 0;
         if (guess === verySecret) {
-            marker = "✅";
+            direction = "✅";
             gameOver = true;
         } else {
             const offset = getOffset(guess);
             distance = getDistance(offset);
-            marker = `${getDirection(offset)} ${distance} km`;
+            direction = getDirection(offset);
         }
 
-        $("form").prepend($("<p>").text(`${guess} ${marker}`));
+        $("form tbody tr").eq(currGuess)
+            .find(".guess")
+            .html(`<div>${guess}</div>`);
+        $("form tbody tr").eq(currGuess)
+            .find(".distance")
+            .html(`<div>${distance}km</div>`);
+        $("form tbody tr").eq(currGuess)
+            .find(".direction")
+            .html(`<div>${direction}</div>`);
+
+        currGuess++;
 
         if (currGuess === MAXIMUM_GUESS) {
             $("form")
-                .prepend($("<p>").text(`Raté ! L'arrêt était : ${verySecret}.`));
+                .append($("<p>").text(`Raté ! L'arrêt était : ${verySecret}.`));
             gameOver = true;
         }
 
         if (gameOver) {
             $("form").off("submit");
-            $("form").children()
-                .attr("disabled", "true");
+            $("button, input").attr("disabled", "true");
         }
     }
 

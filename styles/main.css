@@ -1,5 +1,20 @@
 @import url(Parisine.css);
 @import url(game.css);
+
+html {
+    height: 100%;
+}
 body {
     font-family: Parisine, Arial, Helvetica, sans-serif;
+    height: 100%;
+}
+main {
+    width: 500px;
+    margin: auto auto;
+    text-align: center;
+}
+
+.spoiler {
+    background-color: black;
+    color: black;
 }
