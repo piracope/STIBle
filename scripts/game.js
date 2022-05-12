@@ -6,7 +6,7 @@
  * the lines that pass on this stop and its coordinates.
  * @property {String} stop_name the stop's name
  * @property {String} stop_id the stop's id
- * @property {String[]} lines the lines that pass on this stop
+ * @property {Line[]} lines the lines that pass on this stop
  * @property {{lon: Number, lat: Number}} coordinates the stop's coordinates as [longitude, latitude]
  */
 
@@ -23,11 +23,26 @@
  */
 
 /**
+ * @typedef {Object} Route
+ * A Route is like a Line, but it goes both ways. Also gives more information
+ * on the actual transport.
+ * Route can be of three types : 0 -> Tram, 1 -> Metro, 3 -> Bus
+ * @property {String} route_short_name the Line number
+ * @property {Number} route_type the type of Route
+ * @property {String} route_color the background color of the route
+ * @property {String} route_text_color the color of the route's text
+ */
+
+/**
  * Maximum number of guesses the player can make.
  */
 const MAXIMUM_GUESS = 6;
 
+/**
+ * The number of guesses made so far.
+ */
 let currGuess = 0;
+
 /**
  * Dear God, wtf is asynchronous programming. Why am i making Promises ???
  * Who even thought that was a good idea wtf ?
@@ -44,12 +59,27 @@ async function main() {
     const linesJSON = await $.getJSON("http://127.0.0.1:5500/assets/datasets/lines.json");
 
     /**
+     * All existing routes
+     * @type {Route[]}
+     */
+    const routesJSON = await $.getJSON("http://127.0.0.1:5500/assets/datasets/routes.json");
+
+    /**
      * The Secret Stop to find.
      * TODO : move it out of here because it's very easy to cheat.
      */
     const secret = getRandomStop();
 
+    /**
+     * Array of all Stop names.
+     */
+    const allStops = getStopsNames();
+
+    /**
+     * Game Over marker.
+     */
     let gameOver = false;
+
     /**
      * Returns an array of the names of all the Stops.
      * @returns {String[]} all stops names
@@ -62,8 +92,6 @@ async function main() {
 
         return [...new Set(ret)];
     }
-
-    const allStops = getStopsNames();
 
     /**
      * Gets all equivalents Stops.
@@ -114,8 +142,21 @@ async function main() {
             indiceStop++;
         }
 
-        /* Prevents duplicate lines */
-        return [...new Set(ret)];
+        /* Prevents duplicate lines (thanks stackoverflow*/
+        return [...new Map(ret.map((item) => [item.lineId, item])).values()];
+    }
+
+    /**
+     * Returns the routes equivalent to given lines.
+     * @param {Line[]} lines the array of lines to get the routes from
+     */
+    function getRoutesOfLines(lines) {
+        const ret = [];
+        for (const line of lines) {
+            ret.push(routesJSON.find((r) => String(r.route_short_name) === String(line.lineId)));
+        }
+
+        return ret;
     }
 
     /**
@@ -128,7 +169,7 @@ async function main() {
             ret.push(line.lineId);
         }
 
-        return [...new Set(ret)];
+        return ret;
     }
 
     /**
@@ -143,17 +184,8 @@ async function main() {
         const stopLines = getLines(getEquivalents(stop));
 
         return {
-            stop_name: stopName, stop_id: stopId, lines: linesToId(stopLines), coordinates: coordinates,
+            stop_name: stopName, stop_id: stopId, lines: stopLines, coordinates: coordinates,
         };
-    }
-
-    /**
-     * Builds the datalist for the input.
-     */
-    function buildDatalist() {
-        allStops.forEach((s) => {
-            $("#stops").append($("<option>").attr("value", s));
-        });
     }
 
     /**
@@ -232,7 +264,7 @@ async function main() {
      */
     function buildPage() {
         buildDatalist();
-        $("#lines").text(`Lignes : ${String(secret.lines)}`);
+        buildLines(secret.lines);
         $("#secret").text(secret.stop_name);
 
         $("form").on("submit", (e) => {
@@ -244,6 +276,32 @@ async function main() {
                 $("#guess").val("");
             }
         });
+    }
+
+    /**
+     * Builds the datalist for the input.
+     */
+    function buildDatalist() {
+        allStops.forEach((s) => {
+            $("#stops").append($("<option>").attr("value", s));
+        });
+    }
+
+    /**
+     * Builds the lines in the page.
+     * @param {Line[]} lines the lines to show
+     */
+    function buildLines(lines) {
+        const routes = getRoutesOfLines(lines);
+
+        for (const route of routes) {
+            const routeDOM = $("<div>")
+                .text(String(route?.route_short_name))
+                .addClass("line")
+                .css("background-color", String(`#${route?.route_color}`))
+                .css("color", `#${route?.route_text_color}`);
+            $("#lines").append(routeDOM);
+        }
     }
 
     /**
