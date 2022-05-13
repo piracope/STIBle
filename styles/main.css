@@ -5,7 +5,7 @@
     --red: #f02233;
     --blue: #0070B8;
     --gray: #8a8b8b;
-    --black: #13070C;
+    --black: #050203;
     --near-black: #4F5254;
     --green: #78b159;
 }
@@ -25,8 +25,25 @@ body {
     background-color: var(--black);
     color: white;
     text-align: center;
-}
-main {
     width: 500px;
     margin: auto auto;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+nav ul li {
+    list-style: none;
+}
+
+hr {
+    color: white;
+}
+
+.lang {
+    font-size: larger;
+}
+.lang:hover {
+    cursor: pointer;
 }

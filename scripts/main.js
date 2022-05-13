@@ -64,9 +64,9 @@ const DIALOGUE = {
         fr: "STI",
         nl: "MIV",
     },
-    LANGUAGE: {
-        fr: "Langue",
-        nl: "Taal",
+    HELP: {
+        fr: "Aide",
+        nl: "Hulp",
     },
     PLACEHOLDER: {
         fr: "Arrêt de bus, métro, tram...",
@@ -261,18 +261,18 @@ async function main() {
      * @param {Number} row the row to display the result at
      */
     function displayResult(result, row) {
-        $("form tbody tr").eq(row)
+        $("#game tbody tr").eq(row)
             .find(".guess")
             .append($("<div>").text(`${result.stop_name}`));
 
-        $("form tbody tr").eq(row)
+        $("#game tbody tr").eq(row)
             .find(".distance")
             .text(`${result.distance.toFixed(1)}km`);
 
-        $("form tbody tr").eq(row)
+        $("#game tbody tr").eq(row)
             .find(".squares")
             .text(`${buildSquares(result)}`);
-        $("form tbody tr").eq(row)
+        $("#game tbody tr").eq(row)
             .find(".direction")
             .text(`${result.direction}`);
 
@@ -284,9 +284,7 @@ async function main() {
      * Reloads the page.
      */
     function timeOut() {
-        $("form")
-            .append($("<p>")
-                .text(DIALOGUE.TIMEOUT[initialStorage.lang]));
+        $("#message").text(DIALOGUE.TIMEOUT(initialStorage.lang));
         setTimeout(() => location.reload(), 3000);
     }
 
@@ -296,19 +294,17 @@ async function main() {
      * @param {Result} result the guess result
      */
     function handleGameOver(result) {
-        $("form").off("submit");
-        $("form").on("submit", (e) => e.preventDefault());
+        $("#game").off("submit");
+        $("#game").on("submit", (e) => e.preventDefault());
         $("table input").attr("disabled", "true");
         $("button").addClass("gameover")
             .text(DIALOGUE.SHARE[initialStorage.lang]);
         if (result.direction !== "✅" && result.secret) {
-            $("form")
-                .append($("<p>").text(
-                    `${DIALOGUE.LOSE[initialStorage.lang]} ${result.secret.stop_name}.`
-                ));
+            $("#message").text(
+                `${DIALOGUE.LOSE[initialStorage.lang]} ${result.secret.stop_name}.`
+            );
         } else {
-            $("form")
-                .append($("<p>").text(DIALOGUE.WIN(initialStorage.lang)));
+            $("#message").text(DIALOGUE.WIN(initialStorage.lang));
         }
         $("button.gameover").off("click");
         $("button.gameover").on("click", () => {
@@ -372,8 +368,8 @@ async function main() {
     function init() {
         $(`#${initialStorage.lang}`).attr("checked", "true");
         $("#guess").attr("placeholder", DIALOGUE.PLACEHOLDER[initialStorage.lang]);
-        $("nav span").text(DIALOGUE.LANGUAGE[initialStorage.lang]);
-        $("button").text(DIALOGUE.GUESS[initialStorage.lang]);
+        $("#help").text(DIALOGUE.HELP[initialStorage.lang]);
+        $("#game button").text(DIALOGUE.GUESS[initialStorage.lang]);
         $("header .blue").text(DIALOGUE.TITLE[initialStorage.lang]);
 
         if (!INITIAL_INFO) {
@@ -401,13 +397,15 @@ async function main() {
         $("#guess").val("");
     });
 
-    async function translateHistory() {
+    /**
+     * Translates the history of guesses, saves it then reloads.
+     * @param {String} newLang fr or nl
+     */
+    async function translateHistory(newLang) {
         const guesses = JSON.parse(String(localStorage.getItem("guesses")));
-        let oldLang = String(localStorage.getItem("lang"));
-        let newLang = String($("input[name='lang']:checked").val());
-        if (!oldLang && !newLang || ![oldLang, newLang].includes("fr") && ![oldLang, newLang].includes("nl")) {
-            oldLang = "fr";
-            newLang = "nl";
+        const oldLang = String(localStorage.getItem("lang"));
+        if (oldLang === newLang || !["fr", "nl"].includes(newLang)) {
+            return;
         }
         for (const g of guesses) {
             //idk why ESLint cries here
@@ -419,7 +417,9 @@ async function main() {
         localStorage.setItem("guesses", JSON.stringify(guesses));
         location.reload();
     }
-    $("input[name='lang']").on("change", translateHistory);
+    $(".lang").on("click", (e) => {
+        translateHistory(e.currentTarget.id);
+    });
 }
 
 $(main);

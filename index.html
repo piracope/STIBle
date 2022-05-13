@@ -18,11 +18,13 @@
         <h1><span class="blue">STI</span><span class="red">B</span>le</h1>
     </header>
     <nav>
-        <p>
-            <span>Langue</span> : 
-            <label for="fr">FR<input type="radio" name="lang" value="fr" id="fr" autocomplete="off"></label>
-            <label for="nl">NL<input type="radio" name="lang" value="nl" id="nl" autocomplete="off"></label>
-        </p>
+        <ul>
+            <li><span id="help"></span></li>
+            <li>
+                <span class="lang" id="fr">🇫🇷</span> <span class="lang" id="nl">🇳🇱</span>
+            </li>
+        </ul>
+        <hr>
     </nav>
     <main>
         <form method="post" id="game">
@@ -48,6 +50,7 @@
             <datalist id="stops"></datalist>
 
         </form>
+        <p id="message"></p>
     </main>
 </body>
 
