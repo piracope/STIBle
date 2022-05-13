@@ -2,6 +2,12 @@ const TYPES = require("../typedef.js");
 
 const geo = {
     /**
+     * The maximum distance between two Stops.
+     * I know it's a hard-coded value but no way in hell I'll compute it
+     * at each restart.
+     */
+    MAXIMUM_DISTANCE: 28.179948213920717,
+    /**
      * Returns the distance of the longitude-axis of a vector in km.
      * @param {Number} lon the vector's longitude
      * @param {Number} lat the vector's latitude
