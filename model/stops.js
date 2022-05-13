@@ -8,6 +8,12 @@ const stop = {
      * @type {TYPES.Stop[]}
      */
     ALL_STOPS: JSON.parse(fs.readFileSync("../assets/datasets/stops.json", "utf-8")),
+
+    /**
+     * Translations for the stops.
+     * @type {{stop_name: String, fr: String, nl: String}[]}
+     */
+    TRANSLATIONS: JSON.parse(fs.readFileSync("../assets/datasets/translations.json", "utf-8")),
     /**
      * Returns an array of the names of all the Stops.
      * @returns {String[]} all stops names
@@ -16,6 +22,20 @@ const stop = {
         const ret = [];
         for (const s of stop.ALL_STOPS) {
             ret.push(s.stop_name);
+        }
+
+        return [...new Set(ret)];
+    },
+
+    /**
+     * Returns the translation in a given language of all the stops names.
+     * @param {"fr" | "nl"} lang the language of the translations to get
+     * @returns {String[]} the translated stops names
+     */
+    getAllTranslatedStopNames(lang) {
+        const ret = [];
+        for (const s of stop.TRANSLATIONS) {
+            ret.push(s[lang]);
         }
 
         return [...new Set(ret)];

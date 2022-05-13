@@ -32,18 +32,29 @@ const server = http.createServer((req, res) => {
 
     /* sends the secret's routes, the max number of guesses and all stops names
     for client-side input verification + datalist building*/
-    if (req.url === "/start" && req.method === "GET") {
+    if (req.url === "/start" && req.method === "POST") {
         res.setHeader("Content-Type", "application/json");
-        res.writeHead(200, headers);
-        const allStops = game.getAllStopNames();
-        allStops.sort();
-        const ret = {
-            routes: game.getSecretRoutes(),
-            stops: allStops,
-            max: game.MAXIMUM_GUESS,
-            lvlNumber: lvlNumber,
-        };
-        res.end(JSON.stringify(ret));
+        let lang = "";
+        req.on("data", (chunk) => {
+            lang += chunk;
+        });
+        req.on("end", () => {
+            if (lang !== "fr" && lang !== "nl") {
+                res.writeHead(400, headers);
+                res.end();
+                return;
+            }
+            const allStops = game.getAllTranslatedStopNames(lang);
+            allStops.sort();
+            const ret = {
+                routes: game.getSecretRoutes(),
+                stops: allStops,
+                max: game.MAXIMUM_GUESS,
+                lvlNumber: lvlNumber,
+            };
+            res.writeHead(200, headers);
+            res.end(JSON.stringify(ret));
+        });
     } else if (req.url === "/guess" && req.method === "POST") {
         /*PROCESS USER GUESS */
 
@@ -58,7 +69,7 @@ const server = http.createServer((req, res) => {
             try {
                 const guess = JSON.parse(data);
                 /* server-side input verification */
-                if (!game.getAllStopNames().includes(guess.input)) {
+                if (!game.getAllTranslatedStopNames(guess.lang).includes(guess.input)) {
                     res.writeHead(400, headers);
                     res.end();
                     return;
@@ -68,8 +79,14 @@ const server = http.createServer((req, res) => {
                     res.end();
                     return;
                 }
-                const toSend = game.processGuess(guess.input);
-                console.log(toSend);
+                const stopName = game.translatedToReal(guess.input, guess.lang);
+                if (!stopName) {
+                    /* should never arrive here, but meh better be safe */
+                    res.writeHead(501, headers);
+                    res.end();
+                    return;
+                }
+                const toSend = game.processGuess(stopName);
                 if (!toSend) {
                     /* should never arrive here, but meh better be safe */
                     res.writeHead(501, headers);
@@ -79,11 +96,38 @@ const server = http.createServer((req, res) => {
                         || guess.currNb + 1 >= game.MAXIMUM_GUESS) {
                     toSend.secret = game.getSecret();
                 }
-
+                const nameToSend = game.realToTranslated(toSend.stop_name, guess.lang);
+                if (nameToSend) {
+                    toSend.stop_name = nameToSend;
+                }
+                console.log(JSON.stringify(toSend));
                 res.writeHead(200, headers);
                 res.write(JSON.stringify(toSend));
                 res.end();
                 return;
+            } catch {
+                res.writeHead(400, headers);
+                res.end();
+            }
+        });
+    } else if (req.url === "/tl" && req.method === "POST") {
+        res.setHeader("Content-Type", "text/plain");
+        let data = "";
+        req.on("data", (chunk) => {
+            data += chunk;
+        });
+        req.on("end", () => {
+            try {
+                const stop = JSON.parse(data);
+                const toSend = game.translate(stop.stop_name, stop.oldLang, stop.newLang);
+                console.log(toSend);
+                if (toSend) {
+                    res.writeHead(200, headers);
+                    res.end(toSend);
+                    return;
+                }
+                res.writeHead(204, headers);
+                res.end();
             } catch {
                 res.writeHead(400, headers);
                 res.end();
