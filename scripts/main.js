@@ -111,7 +111,7 @@ async function main() {
     function handleGameOver(secret) {
         $("form").off("submit");
         $("button, input").attr("disabled", "true");
-        if (currNb >= MAX_GUESS) {
+        if (currNb >= MAX_GUESS - 1) {
             $("form")
                 .append($("<p>").text(`Raté ! L'arrêt était : ${secret.stop_name}.`));
         } else {
