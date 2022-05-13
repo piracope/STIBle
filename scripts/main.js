@@ -346,7 +346,7 @@ async function main() {
         let ret = "";
         let cnt = 0;
         let lastDir = "";
-        $("tbody tr").each((i, elem) => {
+        $("#game tbody tr").each((i, elem) => {
             const sq = $(elem).find(".squares");
             if (sq.text()) {
                 ret += `${sq.text()} `;
