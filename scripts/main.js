@@ -56,6 +56,53 @@
 const BACKEND = "http://192.168.0.8:3000";
 
 /**
+ * All text that appears.
+ * @type {Object.<String, String>}
+ */
+const DIALOGUE = {
+    TITLE: {
+        fr: "STI",
+        nl: "MIV",
+    },
+    LANGUAGE: {
+        fr: "Langue",
+        nl: "Taal",
+    },
+    PLACEHOLDER: {
+        fr: "Arrêt de bus, métro, tram...",
+        nl: "Bus, tram, metro halte...",
+    },
+    GUESS: {
+        fr: "Deviner",
+        nl: "Raden",
+    },
+    SHARE: {
+        fr: "Partager",
+        nl: "Delen",
+    },
+    COPIED: {
+        fr: "Copié dans le presse-papiers !",
+        nl: "Naar uw clipboard gekopieerd !",
+    },
+    OFFLINE: {
+        fr: "Le serveur est hors ligne.",
+        nl: "De server is offline.",
+    },
+    TIMEOUT: {
+        fr: "Oups ! Trop tard ! Rechargement en cours...",
+        nl: "Oeps ! U bent te laat ! Herlading onderweg...",
+    },
+    WIN: {
+        fr: "Bien joué !",
+        nl: "Proficiat !",
+    },
+    LOSE: {
+        fr: "Raté ! L'arrêt était : ",
+        nl: "Verloren ! De halte was : ",
+    },
+};
+
+/**
  * The main game loop.
  */
 async function main() {
@@ -96,12 +143,12 @@ async function main() {
                     return res.json();
                 }
 
-                $("#lines").text("Le serveur est hors-ligne.");
+                $("#lines").text(DIALOGUE.OFFLINE[initialStorage.lang]);
                 return undefined;
             })
             .then((data) => data)
             .catch(() => {
-                $("#lines").text("Le serveur est hors-ligne.");
+                $("#lines").text(DIALOGUE.OFFLINE[initialStorage.lang]);
             });
 
         return ret;
@@ -239,7 +286,7 @@ async function main() {
     function timeOut() {
         $("form")
             .append($("<p>")
-                .text("Page en retard ! Elle va être rechargée dans 3 secondes..."));
+                .text(DIALOGUE.TIMEOUT[initialStorage.lang]));
         setTimeout(() => location.reload(), 3000);
     }
 
@@ -253,18 +300,20 @@ async function main() {
         $("form").on("submit", (e) => e.preventDefault());
         $("table input").attr("disabled", "true");
         $("button").addClass("gameover")
-            .text("Partager");
+            .text(DIALOGUE.SHARE[initialStorage.lang]);
         if (result.direction !== "✅" && result.secret) {
             $("form")
-                .append($("<p>").text(`Raté ! L'arrêt était : ${result.secret.stop_name}.`));
+                .append($("<p>").text(
+                    `${DIALOGUE.LOSE[initialStorage.lang]} ${result.secret.stop_name}.`
+                ));
         } else {
             $("form")
-                .append($("<p>").text("Bien joué !"));
+                .append($("<p>").text(DIALOGUE.WIN(initialStorage.lang)));
         }
         $("button.gameover").off("click");
         $("button.gameover").on("click", () => {
             if (shareResults()) {
-                $("button.gameover").text("Copié dans le presse-papiers !");
+                $("button.gameover").text(DIALOGUE.COPIED[initialStorage.lang]);
             }
         });
     }
@@ -321,19 +370,18 @@ async function main() {
         return "";
     }
     function init() {
+        $(`#${initialStorage.lang}`).attr("checked", "true");
+        $("#guess").attr("placeholder", DIALOGUE.PLACEHOLDER[initialStorage.lang]);
+        $("nav span").text(DIALOGUE.LANGUAGE[initialStorage.lang]);
+        $("button").text(DIALOGUE.GUESS[initialStorage.lang]);
+        $("header .blue").text(DIALOGUE.TITLE[initialStorage.lang]);
+
         if (!INITIAL_INFO) {
             return;
         }
         if (initialStorage.getItem("lvlNumber") !== String(INITIAL_INFO.lvlNumber)) {
             localStorage.setItem("guesses", JSON.stringify([]));
             localStorage.setItem("lvlNumber", String(INITIAL_INFO.lvlNumber));
-        }
-        $(`#${initialStorage.lang}`).attr("checked", "true");
-        if (initialStorage.lang === "nl") {
-            $("#guess").attr("placeholder", "Halte...");
-            $("nav span").text("Taal");
-            $("button").text("Raden");
-            $("header .blue").text("MIV");
         }
         displayRoutes();
         buildTable();
@@ -363,6 +411,7 @@ async function main() {
         }
         for (const g of guesses) {
             //idk why ESLint cries here
+            // @ts-ignore
             g.stop_name = await translate(g.stop_name, oldLang, newLang);
         }
 

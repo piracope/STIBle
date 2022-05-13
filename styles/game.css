@@ -54,6 +54,9 @@ table input {
     height: 100%;
     box-sizing: border-box;
 }
+table input:disabled {
+    visibility: hidden;
+}
 button.gameover {
     background-color: var(--green);
     border: 0px;
