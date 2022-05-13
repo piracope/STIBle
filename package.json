@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/piracope/STIBle#readme",
   "devDependencies": {
-    "@types/jquery": "^3.5.14"
+    "@types/jquery": "^3.5.14",
+    "@types/node": "^17.0.32",
+    "node-schedule": "^2.1.0"
   },
   "dependencies": {
     "eslint": "^8.15.0"
