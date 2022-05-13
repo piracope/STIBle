@@ -86,8 +86,18 @@ async function main() {
                 "Accept": "application/json",
             },
         })
-            .then((res) => res.json())
-            .then((data) => data);
+            .then((res) => {
+                if (res.ok) {
+                    return res.json();
+                }
+
+                $("#lines").text("Le serveur est hors-ligne.");
+                return undefined;
+            })
+            .then((data) => data)
+            .catch(() => {
+                $("#lines").text("Le serveur est hors-ligne.");
+            });
 
         return ret;
     }
@@ -277,6 +287,9 @@ async function main() {
         return "";
     }
     function init() {
+        if (!INITIAL_INFO) {
+            return;
+        }
         if (storage.getItem("lvlNumber") !== String(INITIAL_INFO.lvlNumber)) {
             localStorage.setItem("guesses", JSON.stringify([]));
             localStorage.setItem("lvlNumber", String(INITIAL_INFO.lvlNumber));
