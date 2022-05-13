@@ -7,6 +7,8 @@ const [Stops, Lines, Routes, Geo] = [
     require("./geo.js"),
 ];
 
+const fs = require("fs");
+const settings = JSON.parse(fs.readFileSync("./settings.json", "utf-8"));
 /**
  * @type {TYPES.Stop | undefined}
  */
@@ -21,7 +23,7 @@ const game = {
     /**
      * Maximum number of guesses the player can make.
      */
-    MAXIMUM_GUESS: 6,
+    MAXIMUM_GUESS: settings.maximumGuesses,
     start() {
         secret = Stops.getRandomStop();
         secretLines = Lines.getLines(Stops.getEquivalents(secret));
@@ -47,15 +49,18 @@ const game = {
             return {
                 stop_name: guessedStop.stop_name,
                 distance: 0,
+                percentage: 1,
                 direction: "✅",
             };
         }
 
         const vector = Geo.getVector(guessedStop, secret);
+        const distance = Geo.getDistance(vector);
 
         return {
             stop_name: guessedStop.stop_name,
-            distance: Geo.getDistance(vector),
+            distance: distance,
+            percentage: (Geo.MAXIMUM_DISTANCE - distance) / Geo.MAXIMUM_DISTANCE,
             direction: Geo.getDirection(vector),
         };
     },
@@ -83,6 +88,16 @@ const game = {
     getAllStopNames() {
         return Stops.getAllStopNames();
     },
+    getMaximumDistance() {
+        const ret = [];
+        for (const stop1 of Stops.ALL_STOPS) {
+            for (const stop2 of Stops.ALL_STOPS) {
+                const distance = Geo.getDistance(Geo.getVector(stop1, stop2));
+                ret.push(distance);
+            }
+        }
+        ret.sort((a, b) => a - b);
+        console.log(ret[ret.length - 1]);
+    },
 };
-
 module.exports = game;

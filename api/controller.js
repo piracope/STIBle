@@ -1,17 +1,22 @@
 const schedule = require("node-schedule");
-
+const fs = require("fs");
 const game = require("./model/game.js");
-
+let lvlNumber = 0;
+try {
+    lvlNumber = Number(fs.readFileSync("./lvlNumber.txt", "utf-8"));
+} catch {
+    fs.writeFileSync("./lvlNumber.txt", String(lvlNumber));
+}
 /*START GAME*/
 game.start();
 console.log(game.getSecret());
-let date = new Date().getTime();
+fs.writeFileSync("./lvlNumber.txt", String(++lvlNumber));
 
 /*RESTART GAME AT MIDNIGHT*/
 schedule.scheduleJob("* * * * *", () => {
     game.start();
     console.log(game.getSecret());
-    date = new Date().getTime();
+    fs.writeFileSync("./lvlNumber.txt", String(++lvlNumber));
 });
 
 /* OPEN SERVER */
@@ -30,11 +35,13 @@ const server = http.createServer((req, res) => {
     if (req.url === "/start" && req.method === "GET") {
         res.setHeader("Content-Type", "application/json");
         res.writeHead(200, headers);
+        const allStops = game.getAllStopNames();
+        allStops.sort();
         const ret = {
             routes: game.getSecretRoutes(),
-            stops: game.getAllStopNames(),
+            stops: allStops,
             max: game.MAXIMUM_GUESS,
-            date: date,
+            lvlNumber: lvlNumber,
         };
         res.end(JSON.stringify(ret));
     } else if (req.url === "/guess" && req.method === "POST") {
@@ -56,7 +63,7 @@ const server = http.createServer((req, res) => {
                     res.end();
                     return;
                 }
-                if (guess.date !== date) {
+                if (guess.lvlNumber !== lvlNumber) {
                     res.writeHead(205, headers);
                     res.end();
                     return;

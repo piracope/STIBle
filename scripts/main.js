@@ -49,16 +49,22 @@
  * @property {Number} distance the distance between the guessed stop and the secret one
  * @property {String | undefined} direction the direction the secret stop is related to the guessed stop.
  * If undefined, it means they're equivalent.
+ * @property {Number} percentage the percentage of proximity between the stops
  * @property {Stop} [secret] the secret word, exists only if the player found it
  */
 
-const BACKEND = "http://localhost:3000";
+const BACKEND = "http://192.168.0.8:3000";
 
 /**
  * The main game loop.
  */
 async function main() {
+    /**
+     * The initial informations.
+     */
     const INITIAL_INFO = await getInitialData();
+
+    const storage = localStorage;
     /**
      * The current number of guesses made.
      */
@@ -69,7 +75,8 @@ async function main() {
      * routes : the routes that pass on the secret stop
      * stops : all stops possible
      * max : the maximum number of guesses the player can make
-     * @returns {Promise<{routes: Route[], stops: String[], max:Number, date: Number}>}
+     * lvlNumber: the level's number
+     * @returns {Promise<{routes: Route[], stops: String[], max:Number, lvlNumber: Number}>}
      * the initial data
      */
     async function getInitialData() {
@@ -107,6 +114,7 @@ async function main() {
         for (let i = 0; i < INITIAL_INFO.max; i++) {
             const row = $("<tr>");
             row.append($("<td class='guess'>"));
+            row.append($("<td class='squares'>"));
             row.append($("<td class='distance'>"));
             row.append($("<td class='direction'>"));
             table.append(row);
@@ -123,7 +131,7 @@ async function main() {
                 body: JSON.stringify({
                     input: input,
                     currNb: currNb,
-                    date: INITIAL_INFO.date,
+                    lvlNumber: INITIAL_INFO.lvlNumber,
                 }),
                 headers: {
                     "Content-Type": "application/x-www-form-urlencoded",
@@ -141,21 +149,14 @@ async function main() {
                     return undefined;
                 })
                 .then((result) => {
-                    $("form tbody tr").eq(currNb)
-                        .find(".guess")
-                        .html(`<div>${result.stop_name}</div>`);
-                    $("form tbody tr").eq(currNb)
-                        .find(".distance")
-                        .html(`<div>${result.distance.toFixed(1)}km</div>`);
-                    $("form tbody tr").eq(currNb)
-                        .find(".direction")
-                        .html(`<div>${result.direction}</div>`);
-
-                    if (result.secret) {
-                        handleGameOver(result);
-                    } else {
-                        currNb++;
+                    displayResult(result, currNb++);
+                    const guesses = localStorage.getItem("guesses");
+                    let guessesArr = [];
+                    if (guesses) {
+                        guessesArr = JSON.parse(guesses);
+                        guessesArr.push(result);
                     }
+                    localStorage.setItem("guesses", JSON.stringify(guessesArr));
                 })
                 .catch(() => {
                     console.log("skill issue");
@@ -163,6 +164,31 @@ async function main() {
         }
     }
 
+    /**
+     * Displays the result of a guess in the appropriate place.
+     * @param {Result} result the result of a guess
+     * @param {Number} row the row to display the result at
+     */
+    function displayResult(result, row) {
+        $("form tbody tr").eq(row)
+            .find(".guess")
+            .html(`${result.stop_name}`);
+
+        $("form tbody tr").eq(row)
+            .find(".distance")
+            .html(`${result.distance.toFixed(1)}km`);
+
+        $("form tbody tr").eq(row)
+            .find(".squares")
+            .html(`${buildSquares(result)}`);
+        $("form tbody tr").eq(row)
+            .find(".direction")
+            .html(`${result.direction}`);
+
+        if (result.secret) {
+            handleGameOver(result);
+        }
+    }
     /**
      * Reloads the page.
      */
@@ -180,7 +206,10 @@ async function main() {
      */
     function handleGameOver(result) {
         $("form").off("submit");
-        $("button, input").attr("disabled", "true");
+        $("form").on("submit", (e) => e.preventDefault());
+        $("input").attr("disabled", "true");
+        $("button").addClass("gameover")
+            .text("Partager");
         if (result.direction !== "✅" && result.secret) {
             $("form")
                 .append($("<p>").text(`Raté ! L'arrêt était : ${result.secret.stop_name}.`));
@@ -188,6 +217,12 @@ async function main() {
             $("form")
                 .append($("<p>").text("Bien joué !"));
         }
+        $("button.gameover").off("click");
+        $("button.gameover").on("click", () => {
+            if (shareResults()) {
+                $("button.gameover").text("Copié dans le presse-papiers !");
+            }
+        });
     }
 
     /**
@@ -199,9 +234,65 @@ async function main() {
         });
     }
 
-    displayRoutes();
-    buildTable();
-    buildDatalist();
+    /**
+     * Returns the squares corresponding to a Result.
+     * 20% = green square
+     * 10% = yellow square
+     * @param {Result} result the result to get the squares from.
+     * @returns {String}
+     */
+    function buildSquares(result) {
+        const percentage = result.percentage * 100;
+        const green = Math.floor(percentage / 20);
+        const yellow = Math.floor(percentage % 20 / 10);
+        return "🟩".repeat(green) + "🟨".repeat(yellow) + "⬛".repeat(5 - green - yellow);
+    }
+
+    /**
+     * Puts the correct game description in the clipboard.
+     * @returns the string put in the clipboard
+     */
+    function shareResults() {
+        let ret = "";
+        let cnt = 0;
+        let lastDir = "";
+        $("tbody tr").each((i, elem) => {
+            const sq = $(elem).find(".squares");
+            if (sq.text()) {
+                ret += `${sq.text()}`;
+                lastDir = sq.next().next()
+                    .text();
+                ret += lastDir;
+                ret += "\n";
+                cnt++;
+            }
+        });
+
+        if (ret) {
+            const nbOfTries = lastDir === "✅" ? cnt : "X";
+            ret = `#Stible ${INITIAL_INFO.lvlNumber} ${nbOfTries}/${INITIAL_INFO.max}\n\n${ret}`;
+            navigator.clipboard.writeText(ret);
+            return ret;
+        }
+        return "";
+    }
+    function init() {
+        if (storage.getItem("lvlNumber") !== String(INITIAL_INFO.lvlNumber)) {
+            localStorage.setItem("guesses", JSON.stringify([]));
+            localStorage.setItem("lvlNumber", String(INITIAL_INFO.lvlNumber));
+        }
+        displayRoutes();
+        buildTable();
+        buildDatalist();
+        if (storage.getItem("guesses")) {
+            const guesses = JSON.parse(String(storage.getItem("guesses")));
+            for (const result of guesses) {
+                displayResult(result, currNb++);
+            }
+        }
+    }
+
+    init();
     $("form").on("submit", (e) => {
         e.preventDefault();
         guess();

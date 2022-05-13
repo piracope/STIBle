@@ -47,6 +47,7 @@
  * @property {Number} distance the distance between the guessed stop and the secret one
  * @property {String | undefined} direction the direction the secret stop is related to the guessed stop.
  * If undefined, it means they're equivalent.
+ * @property {Number} percentage the percentage of proximity between the stops
  * @property {Stop} [secret] the secret word, exists only if the player found it
  */
 exports.TYPES = {};

@@ -1,12 +1,29 @@
 @import url(Parisine.css);
 @import url(game.css);
 
+:root {
+    --red: #f02233;
+    --blue: #0070B8;
+    --gray: #8a8b8b;
+    --black: #13070C;
+    --near-black: #4F5254;
+    --green: #78b159;
+}
+
+.blue {
+    color: var(--blue);
+}
+.red {
+    color: var(--red)
+}
 html {
     height: 100%;
 }
 body {
     font-family: Parisine, Arial, Helvetica, sans-serif;
     height: 100%;
+    background-color: var(--black);
+    color: white;
 }
 main {
     width: 500px;
