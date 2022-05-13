@@ -29,7 +29,7 @@ const geo = {
      */
     getVector(stop1, stop2) {
         const x = stop2.stop_lon - stop1.stop_lon;
-        const y = stop2.stop_lat - stop2.stop_lat;
+        const y = stop2.stop_lat - stop1.stop_lat;
         return {x: geo.lonToKm(x, y), y: geo.latToKm(y)};
     },
 
@@ -48,9 +48,11 @@ const geo = {
      * @returns {String} the direction the offset is going towards
      */
     getDirection(vec) {
-        const angle = Math.atan2(vec.x, vec.y);
+        console.log(vec);
+        const angle = Math.atan2(vec.y, vec.x);
+        console.log(angle);
 
-        const compass = Math.round(8 * angle / (2 * Math.PI) + 8) % 8;
+        const compass = (Math.round(angle / (2 * Math.PI / 8)) + 8) % 8;
         /* https://gamedev.stackexchange.com/questions/49290/whats-the-best-way-of-transforming-a-2d-vector-into-the-closest-8-way-compass-d */
 
         switch (compass) {
