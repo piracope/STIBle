@@ -48,9 +48,7 @@ const geo = {
      * @returns {String} the direction the offset is going towards
      */
     getDirection(vec) {
-        console.log(vec);
         const angle = Math.atan2(vec.y, vec.x);
-        console.log(angle);
 
         const compass = (Math.round(angle / (2 * Math.PI / 8)) + 8) % 8;
         /* https://gamedev.stackexchange.com/questions/49290/whats-the-best-way-of-transforming-a-2d-vector-into-the-closest-8-way-compass-d */

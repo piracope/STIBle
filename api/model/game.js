@@ -80,6 +80,9 @@ const game = {
     getSecret() {
         return secret;
     },
+    getAllStopNames() {
+        return Stops.getAllStopNames();
+    },
 };
 
 module.exports = game;
