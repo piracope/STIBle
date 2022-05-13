@@ -1,6 +1,7 @@
 const schedule = require("node-schedule");
 const fs = require("fs");
 const game = require("./model/game.js");
+const help = require("./model/help.js");
 let lvlNumber = 0;
 try {
     lvlNumber = Number(fs.readFileSync("./lvlNumber.txt", "utf-8"));
@@ -13,7 +14,7 @@ console.log(game.getSecret());
 fs.writeFileSync("./lvlNumber.txt", String(++lvlNumber));
 
 /*RESTART GAME AT MIDNIGHT*/
-schedule.scheduleJob("* * * * *", () => {
+schedule.scheduleJob("0 0 * * *", () => {
     game.start();
     console.log(game.getSecret());
     fs.writeFileSync("./lvlNumber.txt", String(++lvlNumber));
@@ -51,6 +52,7 @@ const server = http.createServer((req, res) => {
                 stops: allStops,
                 max: game.MAXIMUM_GUESS,
                 lvlNumber: lvlNumber,
+                helpModal: help[lang],
             };
             res.writeHead(200, headers);
             res.end(JSON.stringify(ret));

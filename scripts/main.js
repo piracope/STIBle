@@ -122,7 +122,7 @@ async function main() {
      * stops : all stops possible
      * max : the maximum number of guesses the player can make
      * lvlNumber: the level's number
-     * @returns {Promise<{routes: Route[], stops: String[], max:Number, lvlNumber: Number}>}
+     * @returns {Promise<{routes: Route[], stops: String[], max:Number, lvlNumber: Number, helpModal: String}>}
      * the initial data
      */
     async function getInitialData() {
@@ -249,9 +249,10 @@ async function main() {
                     }
                     localStorage.setItem("guesses", JSON.stringify(guessesArr));
                 })
+                /*
                 .catch(() => {
                     console.log("skill issue");
-                });
+                })*/;
         }
     }
 
@@ -296,15 +297,15 @@ async function main() {
     function handleGameOver(result) {
         $("#game").off("submit");
         $("#game").on("submit", (e) => e.preventDefault());
-        $("table input").attr("disabled", "true");
-        $("button").addClass("gameover")
+        $("#game input").attr("disabled", "true");
+        $("#submit").addClass("gameover")
             .text(DIALOGUE.SHARE[initialStorage.lang]);
         if (result.direction !== "✅" && result.secret) {
             $("#message").text(
                 `${DIALOGUE.LOSE[initialStorage.lang]} ${result.secret.stop_name}.`
             );
         } else {
-            $("#message").text(DIALOGUE.WIN(initialStorage.lang));
+            $("#message").text(DIALOGUE.WIN[initialStorage.lang]);
         }
         $("button.gameover").off("click");
         $("button.gameover").on("click", () => {
@@ -372,39 +373,36 @@ async function main() {
         $("#game button").text(DIALOGUE.GUESS[initialStorage.lang]);
         $("header .blue").text(DIALOGUE.TITLE[initialStorage.lang]);
 
-        if (!INITIAL_INFO) {
-            return;
-        }
-        if (initialStorage.getItem("lvlNumber") !== String(INITIAL_INFO.lvlNumber)) {
-            localStorage.setItem("guesses", JSON.stringify([]));
-            localStorage.setItem("lvlNumber", String(INITIAL_INFO.lvlNumber));
-        }
-        displayRoutes();
-        buildTable();
-        buildDatalist();
-        if (initialStorage.getItem("guesses")) {
-            const guesses = JSON.parse(String(initialStorage.getItem("guesses")));
-            for (const result of guesses) {
-                displayResult(result, currNb++);
+        if (INITIAL_INFO) {
+            $("#helpModal .modal-content").append(INITIAL_INFO.helpModal);
+            if (initialStorage.getItem("lvlNumber") !== String(INITIAL_INFO.lvlNumber)) {
+                localStorage.setItem("guesses", JSON.stringify([]));
+                localStorage.setItem("lvlNumber", String(INITIAL_INFO.lvlNumber));
+            }
+            displayRoutes();
+            buildTable();
+            buildDatalist();
+            if (initialStorage.getItem("guesses")) {
+                const guesses = JSON.parse(String(initialStorage.getItem("guesses")));
+                for (const result of guesses) {
+                    displayResult(result, currNb++);
+                }
             }
         }
-    }
 
-    init();
-    $("form").on("submit", (e) => {
-        e.preventDefault();
-        guess();
-        $("#guess").val("");
-    });
+        $("body").show();
+    }
 
     /**
      * Translates the history of guesses, saves it then reloads.
+     * @param {String} oldLang fr or nl
      * @param {String} newLang fr or nl
      */
-    async function translateHistory(newLang) {
+    async function translateHistory(oldLang, newLang) {
         const guesses = JSON.parse(String(localStorage.getItem("guesses")));
-        const oldLang = String(localStorage.getItem("lang"));
+        console.log(oldLang);
         if (oldLang === newLang || !["fr", "nl"].includes(newLang)) {
+            console.log("xdd");
             return;
         }
         for (const g of guesses) {
@@ -413,13 +411,24 @@ async function main() {
             g.stop_name = await translate(g.stop_name, oldLang, newLang);
         }
 
-        localStorage.setItem("lang", newLang);
         localStorage.setItem("guesses", JSON.stringify(guesses));
         location.reload();
     }
-    $(".lang").on("click", (e) => {
-        translateHistory(e.currentTarget.id);
+
+    init();
+    $("#game").on("submit", (e) => {
+        e.preventDefault();
+        guess();
+        $("#guess").val("");
     });
+
+    $(".lang").on("click", (e) => {
+        const oldLang = String(localStorage.getItem("lang"));
+        localStorage.setItem("lang", e.currentTarget.id);
+        translateHistory(oldLang, e.currentTarget.id);
+    });
+    $("#help").on("click", () => $("#helpModal").show());
+    $(".close").on("click", () => $("#helpModal").hide());
 }
 
 $(main);

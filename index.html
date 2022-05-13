@@ -11,15 +11,15 @@
     <title>STIBle</title>
 </head>
 
-<body>
+<body hidden>
     <noscript>fréro t'as cru que le jeu allait se lancer sans javascript ???</noscript>
 
     <header>
-        <h1><span class="blue">STI</span><span class="red">B</span>le</h1>
+        <h1><span class="blue"></span><span class="red">B</span>le</h1>
     </header>
     <nav>
         <ul>
-            <li><span id="help"></span></li>
+            <li><button id="help"></button></li>
             <li>
                 <span class="lang" id="fr">🇫🇷</span> <span class="lang" id="nl">🇳🇱</span>
             </li>
@@ -31,7 +31,7 @@
             <table>
                 <thead>
                     <th colspan="4">
-                        <div id="lines"></div>
+                        <div id="lines" class="line-container"></div>
                     </th>
                 </thead>
                 <tbody>
@@ -42,7 +42,7 @@
                                 placeholder="Arrêt..." required></td>
                     </tr>
                     <tr>
-                        <td colspan="4"><button id="submit">Deviner</button></td>
+                        <td colspan="4"><button id="submit"></button></td>
                     </tr>
                 </tfoot>
             </table>
@@ -52,6 +52,11 @@
         </form>
         <p id="message"></p>
     </main>
+    <div id="helpModal" class="modal">
+        <div class="modal-content">
+            <span class="close red">&times;</span>
+        </div>
+    </div>
 </body>
 
 </html>
