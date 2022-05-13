@@ -24,9 +24,9 @@ body {
     height: 100%;
     background-color: var(--black);
     color: white;
+    text-align: center;
 }
 main {
     width: 500px;
     margin: auto auto;
-    text-align: center;
 }

@@ -26,6 +26,12 @@ td {
     height: 1.5rem;
     line-height: 1.5rem;
 }
+td div {
+    padding-inline: .2em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
 tbody tr {
     display: grid;
     grid-auto-flow: column;
@@ -37,8 +43,8 @@ tfoot td {
     border: 2px solid var(--gray);
     background-color: var(--black);
 }
-button,
-input {
+table button,
+table input {
     background-color: var(--black);
     font-weight: bold;
     color: white;

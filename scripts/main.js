@@ -59,12 +59,11 @@ const BACKEND = "http://192.168.0.8:3000";
  * The main game loop.
  */
 async function main() {
+    const initialStorage = localStorage;
     /**
      * The initial informations.
      */
     const INITIAL_INFO = await getInitialData();
-
-    const storage = localStorage;
     /**
      * The current number of guesses made.
      */
@@ -80,11 +79,17 @@ async function main() {
      * the initial data
      */
     async function getInitialData() {
+        if (!initialStorage.lang) {
+            localStorage.setItem("lang", "fr");
+            initialStorage.lang = "fr";
+        }
         const ret = await fetch(`${BACKEND}/start`, {
-            method: "GET",
+            method: "POST",
             headers: {
+                "Content-Type": "text/plain",
                 "Accept": "application/json",
             },
+            body: initialStorage.lang,
         })
             .then((res) => {
                 if (res.ok) {
@@ -102,6 +107,34 @@ async function main() {
         return ret;
     }
 
+    /**
+     * Translates a stop from one lanugage to another.
+     * @param {String} stop the translated stop name
+     * @param {"fr" | "nl"} oldLang the current language
+     * @param {"fr" | "nl"} newLang the destination language
+     */
+    async function translate(stop, oldLang, newLang) {
+        const ret = await fetch(`${BACKEND}/tl`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Accept": "text/plain",
+            },
+            body: JSON.stringify({
+                stop_name: stop,
+                oldLang: oldLang,
+                newLang: newLang,
+            }),
+        }).then((res) => {
+            if (res.status === 200) {
+                return res.text();
+            }
+            return undefined;
+        })
+            .then((data) => data);
+
+        return ret;
+    }
     /**
      * Displays the secret routes.
      */
@@ -134,7 +167,7 @@ async function main() {
      * Handles a player guess.
      */
     async function guess() {
-        const input = String($("#guess").val()).toUpperCase();
+        const input = String($("#guess").val());
         if (INITIAL_INFO.stops.includes(input)) {
             fetch(`${BACKEND}/guess`, {
                 method: "POST",
@@ -142,6 +175,7 @@ async function main() {
                     input: input,
                     currNb: currNb,
                     lvlNumber: INITIAL_INFO.lvlNumber,
+                    lang: initialStorage.lang,
                 }),
                 headers: {
                     "Content-Type": "application/x-www-form-urlencoded",
@@ -182,18 +216,18 @@ async function main() {
     function displayResult(result, row) {
         $("form tbody tr").eq(row)
             .find(".guess")
-            .html(`${result.stop_name}`);
+            .append($("<div>").text(`${result.stop_name}`));
 
         $("form tbody tr").eq(row)
             .find(".distance")
-            .html(`${result.distance.toFixed(1)}km`);
+            .text(`${result.distance.toFixed(1)}km`);
 
         $("form tbody tr").eq(row)
             .find(".squares")
-            .html(`${buildSquares(result)}`);
+            .text(`${buildSquares(result)}`);
         $("form tbody tr").eq(row)
             .find(".direction")
-            .html(`${result.direction}`);
+            .text(`${result.direction}`);
 
         if (result.secret) {
             handleGameOver(result);
@@ -217,7 +251,7 @@ async function main() {
     function handleGameOver(result) {
         $("form").off("submit");
         $("form").on("submit", (e) => e.preventDefault());
-        $("input").attr("disabled", "true");
+        $("table input").attr("disabled", "true");
         $("button").addClass("gameover")
             .text("Partager");
         if (result.direction !== "✅" && result.secret) {
@@ -269,7 +303,7 @@ async function main() {
         $("tbody tr").each((i, elem) => {
             const sq = $(elem).find(".squares");
             if (sq.text()) {
-                ret += `${sq.text()}`;
+                ret += `${sq.text()} `;
                 lastDir = sq.next().next()
                     .text();
                 ret += lastDir;
@@ -280,7 +314,7 @@ async function main() {
 
         if (ret) {
             const nbOfTries = lastDir === "✅" ? cnt : "X";
-            ret = `#Stible ${INITIAL_INFO.lvlNumber} ${nbOfTries}/${INITIAL_INFO.max}\n\n${ret}`;
+            ret = `Stible #${INITIAL_INFO.lvlNumber} ${nbOfTries}/${INITIAL_INFO.max}\n\n${ret}`;
             navigator.clipboard.writeText(ret);
             return ret;
         }
@@ -290,15 +324,22 @@ async function main() {
         if (!INITIAL_INFO) {
             return;
         }
-        if (storage.getItem("lvlNumber") !== String(INITIAL_INFO.lvlNumber)) {
+        if (initialStorage.getItem("lvlNumber") !== String(INITIAL_INFO.lvlNumber)) {
             localStorage.setItem("guesses", JSON.stringify([]));
             localStorage.setItem("lvlNumber", String(INITIAL_INFO.lvlNumber));
+        }
+        $(`#${initialStorage.lang}`).attr("checked", "true");
+        if (initialStorage.lang === "nl") {
+            $("#guess").attr("placeholder", "Halte...");
+            $("nav span").text("Taal");
+            $("button").text("Raden");
+            $("header .blue").text("MIV");
         }
         displayRoutes();
         buildTable();
         buildDatalist();
-        if (storage.getItem("guesses")) {
-            const guesses = JSON.parse(String(storage.getItem("guesses")));
+        if (initialStorage.getItem("guesses")) {
+            const guesses = JSON.parse(String(initialStorage.getItem("guesses")));
             for (const result of guesses) {
                 displayResult(result, currNb++);
             }
@@ -311,6 +352,25 @@ async function main() {
         guess();
         $("#guess").val("");
     });
+
+    async function translateHistory() {
+        const guesses = JSON.parse(String(localStorage.getItem("guesses")));
+        let oldLang = String(localStorage.getItem("lang"));
+        let newLang = String($("input[name='lang']:checked").val());
+        if (!oldLang && !newLang || ![oldLang, newLang].includes("fr") && ![oldLang, newLang].includes("nl")) {
+            oldLang = "fr";
+            newLang = "nl";
+        }
+        for (const g of guesses) {
+            //idk why ESLint cries here
+            g.stop_name = await translate(g.stop_name, oldLang, newLang);
+        }
+
+        localStorage.setItem("lang", newLang);
+        localStorage.setItem("guesses", JSON.stringify(guesses));
+        location.reload();
+    }
+    $("input[name='lang']").on("change", translateHistory);
 }
 
 $(main);

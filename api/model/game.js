@@ -88,6 +88,52 @@ const game = {
     getAllStopNames() {
         return Stops.getAllStopNames();
     },
+    /**
+     * zz
+     * @param {"fr" | "nl"} lang zzz
+     * @returns zz
+     */
+    getAllTranslatedStopNames(lang) {
+        return Stops.getAllTranslatedStopNames(lang);
+    },
+    /**
+     * Converts a translated stop name to its internal name.
+     * @param {String} stop the name of the translated stop
+     * @param {"fr" | "nl"} lang the language of the translation
+     * @returns {String | undefined} the name of the stop
+     */
+    translatedToReal(stop, lang) {
+        return Stops.TRANSLATIONS.find((s) => s[lang] === stop)?.stop_name;
+    },
+
+    /**
+     * Converts a translated stop name to its internal name.
+     * @param {String} stop the name of the translated stop
+     * @param {"fr" | "nl"} oldLang the departure language of the translation
+     * @param {"fr" | "nl"} newLang the arrival language of the translation
+     * @returns {String | undefined} the name of the stop
+     */
+    translate(stop, oldLang, newLang) {
+        const tl = Stops.TRANSLATIONS.find((s) => s[oldLang] === stop);
+        if (tl) {
+            return tl[newLang];
+        }
+        return undefined;
+    },
+
+    /**
+     * Translates a stop name
+     * @param {String} stop the name of the translated stop
+     * @param {"fr" | "nl"} lang the language of the translation
+     * @returns {String | undefined} the name of the stop
+     */
+    realToTranslated(stop, lang) {
+        const tl = Stops.TRANSLATIONS.find((s) => s.stop_name === stop);
+        if (tl) {
+            return tl[lang];
+        }
+        return undefined;
+    },
     getMaximumDistance() {
         const ret = [];
         for (const stop1 of Stops.ALL_STOPS) {
@@ -99,5 +145,8 @@ const game = {
         ret.sort((a, b) => a - b);
         console.log(ret[ret.length - 1]);
     },
+
 };
+
+console.log(Stops.getAllTranslatedStopNames("fr"));
 module.exports = game;

@@ -13,9 +13,19 @@
 
 <body>
     <noscript>fréro t'as cru que le jeu allait se lancer sans javascript ???</noscript>
-    <main>
+
+    <header>
         <h1><span class="blue">STI</span><span class="red">B</span>le</h1>
-        <form method="POST" id="game">
+    </header>
+    <nav>
+        <p>
+            <span>Langue</span> : 
+            <label for="fr">FR<input type="radio" name="lang" value="fr" id="fr" autocomplete="off"></label>
+            <label for="nl">NL<input type="radio" name="lang" value="nl" id="nl" autocomplete="off"></label>
+        </p>
+    </nav>
+    <main>
+        <form method="post" id="game">
             <table>
                 <thead>
                     <th colspan="4">
