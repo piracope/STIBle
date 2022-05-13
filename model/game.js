@@ -148,5 +148,4 @@ const game = {
 
 };
 
-console.log(Stops.getAllTranslatedStopNames("fr"));
 module.exports = game;

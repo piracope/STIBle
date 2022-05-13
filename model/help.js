@@ -45,6 +45,8 @@ const help = {
     <p><strong><span class="blue">STI</span><span class="red">B</span></strong>le a été
     <strong>très très</strong> inspiré de WORLDLE par @teufteuf, qui
     lui-même a été inspiré de Wordle, par Josh Wardle.</p>
+    <hr>
+    <p>Fait par piracope sur une idée de REXAGONE et Hatsena.</p>
 </div>
 `,
     nl:
