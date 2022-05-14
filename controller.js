@@ -2,7 +2,7 @@ const schedule = require("node-schedule");
 const fs = require("fs");
 const game = require("./model/game.js");
 const help = require("./model/help.js");
-let lvlNumber = 0;
+let lvlNumber = 1;
 try {
     lvlNumber = Number(fs.readFileSync("./lvlNumber.txt", "utf-8"));
 } catch {
@@ -11,7 +11,6 @@ try {
 /*START GAME*/
 game.start();
 console.log(game.getSecret());
-fs.writeFileSync("./lvlNumber.txt", String(++lvlNumber));
 
 /*RESTART GAME AT MIDNIGHT*/
 //TODO : change this back to 0 0 * * *
@@ -20,7 +19,6 @@ schedule.scheduleJob("0 0 * * *", () => {
     console.log(game.getSecret());
     fs.writeFileSync("./lvlNumber.txt", String(++lvlNumber));
 });
-
 
 /* OPEN SERVER */
 const http = require("http");
@@ -179,7 +177,7 @@ function serveFile(res, filename, status) {
             if (!mimeToSend) {
                 mimeToSend = "text/plain";
             }
-            res.setHeader("Content-Type", MIME[extension[extension.length - 1]]);
+            res.setHeader("Content-Type", mimeToSend);
             res.writeHead(status || 200);
         });
         stream.on("error", () => {

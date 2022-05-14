@@ -80,6 +80,13 @@ const DIALOGUE = {
         fr: "Copié dans le presse-papiers !",
         nl: "Naar uw clipboard gekopieerd !",
     },
+    CANT_COPY: {
+        fr: `Il semble que votre navigateur n'a pas envie de copier le résultat
+        tout seul comme un grand. Je vous invite donc à copier le résultat
+        ci-dessous à la main.`,
+        nl: `Uw browser mag niet kopieeren, dus u moet de kleine "squares"
+        jezelf kopieeren.`,
+    },
     OFFLINE: {
         fr: "Le serveur est hors ligne.",
         nl: "De server is offline.",
@@ -357,8 +364,18 @@ async function main() {
         if (ret) {
             const nbOfTries = lastDir === "✅" ? cnt : "X";
             ret = `Stible #${INITIAL_INFO.lvlNumber} ${nbOfTries}/${INITIAL_INFO.max}\n\n${ret}`;
-            navigator.clipboard.writeText(ret);
-            return ret;
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(ret);
+                return ret;
+            }
+            $("#shareModal .modal-content > div").empty();
+            $("#shareModal .modal-content > div").append(
+                $("<p>").text(DIALOGUE.CANT_COPY[initialStorage.lang])
+            )
+                .append($("<textarea>").text(ret));
+            $("#shareModal").show();
+
+            return "";
         }
         return "";
     }
@@ -426,7 +443,8 @@ async function main() {
         translateHistory(oldLang, e.currentTarget.id);
     });
     $("#help").on("click", () => $("#helpModal").show());
-    $(".close").on("click", () => $("#helpModal").hide());
+    $(".close").on("click", (e) => $(e.currentTarget).parents(".modal")
+        .hide());
 }
 
 $(main);
