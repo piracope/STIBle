@@ -281,7 +281,7 @@ async function main() {
      * Reloads the page.
      */
     function timeOut() {
-        $("#message").text(DIALOGUE.TIMEOUT(initialStorage.lang));
+        $("#message").text(DIALOGUE.TIMEOUT[initialStorage.lang]);
         setTimeout(() => location.reload(), 3000);
     }
 
