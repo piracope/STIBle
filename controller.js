@@ -136,8 +136,10 @@ const server = http.createServer((req, res) => {
             }
         });
     } else {
+        res.setHeader("Content-Type", "text/html");
         res.writeHead(404, headers);
-        res.end("ERREUR 404 HAHAHAHAAA (t'as vu maman je fais mes propres erreur 404 maintenant");
+        const fileStream = fs.createReadStream(`${__dirname}/public/index.html`);
+        fileStream.pipe(res);
     }
 });
 server.listen(PORT);
