@@ -363,7 +363,6 @@ async function main() {
         return "";
     }
     function init() {
-        $(`#${initialStorage.lang}`).attr("checked", "true");
         $("#guess").attr("placeholder", DIALOGUE.PLACEHOLDER[initialStorage.lang]);
         $("#help").text(DIALOGUE.HELP[initialStorage.lang]);
         $("#game button").text(DIALOGUE.GUESS[initialStorage.lang]);
@@ -371,6 +370,9 @@ async function main() {
 
         if (INITIAL_INFO) {
             $("#helpModal .modal-content").append(INITIAL_INFO.helpModal);
+            if (!initialStorage.getItem("guesses")) {
+                $("#helpModal").show();
+            }
             if (initialStorage.getItem("lvlNumber") !== String(INITIAL_INFO.lvlNumber)) {
                 localStorage.setItem("guesses", JSON.stringify([]));
                 localStorage.setItem("lvlNumber", String(INITIAL_INFO.lvlNumber));

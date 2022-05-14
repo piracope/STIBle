@@ -15,7 +15,7 @@ fs.writeFileSync("./lvlNumber.txt", String(++lvlNumber));
 
 /*RESTART GAME AT MIDNIGHT*/
 //TODO : change this back to 0 0 * * *
-schedule.scheduleJob("* * * * *", () => {
+schedule.scheduleJob("0 0 * * *", () => {
     game.start();
     console.log(game.getSecret());
     fs.writeFileSync("./lvlNumber.txt", String(++lvlNumber));
@@ -69,7 +69,6 @@ const server = http.createServer((req, res) => {
             data += chunk;
         });
         req.on("end", () => {
-            console.log(data);
             try {
                 const guess = JSON.parse(data);
                 /* server-side input verification */
@@ -104,7 +103,6 @@ const server = http.createServer((req, res) => {
                 if (nameToSend) {
                     toSend.stop_name = nameToSend;
                 }
-                console.log(JSON.stringify(toSend));
                 res.writeHead(200, headers);
                 res.write(JSON.stringify(toSend));
                 res.end();
@@ -125,7 +123,6 @@ const server = http.createServer((req, res) => {
             try {
                 const stop = JSON.parse(data);
                 const toSend = game.translate(stop.stop_name, stop.oldLang, stop.newLang);
-                console.log(toSend);
                 if (toSend) {
                     res.writeHead(200, headers);
                     res.end(toSend);
@@ -181,7 +178,6 @@ function serveFile(res, filename, status) {
     };
     try {
         const stream = fs.createReadStream(filename);
-        console.log(filename);
         stream.pipe(res);
         stream.on("open", () => {
             const extension = filename.split(".");
