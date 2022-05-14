@@ -53,7 +53,7 @@
  * @property {Stop} [secret] the secret word, exists only if the player found it
  */
 
-const BACKEND = "http://192.168.0.8:3000";
+const BACKEND = "https://stible-test.herokuapp.com";
 
 /**
  * All text that appears.
