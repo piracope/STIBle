@@ -1,3 +1,5 @@
+/* global twemoji */
+
 /**
  * @typedef {Object} Stop
  * A Stop is a STIB/MIVB stop place and is represented by its name,
@@ -279,10 +281,11 @@ async function main() {
         $("#game tbody tr").eq(row)
             .find(".direction")
             .text(`${result.direction}`);
-
         if (result.secret) {
             handleGameOver(result);
         }
+
+        twemoji.parse(document.querySelector("#game tbody"));
     }
     /**
      * Reloads the page.
@@ -405,6 +408,7 @@ async function main() {
             }
         }
 
+        twemoji.parse(document.body);
         $("body").show();
     }
 
