@@ -6,7 +6,7 @@ const fs = require("fs");
  * All existing routes
  * @type {TYPES.Route[]}
  */
-const ALL_ROUTES = JSON.parse(fs.readFileSync("../assets/datasets/routes.json", "utf-8"));
+const ALL_ROUTES = JSON.parse(fs.readFileSync("assets/datasets/routes.json", "utf-8"));
 
 const route = {
     /**

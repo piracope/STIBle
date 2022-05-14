@@ -6,7 +6,7 @@ const fs = require("fs");
  * All existing lines.
  * @type {TYPES.Line[]}
 */
-const ALL_LINES = JSON.parse(fs.readFileSync("../assets/datasets/lines.json", "utf-8"));
+const ALL_LINES = JSON.parse(fs.readFileSync("assets/datasets/lines.json", "utf-8"));
 
 const line = {
     /**

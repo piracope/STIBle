@@ -7,13 +7,13 @@ const stop = {
      * All existing stops.
      * @type {TYPES.Stop[]}
      */
-    ALL_STOPS: JSON.parse(fs.readFileSync("../assets/datasets/stops.json", "utf-8")),
+    ALL_STOPS: JSON.parse(fs.readFileSync("assets/datasets/stops.json", "utf-8")),
 
     /**
      * Translations for the stops.
      * @type {{stop_name: String, fr: String, nl: String}[]}
      */
-    TRANSLATIONS: JSON.parse(fs.readFileSync("../assets/datasets/translations.json", "utf-8")),
+    TRANSLATIONS: JSON.parse(fs.readFileSync("assets/datasets/translations.json", "utf-8")),
     /**
      * Returns an array of the names of all the Stops.
      * @returns {String[]} all stops names
