@@ -129,20 +129,11 @@ const server = http.createServer((req, res) => {
         });
     } else if (req.url) {
         /* STATIC FILE SERVING */
-        /**
-         * MIME looking table.
-         * @type {Object.<String, String>}
-         */
-        const MIME = {
-            "html": "text/html",
-            "js": "text/javascript",
-            "css": "text/css",
-            "otf": "application/x-font-opentype",
-        };
         const uri = decodeURI(new URL(req.url, `https://${req.headers.host}/`).pathname);
         let filename = path.normalize(path.join(__dirname, "public", uri));
-        if (filename.charAt(filename.length - 1) === "/") {
-            filename += "index.html";
+        console.log(filename);
+        if (filename.charAt(filename.length - 1) === path.sep) {
+            filename = path.join(filename, "index.html");
         }
         serveFile(res, filename);
     }
