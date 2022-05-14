@@ -37,7 +37,7 @@ const server = http.createServer((req, res) => {
         });
         req.on("end", () => {
             if (lang !== "fr" && lang !== "nl") {
-                res.writeHead(400, headers);
+                res.writeHead(400);
                 res.end();
                 return;
             }
@@ -50,7 +50,7 @@ const server = http.createServer((req, res) => {
                 lvlNumber: lvlNumber,
                 helpModal: help[lang],
             };
-            res.writeHead(200, headers);
+            res.writeHead(200);
             res.end(JSON.stringify(ret));
         });
     } else if (req.url === "/guess" && req.method === "POST") {
@@ -67,26 +67,26 @@ const server = http.createServer((req, res) => {
                 const guess = JSON.parse(data);
                 /* server-side input verification */
                 if (!game.getAllTranslatedStopNames(guess.lang).includes(guess.input)) {
-                    res.writeHead(400, headers);
+                    res.writeHead(400);
                     res.end();
                     return;
                 }
                 if (guess.lvlNumber !== lvlNumber) {
-                    res.writeHead(205, headers); /*Data expired or something i don't remember */
+                    res.writeHead(205); /*Data expired or something i don't remember */
                     res.end();
                     return;
                 }
                 const stopName = game.translatedToReal(guess.input, guess.lang);
                 if (!stopName) {
                     /* should never arrive here, but meh better be safe */
-                    res.writeHead(501, headers);
+                    res.writeHead(501);
                     res.end();
                     return;
                 }
                 const toSend = game.processGuess(stopName);
                 if (!toSend) {
                     /* should never arrive here, but meh better be safe */
-                    res.writeHead(501, headers);
+                    res.writeHead(501);
                     res.end();
                     return;
                 } else if (toSend?.direction === "✅"
@@ -97,12 +97,12 @@ const server = http.createServer((req, res) => {
                 if (nameToSend) {
                     toSend.stop_name = nameToSend;
                 }
-                res.writeHead(200, headers);
+                res.writeHead(200);
                 res.write(JSON.stringify(toSend));
                 res.end();
                 return;
             } catch {
-                res.writeHead(400, headers);
+                res.writeHead(400);
                 res.end();
             }
         });
@@ -118,14 +118,14 @@ const server = http.createServer((req, res) => {
                 const stop = JSON.parse(data);
                 const toSend = game.translate(stop.stop_name, stop.oldLang, stop.newLang);
                 if (toSend) {
-                    res.writeHead(200, headers);
+                    res.writeHead(200);
                     res.end(toSend);
                     return;
                 }
-                res.writeHead(204, headers);
+                res.writeHead(204);
                 res.end();
             } catch {
-                res.writeHead(400, headers);
+                res.writeHead(400);
                 res.end();
             }
         });
@@ -180,7 +180,7 @@ function serveFile(res, filename, status) {
                 mimeToSend = "text/plain";
             }
             res.setHeader("Content-Type", MIME[extension[extension.length - 1]]);
-            res.writeHead(status || 200, headers);
+            res.writeHead(status || 200);
         });
         stream.on("error", () => {
             serveFile(res, path.join(__dirname, "public", "quoi.html"), 404);
