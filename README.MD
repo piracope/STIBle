@@ -89,6 +89,19 @@ Because it's the best one.
 
 I know who you are, where you are, and I am approaching rapidly. Start running.
 
+## Authors and acknowledgments
+
+Well obviously REXA and Hatsena for the initial idea. I've picked a lot of
+concepts from @teuteuf's WORLDLE, which was also very inspired from Josh Wardle's Wordle.
+
+This is hosted on REXA's Elitios network (well, not currently, but soon).
+
+The inner functionment was inspired by cémantix's source code, which gave me the
+idea of doing a front-end and a back-end for the first time.
+
+The data (stops, lines, ...) required to make the datasets that the game
+runs on came from the [STIB's API](https://opendata.stib-mivb.be/store/data).
+
 ## License
 
 Haven't decided on that yet :/
