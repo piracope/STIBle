@@ -21,12 +21,6 @@ schedule.scheduleJob("0 0 * * *", () => {
     fs.writeFileSync("./lvlNumber.txt", String(++lvlNumber));
 });
 
-/* HEADERS FOR CORS */
-const headers = {
-    "Access-Control-Allow-Origin": "*",
-    "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
-    "Access-Control-Max-Age": 2592000,
-};
 
 /* OPEN SERVER */
 const http = require("http");
