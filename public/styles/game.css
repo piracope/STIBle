@@ -1,0 +1,67 @@
+.line-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    padding-inline: 10px;
+    gap: 10px;
+}
+.line {
+    display: block;
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+
+    text-align: center;
+    border-radius: 3px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+table {
+    text-align: center;
+    width: 100%;
+}
+
+td {
+    background-color: var(--near-black);
+    border-radius: 3px;
+    height: 1.5rem;
+    line-height: 1.5rem;
+}
+td div {
+    padding-inline: .2em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+tbody tr {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 50% 6rem auto 2rem;
+    gap: 2px;
+    margin-bottom: 2px;
+}
+tfoot td {
+    border: 2px solid var(--gray);
+    background-color: var(--black);
+}
+table button,
+table input {
+    background-color: var(--black);
+    font-weight: bold;
+    color: white;
+    border: none;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+table input:disabled {
+    visibility: hidden;
+}
+button.gameover {
+    background-color: var(--green);
+    border: 0px;
+}
+button:enabled {
+    cursor: pointer;
+}

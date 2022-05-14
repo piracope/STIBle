@@ -22,6 +22,7 @@ schedule.scheduleJob("0 0 * * *", () => {
 
 /* OPEN SERVER */
 const http = require("http");
+const path = require("path");
 const PORT = process.env.PORT || 3000;
 const server = http.createServer((req, res) => {
     /* HEADERS FOR CORS */
@@ -135,11 +136,42 @@ const server = http.createServer((req, res) => {
                 res.end();
             }
         });
-    } else {
-        res.setHeader("Content-Type", "text/html");
-        res.writeHead(404, headers);
-        const fileStream = fs.createReadStream(`${__dirname}/public/index.html`);
-        fileStream.pipe(res);
+    } else if (req.url) {
+        /**
+             * @type {Object.<String, String>}
+             */
+        const MIME = {
+            "html": "text/html",
+            "js": "text/javascript",
+            "css": "text/css",
+            "otf": "application/x-font-opentype",
+        };
+        const uri = decodeURI(new URL(req.url, `https://${req.headers.host}/`).pathname);
+        let filename = path.normalize(path.join(__dirname, "public", uri));
+        if (filename.charAt(filename.length - 1) === "/") {
+            filename += "index.html";
+        }
+        try {
+            const stream = fs.createReadStream(filename);
+            console.log(filename);
+            stream.pipe(res);
+            stream.on("open", () => {
+                const extension = filename.split(".");
+                let mimeToSend = MIME[extension[extension.length - 1]];
+                if (!mimeToSend) {
+                    mimeToSend = "text/plain";
+                }
+                res.setHeader("Content-Type", MIME[extension[extension.length - 1]]);
+                res.writeHead(200);
+            });
+            stream.on("error", () => {
+                res.writeHead(404, headers);
+                res.end();
+            });
+        } catch {
+            res.writeHead(500, headers);
+            res.end();
+        }
     }
 });
 server.listen(PORT);

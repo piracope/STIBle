@@ -6,51 +6,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <title>Je connais ton adresse.</title>
-    <style>
-        body {
-            width: fit-content;
-            margin: auto auto;
-            text-align: center;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-        }
-    </style>
+    <script src="scripts/main.js"></script>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/2/29/STIB-MIVB_Line_95.svg"
+        type="image/x-icon">
+    <title>STIBle</title>
 </head>
 
-<body>
+<body hidden>
+    <noscript>fréro t'as cru que le jeu allait se lancer sans javascript ???</noscript>
+
+    <header>
+        <h1><span class="blue"></span><span class="red">B</span>le</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><button id="help"></button></li>
+            <li>
+                <span class="lang" id="fr">🇫🇷</span> <span class="lang" id="nl">🇳🇱</span>
+            </li>
+        </ul>
+        <hr>
+    </nav>
     <main>
-        <h1>Ouille, c'est la backend :/</h1>
-        <div id="blague">
-            <p hidden>- Hmmm... on dirait qu'on est sur le site de la backend</p>
-            <p hidden>"La Back-end ?"</p>
-            <p hidden>Ouais genre, le serveur qui fait des trucs</p>
-            <p hidden>"Comme quoi ?"</p>
-            <div hidden class="tenor-gif-embed" data-postid="21195505" data-share-method="host"
-                data-aspect-ratio="1.77778" data-width="500px"><a
-                    href="https://tenor.com/view/feur-quoi-clip-gif-21195505">Feur Quoi GIF</a>from <a
-                    href="https://tenor.com/search/feur-gifs">Feur GIFs</a></div>
-            <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+        <form method="post" id="game">
+            <table>
+                <thead>
+                    <th colspan="4">
+                        <div id="lines" class="line-container"></div>
+                    </th>
+                </thead>
+                <tbody>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4"><input list="stops" name="guess" id="guess" autocomplete="off"
+                                placeholder="Arrêt..." required></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4"><button id="submit"></button></td>
+                    </tr>
+                </tfoot>
+            </table>
 
-        </div>
+            <datalist id="stops"></datalist>
+
+        </form>
+        <p id="message"></p>
     </main>
-    <script>
-        const INTERVAL = 2000;
-
-        $(() => {
-            const max = $("#blague").children().length;
-            let i = 0;
-            const s = setInterval(() => {
-                $("#blague").children()
-                    .eq(i++)
-                    .fadeIn(INTERVAL);
-
-                if (i >= max) {
-                    clearInterval(s);
-                }
-            }, INTERVAL);
-        });
-
-    </script>
+    <div id="helpModal" class="modal">
+        <div class="modal-content">
+            <span class="close red">&times;</span>
+        </div>
+    </div>
 </body>
 
 </html>

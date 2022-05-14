@@ -1,0 +1,16 @@
+@font-face {
+    font-family: Parisine;
+    src: url("../assets/fonts/Parisine/Parisine Regular/Parisine Regular.otf");
+}
+@font-face {
+    font-family: Parisine;
+    src: url("../assets/fonts/Parisine/Parisine Bold/Parisine Bold.otf");
+    font-weight: bold;
+}
+@font-face {
+    font-family: Parisine;
+    src: url("../assets/fonts/Parisine/Parisine Bold Italic/Parisine Bold Italic.otf");
+    font-weight: bold;
+    font-style: italic;
+}
+

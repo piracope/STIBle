@@ -1,3 +1,5 @@
+"use strict";
+
 const INTERVAL = 2000;
 
 $(() => {

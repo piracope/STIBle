@@ -1,6 +1,110 @@
+@import url(Parisine.css);
+@import url(game.css);
+
+:root {
+    --red: #f02233;
+    --blue: #0070b8;
+    --gray: #8a8b8b;
+    --black: #050203;
+    --near-black: #4f5254;
+    --green: #78b159;
+}
+
+.blue {
+    color: var(--blue);
+}
+.red {
+    color: var(--red);
+}
+html {
+    height: 100%;
+    background-color: var(--black);
+}
 body {
-    width: fit-content;
-    margin: auto auto;
+    font-family: Parisine, Arial, Helvetica, sans-serif;
+    height: 100%;
+    color: white;
     text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 500px;
+    margin: auto auto;
+    box-sizing: border-box;
+}
+
+nav ul {
+    padding: 5px;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul li {
+    list-style: none;
+    list-style-position: outside;
+    height: fit-content;
+}
+
+hr {
+    color: white;
+}
+
+.lang {
+    font-size: 30px;
+}
+.lang:hover {
+    cursor: pointer;
+}
+
+/* MODAL (thanks w3schools)*/
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    line-height: 1.5em;
+    text-align: justify;
+    background-color: var(--black);
+    border: 3px solid var(--gray);
+    margin: 5% auto; /* 5% from the top and centered */
+    padding: 20px;
+    width: 600px; /* Could be more or less, depending on screen size */
+}
+h1, h2, h3 {
+    text-align: center;
+}
+/* The Close Button */
+.close {
+    color: var(--gray);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--red);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#help {
+    width: 5em;
+    height: 30px;
+    background: none;
+    color: white;
+    font-weight: bold;
+    border: 2px solid white;
+}
+#help:hover {
+    background-color: var(--near-black);
 }
