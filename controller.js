@@ -14,24 +14,25 @@ console.log(game.getSecret());
 fs.writeFileSync("./lvlNumber.txt", String(++lvlNumber));
 
 /*RESTART GAME AT MIDNIGHT*/
-schedule.scheduleJob("0 0 * * *", () => {
+//TODO : change this back to 0 0 * * *
+schedule.scheduleJob("* * * * *", () => {
     game.start();
     console.log(game.getSecret());
     fs.writeFileSync("./lvlNumber.txt", String(++lvlNumber));
 });
+
+/* HEADERS FOR CORS */
+const headers = {
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
+    "Access-Control-Max-Age": 2592000,
+};
 
 /* OPEN SERVER */
 const http = require("http");
 const path = require("path");
 const PORT = process.env.PORT || 3000;
 const server = http.createServer((req, res) => {
-    /* HEADERS FOR CORS */
-    const headers = {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
-        "Access-Control-Max-Age": 2592000,
-    };
-
     /* sends the secret's routes, the max number of guesses and all stops names
     for client-side input verification + datalist building*/
     if (req.url === "/start" && req.method === "POST") {
@@ -78,7 +79,7 @@ const server = http.createServer((req, res) => {
                     return;
                 }
                 if (guess.lvlNumber !== lvlNumber) {
-                    res.writeHead(205, headers);
+                    res.writeHead(205, headers); /*Data expired or something i don't remember */
                     res.end();
                     return;
                 }
@@ -114,6 +115,7 @@ const server = http.createServer((req, res) => {
             }
         });
     } else if (req.url === "/tl" && req.method === "POST") {
+        /** TRANSLATES A STOP FROM OLDLANG TO NEWLANG */
         res.setHeader("Content-Type", "text/plain");
         let data = "";
         req.on("data", (chunk) => {
@@ -137,9 +139,11 @@ const server = http.createServer((req, res) => {
             }
         });
     } else if (req.url) {
+        /* STATIC FILE SERVING */
         /**
-             * @type {Object.<String, String>}
-             */
+         * MIME looking table.
+         * @type {Object.<String, String>}
+         */
         const MIME = {
             "html": "text/html",
             "js": "text/javascript",
@@ -151,29 +155,48 @@ const server = http.createServer((req, res) => {
         if (filename.charAt(filename.length - 1) === "/") {
             filename += "index.html";
         }
-        try {
-            const stream = fs.createReadStream(filename);
-            console.log(filename);
-            stream.pipe(res);
-            stream.on("open", () => {
-                const extension = filename.split(".");
-                let mimeToSend = MIME[extension[extension.length - 1]];
-                if (!mimeToSend) {
-                    mimeToSend = "text/plain";
-                }
-                res.setHeader("Content-Type", MIME[extension[extension.length - 1]]);
-                res.writeHead(200);
-            });
-            stream.on("error", () => {
-                res.writeHead(404, headers);
-                res.end();
-            });
-        } catch {
-            res.writeHead(500, headers);
-            res.end();
-        }
+        serveFile(res, filename);
     }
 });
 server.listen(PORT);
 
 console.log(`Listening on port ${PORT}`);
+
+/**
+ * Serves a file.
+ * @param {http.ServerResponse} res the response
+ * @param {String} filename the file's name
+ * @param {Number} [status] the status code to send
+ */
+function serveFile(res, filename, status) {
+    /**
+     * MIME looking table.
+     * @type {Object.<String, String>}
+     */
+    const MIME = {
+        "html": "text/html",
+        "js": "text/javascript",
+        "css": "text/css",
+        "otf": "application/x-font-opentype",
+    };
+    try {
+        const stream = fs.createReadStream(filename);
+        console.log(filename);
+        stream.pipe(res);
+        stream.on("open", () => {
+            const extension = filename.split(".");
+            let mimeToSend = MIME[extension[extension.length - 1]];
+            if (!mimeToSend) {
+                mimeToSend = "text/plain";
+            }
+            res.setHeader("Content-Type", MIME[extension[extension.length - 1]]);
+            res.writeHead(status || 200, headers);
+        });
+        stream.on("error", () => {
+            serveFile(res, path.join(__dirname, "public", "quoi.html"), 404);
+        });
+    } catch {
+        res.statusCode = 500;
+        throw Error("500");
+    }
+}
