@@ -1,4 +1,4 @@
-const schedule = require("./node_modules/node-schedule");
+const schedule = require("node-schedule");
 const fs = require("fs");
 const game = require("./model/game.js");
 const help = require("./model/help.js");
