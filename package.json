@@ -3,6 +3,10 @@
     "version": "1.0.0",
     "description": "## FR C'est un Wordle, mais avec les arrêts de la STIB.",
     "main": "index.js",
+    "engines": {
+        "node": "18.x",
+        "npm": "8.x"
+    },
     "scripts": {
         "start": "node controller.js",
         "test": "echo \"Error: no test specified\" && exit 1"
