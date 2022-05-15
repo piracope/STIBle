@@ -9,7 +9,7 @@ const http = require("http");
 const path = require("path");
 const PORT = process.env.PORT || 3000;
 const headers = {
-    "Strict-Transport-Security": "max-age=300",
+    "Strict-Transport-Security": "max-age=63072000",
 };
 
 let lvlNumber = 1;
@@ -55,7 +55,7 @@ const server = http.createServer((req, res) => {
         });
         req.on("end", () => {
             if (lang !== "fr" && lang !== "nl") {
-                res.writeHead(400);
+                res.writeHead(400, headers);
                 res.end();
                 return;
             }
@@ -68,7 +68,7 @@ const server = http.createServer((req, res) => {
                 lvlNumber: lvlNumber,
                 helpModal: help[lang],
             };
-            res.writeHead(200);
+            res.writeHead(200, headers);
             res.end(JSON.stringify(ret));
         });
     } else if (req.url === "/guess" && req.method === "POST") {
@@ -86,26 +86,26 @@ const server = http.createServer((req, res) => {
                 /* server-side input verification */
                 console.log(guess);
                 if (!game.getAllTranslatedStopNames(guess.lang).includes(guess.input)) {
-                    res.writeHead(400);
+                    res.writeHead(400, headers);
                     res.end();
                     return;
                 }
                 if (guess.lvlNumber !== lvlNumber) {
-                    res.writeHead(205); /*Data expired or something i don't remember */
+                    res.writeHead(205, headers); /*Data expired or something i don't remember */
                     res.end();
                     return;
                 }
                 const stopName = game.translatedToReal(guess.input, guess.lang);
                 if (!stopName) {
                     /* should never arrive here, but meh better be safe */
-                    res.writeHead(501);
+                    res.writeHead(501, headers);
                     res.end();
                     return;
                 }
                 const toSend = game.processGuess(stopName);
                 if (!toSend) {
                     /* should never arrive here, but meh better be safe */
-                    res.writeHead(501);
+                    res.writeHead(501, headers);
                     res.end();
                     return;
                 } else if (toSend?.direction === "✅"
@@ -116,12 +116,12 @@ const server = http.createServer((req, res) => {
                 if (nameToSend) {
                     toSend.stop_name = nameToSend;
                 }
-                res.writeHead(200);
+                res.writeHead(200, headers);
                 res.write(JSON.stringify(toSend));
                 res.end();
                 return;
             } catch {
-                res.writeHead(400);
+                res.writeHead(400, headers);
                 res.end();
             }
         });
@@ -137,14 +137,14 @@ const server = http.createServer((req, res) => {
                 const stop = JSON.parse(data);
                 const toSend = game.translate(stop.stop_name, stop.oldLang, stop.newLang);
                 if (toSend) {
-                    res.writeHead(200);
+                    res.writeHead(200, headers);
                     res.end(toSend);
                     return;
                 }
-                res.writeHead(204);
+                res.writeHead(204, headers);
                 res.end();
             } catch {
-                res.writeHead(400);
+                res.writeHead(400, headers);
                 res.end();
             }
         });
