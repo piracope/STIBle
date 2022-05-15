@@ -36,6 +36,7 @@ const server = http.createServer((req, res) => {
             "Location": `https://${req.headers.host}${req.url}`,
         });
         res.end();
+        return;
     }
     /* sends the secret's routes, the max number of guesses and all stops names
     for client-side input verification + datalist building*/
