@@ -14,9 +14,9 @@ const headers = {
 
 let lvlNumber = 1;
 try {
-    lvlNumber = Number(fs.readFileSync("./lvlNumber.txt", "utf-8"));
+    lvlNumber = Number(fs.readFileSync("./lvlnumber.txt", "utf-8"));
 } catch {
-    fs.writeFileSync("./lvlNumber.txt", String(lvlNumber));
+    fs.writeFileSync("./lvlnumber.txt", String(lvlNumber));
 }
 /*START GAME*/
 game.start();
@@ -24,20 +24,18 @@ console.log(game.getSecret());
 console.log(`Niveau : ${lvlNumber}`);
 
 /*RESTART GAME AT MIDNIGHT*/
-const rule = new schedule.RecurrenceRule();
-rule.minute = "*";
-rule.hour = "*";
-rule.tz = "Europe/Brussels";
+const scheduleRule = process.env.MINUTE_MODE ? "* * * * *" : "0 0 0 0 0";
 // TODO : change minute and hour to 0 on production
-schedule.scheduleJob("* * * * *", () => {
+schedule.scheduleJob(scheduleRule, () => {
     game.start();
     console.log(game.getSecret());
-    fs.writeFileSync("./lvlNumber.txt", String(++lvlNumber));
+    fs.writeFileSync("./lvlnumber.txt", String(++lvlNumber));
     console.log(`Niveau : ${lvlNumber}`);
 });
 
 /* OPEN SERVER */
 const server = http.createServer((req, res) => {
+    /* process.env.DYNO tests if it runs on heroku */
     if (process.env.DYNO && req.headers["x-forwarded-proto"] !== "https") {
         res.writeHead(302, {
             "Location": `https://${req.headers.host}${req.url}`,

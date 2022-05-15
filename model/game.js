@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const TYPES = require("../typedef.js");
 
 const [Stops, Lines, Routes, Geo] = [
@@ -8,7 +10,6 @@ const [Stops, Lines, Routes, Geo] = [
 ];
 
 const fs = require("fs");
-const settings = JSON.parse(fs.readFileSync("./settings.json", "utf-8"));
 /**
  * @type {TYPES.Stop | undefined}
  */
@@ -18,12 +19,11 @@ let secret = undefined;
  * @type {TYPES.Line[] | undefined}
  */
 let secretLines = undefined;
-
 const game = {
     /**
      * Maximum number of guesses the player can make.
      */
-    MAXIMUM_GUESS: Number(settings.maximumGuesses),
+    MAXIMUM_GUESS: Number(process.env.MAXIMUM_GUESSES),
     start() {
         secret = Stops.getRandomStop();
         secretLines = Lines.getLines(Stops.getEquivalents(secret));
