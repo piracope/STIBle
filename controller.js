@@ -14,7 +14,11 @@ console.log(game.getSecret());
 console.log(`Niveau : ${lvlNumber}`);
 
 /*RESTART GAME AT MIDNIGHT*/
-//TODO : change this back to 0 0 * * *
+const rule = new schedule.RecurrenceRule();
+rule.minute = "*";
+rule.hour = "*";
+rule.tz = "Europe/Brussels";
+// TODO : change minute and hour to 0 on production
 schedule.scheduleJob("* * * * *", () => {
     game.start();
     console.log(game.getSecret());
