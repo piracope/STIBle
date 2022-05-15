@@ -31,7 +31,7 @@ console.log(game.getSecret());
 console.log(`Niveau : ${lvlNumber}`);
 
 /*RESTART GAME AT MIDNIGHT*/
-const scheduleRule = process.env.MINUTE_MODE ? "* * * * *" : "0 0 0 0 0";
+const scheduleRule = process.env.MINUTE_MODE ? "*/5 * * * *" : "0 0 0 0 0";
 // TODO : change minute and hour to 0 on production
 schedule.scheduleJob(scheduleRule, () => {
     game.start();
