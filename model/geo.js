@@ -77,6 +77,7 @@ const geo = {
         case 7:
             return "↘️";
         default:
+            // this is literally impossible.
             return "";
         }
     },

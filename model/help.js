@@ -15,7 +15,7 @@ const help = {
     essai et l'arrêt mystère.
     <hr>
     <h3>Exemple</h3>
-    <table style="width: 500px; margin: auto auto">
+    <table>
         <tr>
             <td class="guess">
                 <div>Lot Station</div>

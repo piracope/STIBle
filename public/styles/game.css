@@ -65,3 +65,10 @@ button.gameover {
 button:enabled {
     cursor: pointer;
 }
+
+img.emoji {
+    height: 1em;
+    width: 1em;
+    vertical-align: -0.1em;
+    pointer-events: none;
+ }

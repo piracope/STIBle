@@ -1,3 +1,7 @@
+"use strict";
+
+/* global twemoji */
+
 /**
  * @typedef {Object} Stop
  * A Stop is a STIB/MIVB stop place and is represented by its name,
@@ -45,7 +49,7 @@
  * A Result is what will be shown to the player after making a guess.
  * @property {String} stop_name the guessed stop's name
  * @property {Number} distance the distance between the guessed stop and the secret one
- * @property {String | undefined} direction the direction the secret stop is related to the guessed stop.
+ * @property {String} direction the direction the secret stop is related to the guessed stop.
  * If undefined, it means they're equivalent.
  * @property {Number} percentage the percentage of proximity between the stops
  * @property {Stop} [secret] the secret word, exists only if the player found it
@@ -79,6 +83,13 @@ const DIALOGUE = {
     COPIED: {
         fr: "Copié dans le presse-papiers !",
         nl: "Naar uw clipboard gekopieerd !",
+    },
+    CANT_COPY: {
+        fr: `Il semble que votre navigateur n'a pas envie de copier le résultat
+        tout seul comme un grand. Je vous invite donc à copier le résultat
+        ci-dessous à la main.`,
+        nl: `Uw browser mag niet kopieeren, dus u moet de kleine "squares"
+        jezelf kopieeren.`,
     },
     OFFLINE: {
         fr: "Le serveur est hors ligne.",
@@ -118,7 +129,13 @@ async function main() {
      * stops : all stops possible
      * max : the maximum number of guesses the player can make
      * lvlNumber: the level's number
-     * @returns {Promise<{routes: Route[], stops: String[], max:Number, lvlNumber: Number, helpModal: String}>}
+     * @returns {Promise<{
+     * routes: Route[],
+     * stops: String[],
+     * max:Number,
+     * lvlNumber: Number,
+     * helpModal: String,
+     * minute_mode: String}>}
      * the initial data
      */
     async function getInitialData() {
@@ -272,10 +289,13 @@ async function main() {
         $("#game tbody tr").eq(row)
             .find(".direction")
             .text(`${result.direction}`);
-
         if (result.secret) {
             handleGameOver(result);
         }
+
+        // Another CDN moment
+        // @ts-ignore
+        twemoji.parse(document.querySelector("#game tbody"));
     }
     /**
      * Reloads the page.
@@ -342,23 +362,40 @@ async function main() {
         let ret = "";
         let cnt = 0;
         let lastDir = "";
-        $("#game tbody tr").each((i, elem) => {
-            const sq = $(elem).find(".squares");
-            if (sq.text()) {
-                ret += `${sq.text()} `;
-                lastDir = sq.next().next()
-                    .text();
-                ret += lastDir;
-                ret += "\n";
-                cnt++;
-            }
+
+        const guesses = localStorage.getItem("guesses");
+        if (!guesses) {
+            return "";
+        }
+        /**
+         * @type {Result[]}
+         */
+        const results = JSON.parse(guesses);
+        results.forEach((g) => {
+            console.log(g);
+            const sq = buildSquares(g);
+            ret += sq;
+            lastDir = g.direction;
+            ret += ` ${lastDir}\n`;
+            cnt++;
         });
 
         if (ret) {
             const nbOfTries = lastDir === "✅" ? cnt : "X";
-            ret = `Stible #${INITIAL_INFO.lvlNumber} ${nbOfTries}/${INITIAL_INFO.max}\n\n${ret}`;
-            navigator.clipboard.writeText(ret);
-            return ret;
+            ret = `#${DIALOGUE.TITLE[initialStorage.lang]}Ble${INITIAL_INFO.minute_mode ? "-test" : ""} #${INITIAL_INFO.lvlNumber} ${nbOfTries}/${INITIAL_INFO.max}\n\n${ret}`;
+
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(ret);
+                return ret;
+            }
+            $("#shareModal .modal-content > div").empty();
+            $("#shareModal .modal-content > div").append(
+                $("<p>").text(DIALOGUE.CANT_COPY[initialStorage.lang])
+            )
+                .append($("<textarea>").text(ret));
+            $("#shareModal").show();
+
+            return "";
         }
         return "";
     }
@@ -370,6 +407,9 @@ async function main() {
 
         if (INITIAL_INFO) {
             $("#helpModal .modal-content").append(INITIAL_INFO.helpModal);
+            if (INITIAL_INFO.minute_mode) {
+                $("header").append("Mode minute");
+            }
             if (!initialStorage.getItem("guesses")) {
                 $("#helpModal").show();
             }
@@ -388,6 +428,9 @@ async function main() {
             }
         }
 
+        // CDN moment
+        // @ts-ignore
+        twemoji.parse(document.body);
         $("body").show();
     }
 
@@ -426,7 +469,8 @@ async function main() {
         translateHistory(oldLang, e.currentTarget.id);
     });
     $("#help").on("click", () => $("#helpModal").show());
-    $(".close").on("click", () => $("#helpModal").hide());
+    $(".close").on("click", (e) => $(e.currentTarget).parents(".modal")
+        .hide());
 }
 
 $(main);

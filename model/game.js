@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const TYPES = require("../typedef.js");
 
 const [Stops, Lines, Routes, Geo] = [
@@ -8,7 +10,6 @@ const [Stops, Lines, Routes, Geo] = [
 ];
 
 const fs = require("fs");
-const settings = JSON.parse(fs.readFileSync("./settings.json", "utf-8"));
 /**
  * @type {TYPES.Stop | undefined}
  */
@@ -18,12 +19,11 @@ let secret = undefined;
  * @type {TYPES.Line[] | undefined}
  */
 let secretLines = undefined;
-
 const game = {
     /**
      * Maximum number of guesses the player can make.
      */
-    MAXIMUM_GUESS: Number(settings.maximumGuesses),
+    MAXIMUM_GUESS: Number(process.env.MAXIMUM_GUESSES) || 6,
     start() {
         secret = Stops.getRandomStop();
         secretLines = Lines.getLines(Stops.getEquivalents(secret));
@@ -100,10 +100,11 @@ const game = {
      * Converts a translated stop name to its internal name.
      * @param {String} stop the name of the translated stop
      * @param {"fr" | "nl"} lang the language of the translation
-     * @returns {String | undefined} the name of the stop
+     * @returns {String | null} the name of the stop
      */
     translatedToReal(stop, lang) {
-        return Stops.TRANSLATIONS.find((s) => s[lang] === stop)?.stop_name;
+        const ret = Stops.TRANSLATIONS.find((s) => s[lang] === stop)?.stop_name;
+        return ret || null;
     },
 
     /**
@@ -111,14 +112,14 @@ const game = {
      * @param {String} stop the name of the translated stop
      * @param {"fr" | "nl"} oldLang the departure language of the translation
      * @param {"fr" | "nl"} newLang the arrival language of the translation
-     * @returns {String | undefined} the name of the stop
+     * @returns {String} the name of the stop translated to the desired language, or as is.
      */
     translate(stop, oldLang, newLang) {
         const tl = Stops.TRANSLATIONS.find((s) => s[oldLang] === stop);
         if (tl) {
             return tl[newLang];
         }
-        return undefined;
+        return stop;
     },
 
     /**
@@ -134,6 +135,12 @@ const game = {
         }
         return undefined;
     },
+
+    /**
+     * Gets the maximum distance that can exist between two Stops.
+     * It's useful to computing the percentage in processGuess, but this took
+     * such a long time that  I just hardcoded the returned value in geo.js.
+     */
     getMaximumDistance() {
         const ret = [];
         for (const stop1 of Stops.ALL_STOPS) {

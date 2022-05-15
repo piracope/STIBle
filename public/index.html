@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
     <script src="scripts/main.js"></script>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/2/29/STIB-MIVB_Line_95.svg"
@@ -29,6 +30,7 @@
         <hr>
     </nav>
     <main>
+        <script>0</script> <!--Fixes Flash of Unstyled Content-->
         <form method="post" id="game">
             <table>
                 <thead>
@@ -53,10 +55,16 @@
 
         </form>
         <p id="message"></p>
+        <div id="shareModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div></div>
+            </div>
+        </div>
     </main>
     <div id="helpModal" class="modal">
         <div class="modal-content">
-            <span class="close red">&times;</span>
+            <span class="close">&times;</span>
         </div>
     </div>
 </body>

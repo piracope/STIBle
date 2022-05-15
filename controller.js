@@ -1,31 +1,55 @@
+/*ENVIRONMENT VARIABLES*/
+require("dotenv").config();
+/* GAME CONSTANTS */
 const schedule = require("node-schedule");
-const fs = require("fs");
 const game = require("./model/game.js");
 const help = require("./model/help.js");
-let lvlNumber = 0;
-try {
-    lvlNumber = Number(fs.readFileSync("./lvlNumber.txt", "utf-8"));
-} catch {
-    fs.writeFileSync("./lvlNumber.txt", String(lvlNumber));
-}
-/*START GAME*/
-game.start();
-console.log(game.getSecret());
-fs.writeFileSync("./lvlNumber.txt", String(++lvlNumber));
 
-/*RESTART GAME AT MIDNIGHT*/
-//TODO : change this back to 0 0 * * *
-schedule.scheduleJob("0 0 * * *", () => {
-    game.start();
-    console.log(game.getSecret());
-    fs.writeFileSync("./lvlNumber.txt", String(++lvlNumber));
-});
-
-/* OPEN SERVER */
+/* SERVER CONSTANTS */
+const fs = require("fs");
 const http = require("http");
 const path = require("path");
 const PORT = process.env.PORT || 3000;
+const headers = {
+    "Strict-Transport-Security": "max-age=63072000",
+};
+
+let lvlNumber = 1;
+if (!process.env.DYNO) {
+    try {
+        lvlNumber = Number(fs.readFileSync("./lvlnumber.txt", "utf-8"));
+    } catch {
+        fs.writeFileSync("./lvlnumber.txt", String(lvlNumber));
+    }
+} else {
+    lvlNumber = Math.floor(Math.random() * 1000);
+}
+
+/*START GAME*/
+game.start();
+console.log(game.getSecret());
+console.log(`Niveau : ${lvlNumber}`);
+
+/*RESTART GAME AT MIDNIGHT*/
+const scheduleRule = process.env.MINUTE_MODE ? "*/5 * * * *" : "0 0 0 0 0";
+// TODO : change minute and hour to 0 on production
+schedule.scheduleJob(scheduleRule, () => {
+    game.start();
+    console.log(game.getSecret());
+    fs.writeFileSync("./lvlnumber.txt", String(++lvlNumber));
+    console.log(`Niveau : ${lvlNumber}`);
+});
+
+/* OPEN SERVER */
 const server = http.createServer((req, res) => {
+    /* process.env.DYNO tests if it runs on heroku */
+    if (process.env.DYNO && req.headers["x-forwarded-proto"] !== "https") {
+        res.writeHead(302, {
+            "Location": `https://${req.headers.host}${req.url}`,
+        });
+        res.end();
+        return;
+    }
     /* sends the secret's routes, the max number of guesses and all stops names
     for client-side input verification + datalist building*/
     if (req.url === "/start" && req.method === "POST") {
@@ -36,7 +60,7 @@ const server = http.createServer((req, res) => {
         });
         req.on("end", () => {
             if (lang !== "fr" && lang !== "nl") {
-                res.writeHead(400);
+                res.writeHead(400, headers);
                 res.end();
                 return;
             }
@@ -48,8 +72,9 @@ const server = http.createServer((req, res) => {
                 max: game.MAXIMUM_GUESS,
                 lvlNumber: lvlNumber,
                 helpModal: help[lang],
+                minute_mode: process.env.MINUTE_MODE,
             };
-            res.writeHead(200);
+            res.writeHead(200, headers);
             res.end(JSON.stringify(ret));
         });
     } else if (req.url === "/guess" && req.method === "POST") {
@@ -65,27 +90,28 @@ const server = http.createServer((req, res) => {
             try {
                 const guess = JSON.parse(data);
                 /* server-side input verification */
+                console.log(guess);
                 if (!game.getAllTranslatedStopNames(guess.lang).includes(guess.input)) {
-                    res.writeHead(400);
+                    res.writeHead(400, headers);
                     res.end();
                     return;
                 }
                 if (guess.lvlNumber !== lvlNumber) {
-                    res.writeHead(205); /*Data expired or something i don't remember */
+                    res.writeHead(205, headers); /*Data expired or something i don't remember */
                     res.end();
                     return;
                 }
                 const stopName = game.translatedToReal(guess.input, guess.lang);
                 if (!stopName) {
                     /* should never arrive here, but meh better be safe */
-                    res.writeHead(501);
+                    res.writeHead(501, headers);
                     res.end();
                     return;
                 }
                 const toSend = game.processGuess(stopName);
                 if (!toSend) {
                     /* should never arrive here, but meh better be safe */
-                    res.writeHead(501);
+                    res.writeHead(501, headers);
                     res.end();
                     return;
                 } else if (toSend?.direction === "✅"
@@ -96,12 +122,12 @@ const server = http.createServer((req, res) => {
                 if (nameToSend) {
                     toSend.stop_name = nameToSend;
                 }
-                res.writeHead(200);
+                res.writeHead(200, headers);
                 res.write(JSON.stringify(toSend));
                 res.end();
                 return;
             } catch {
-                res.writeHead(400);
+                res.writeHead(400, headers);
                 res.end();
             }
         });
@@ -117,33 +143,23 @@ const server = http.createServer((req, res) => {
                 const stop = JSON.parse(data);
                 const toSend = game.translate(stop.stop_name, stop.oldLang, stop.newLang);
                 if (toSend) {
-                    res.writeHead(200);
+                    res.writeHead(200, headers);
                     res.end(toSend);
                     return;
                 }
-                res.writeHead(204);
+                res.writeHead(204, headers);
                 res.end();
             } catch {
-                res.writeHead(400);
+                res.writeHead(400, headers);
                 res.end();
             }
         });
     } else if (req.url) {
         /* STATIC FILE SERVING */
-        /**
-         * MIME looking table.
-         * @type {Object.<String, String>}
-         */
-        const MIME = {
-            "html": "text/html",
-            "js": "text/javascript",
-            "css": "text/css",
-            "otf": "application/x-font-opentype",
-        };
         const uri = decodeURI(new URL(req.url, `https://${req.headers.host}/`).pathname);
         let filename = path.normalize(path.join(__dirname, "public", uri));
-        if (filename.charAt(filename.length - 1) === "/") {
-            filename += "index.html";
+        if (filename.charAt(filename.length - 1) === path.sep) {
+            filename = path.join(filename, "index.html");
         }
         serveFile(res, filename);
     }
@@ -178,8 +194,8 @@ function serveFile(res, filename, status) {
             if (!mimeToSend) {
                 mimeToSend = "text/plain";
             }
-            res.setHeader("Content-Type", MIME[extension[extension.length - 1]]);
-            res.writeHead(status || 200);
+            res.setHeader("Content-Type", mimeToSend);
+            res.writeHead(status || 200, headers);
         });
         stream.on("error", () => {
             serveFile(res, path.join(__dirname, "public", "quoi.html"), 404);

@@ -45,7 +45,7 @@
  * A Result is what will be shown to the player after making a guess.
  * @property {String} stop_name the guessed stop's name
  * @property {Number} distance the distance between the guessed stop and the secret one
- * @property {String | undefined} direction the direction the secret stop is related to the guessed stop.
+ * @property {String} direction the direction the secret stop is related to the guessed stop.
  * If undefined, it means they're equivalent.
  * @property {Number} percentage the percentage of proximity between the stops
  * @property {Stop} [secret] the secret word, exists only if the player found it
