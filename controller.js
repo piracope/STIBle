@@ -31,7 +31,11 @@ const http = require("http");
 const path = require("path");
 const PORT = process.env.PORT || 3000;
 const server = http.createServer((req, res) => {
-    console.log(req.headers["x-forwarded-proto"]);
+    if (process.env.DYNO && req.headers["x-forwarded-proto"] !== "https") {
+        res.writeHead(302, {
+            "Location": `https://${req.headers.host}${req.url}`,
+        });
+    }
     /* sends the secret's routes, the max number of guesses and all stops names
     for client-side input verification + datalist building*/
     if (req.url === "/start" && req.method === "POST") {
