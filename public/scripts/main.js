@@ -376,7 +376,7 @@ async function main() {
 
         if (ret) {
             const nbOfTries = lastDir === "✅" ? cnt : "X";
-            ret = `#${DIALOGUE.TITLE[initialStorage.lang]}ble #${INITIAL_INFO.lvlNumber} ${nbOfTries}/${INITIAL_INFO.max}\n\n${ret}`;
+            ret = `#${DIALOGUE.TITLE[initialStorage.lang]}Ble #${INITIAL_INFO.lvlNumber} ${nbOfTries}/${INITIAL_INFO.max}\n\n${ret}`;
 
             if (navigator.clipboard) {
                 navigator.clipboard.writeText(ret);

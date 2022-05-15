@@ -2,7 +2,7 @@ const schedule = require("node-schedule");
 const fs = require("fs");
 const game = require("./model/game.js");
 const help = require("./model/help.js");
-let lvlNumber = 2;
+let lvlNumber = 1;
 try {
     lvlNumber = Number(fs.readFileSync("./lvlNumber.txt", "utf-8"));
 } catch {
