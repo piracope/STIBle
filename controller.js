@@ -1,7 +1,17 @@
+/* GAME CONSTANTS */
 const schedule = require("node-schedule");
-const fs = require("fs");
 const game = require("./model/game.js");
 const help = require("./model/help.js");
+
+/* SERVER CONSTANTS */
+const fs = require("fs");
+const http = require("http");
+const path = require("path");
+const PORT = process.env.PORT || 3000;
+const headers = {
+    "Strict-Transport-Security": "max-age=300",
+};
+
 let lvlNumber = 1;
 try {
     lvlNumber = Number(fs.readFileSync("./lvlNumber.txt", "utf-8"));
@@ -27,9 +37,6 @@ schedule.scheduleJob("* * * * *", () => {
 });
 
 /* OPEN SERVER */
-const http = require("http");
-const path = require("path");
-const PORT = process.env.PORT || 3000;
 const server = http.createServer((req, res) => {
     if (process.env.DYNO && req.headers["x-forwarded-proto"] !== "https") {
         res.writeHead(302, {
@@ -182,7 +189,7 @@ function serveFile(res, filename, status) {
                 mimeToSend = "text/plain";
             }
             res.setHeader("Content-Type", mimeToSend);
-            res.writeHead(status || 200);
+            res.writeHead(status || 200, headers);
         });
         stream.on("error", () => {
             serveFile(res, path.join(__dirname, "public", "quoi.html"), 404);
