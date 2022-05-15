@@ -15,7 +15,7 @@ const headers = {
 };
 
 let lvlNumber = 1;
-if (process.env.DYNO) {
+if (!process.env.DYNO) {
     try {
         lvlNumber = Number(fs.readFileSync("./lvlnumber.txt", "utf-8"));
     } catch {
