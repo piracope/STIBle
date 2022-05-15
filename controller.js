@@ -2,7 +2,7 @@ const schedule = require("node-schedule");
 const fs = require("fs");
 const game = require("./model/game.js");
 const help = require("./model/help.js");
-let lvlNumber = 1;
+let lvlNumber = 42;
 try {
     lvlNumber = Number(fs.readFileSync("./lvlNumber.txt", "utf-8"));
 } catch {
@@ -11,13 +11,15 @@ try {
 /*START GAME*/
 game.start();
 console.log(game.getSecret());
+console.log(`Niveau : ${lvlNumber}`);
 
 /*RESTART GAME AT MIDNIGHT*/
 //TODO : change this back to 0 0 * * *
-schedule.scheduleJob("0 0 * * *", () => {
+schedule.scheduleJob("* * * * *", () => {
     game.start();
     console.log(game.getSecret());
     fs.writeFileSync("./lvlNumber.txt", String(++lvlNumber));
+    console.log(`Niveau : ${lvlNumber}`);
 });
 
 /* OPEN SERVER */
@@ -64,6 +66,7 @@ const server = http.createServer((req, res) => {
             try {
                 const guess = JSON.parse(data);
                 /* server-side input verification */
+                console.log(guess);
                 if (!game.getAllTranslatedStopNames(guess.lang).includes(guess.input)) {
                     res.writeHead(400);
                     res.end();
@@ -131,7 +134,6 @@ const server = http.createServer((req, res) => {
         /* STATIC FILE SERVING */
         const uri = decodeURI(new URL(req.url, `https://${req.headers.host}/`).pathname);
         let filename = path.normalize(path.join(__dirname, "public", uri));
-        console.log(filename);
         if (filename.charAt(filename.length - 1) === path.sep) {
             filename = path.join(filename, "index.html");
         }
