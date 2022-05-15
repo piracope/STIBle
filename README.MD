@@ -35,10 +35,27 @@ port you're listening to). Btw that weird stuff is the secret stop generated whi
 is useful for ~~cheating~~ debugging.
 Then, open your browser to [http://localhost:3000](http://localhost:3000). And then, do some heavy gaming 😎.
 
+### Environment variables
+
+In the root of the project, create a .env file.
+The only keys that will be taken into account (and their default values) are :
+
+```
+PORT=3000           // the port the server will be listening on
+MAXIMUM_GUESSES=6   // the maximum number of guesses the player can make
+MINUTE_MODE=        // if this variable is set to whatever, Minute Mode will be turned on
+```
+
+If any of those aren't set, they will take the default values aforementioned.
+
+### Minute Mode (debug)
+
+Minute Mode generates a new secret Stop every 5 minutes. That's it. It's useful
+for debugging tho.
+
 ## Features
 
-+ Generates a new secret stop to guess every midnight (midnight being your system's
-midnight)
++ Generates a new secret stop to guess every midnight (Europe/Brussels' midnight)
 
 + You can switch from French to Dutch and everything gets translated accordingly
 
