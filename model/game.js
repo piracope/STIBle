@@ -23,7 +23,7 @@ const game = {
     /**
      * Maximum number of guesses the player can make.
      */
-    MAXIMUM_GUESS: Number(process.env.MAXIMUM_GUESSES),
+    MAXIMUM_GUESS: Number(process.env.MAXIMUM_GUESSES) || 6,
     start() {
         secret = Stops.getRandomStop();
         secretLines = Lines.getLines(Stops.getEquivalents(secret));
