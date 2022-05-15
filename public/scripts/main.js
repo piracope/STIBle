@@ -129,7 +129,13 @@ async function main() {
      * stops : all stops possible
      * max : the maximum number of guesses the player can make
      * lvlNumber: the level's number
-     * @returns {Promise<{routes: Route[], stops: String[], max:Number, lvlNumber: Number, helpModal: String}>}
+     * @returns {Promise<{
+     * routes: Route[],
+     * stops: String[],
+     * max:Number,
+     * lvlNumber: Number,
+     * helpModal: String,
+     * minute_mode: String}>}
      * the initial data
      */
     async function getInitialData() {
@@ -401,6 +407,9 @@ async function main() {
 
         if (INITIAL_INFO) {
             $("#helpModal .modal-content").append(INITIAL_INFO.helpModal);
+            if (INITIAL_INFO.minute_mode) {
+                $("header").append("Mode minute");
+            }
             if (!initialStorage.getItem("guesses")) {
                 $("#helpModal").show();
             }

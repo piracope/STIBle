@@ -1,3 +1,5 @@
+/*ENVIRONMENT VARIABLES*/
+require("dotenv").config();
 /* GAME CONSTANTS */
 const schedule = require("node-schedule");
 const game = require("./model/game.js");
@@ -65,6 +67,7 @@ const server = http.createServer((req, res) => {
                 max: game.MAXIMUM_GUESS,
                 lvlNumber: lvlNumber,
                 helpModal: help[lang],
+                minute_mode: process.env.MINUTE_MODE,
             };
             res.writeHead(200, headers);
             res.end(JSON.stringify(ret));
