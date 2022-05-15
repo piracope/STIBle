@@ -352,7 +352,7 @@ async function main() {
         let ret = "";
         let cnt = 0;
         let lastDir = "";
-        $("#game tbody tr").each((i, elem) => {
+        /* $("#game tbody tr").each((i, elem) => {
             const sq = $(elem).find(".squares");
             if (sq.text()) {
                 ret += `${sq.text()} `;
@@ -362,15 +362,33 @@ async function main() {
                 ret += "\n";
                 cnt++;
             }
+        }); */
+
+        const guesses = localStorage.getItem("guesses");
+        if (!guesses) {
+            return "";
+        }
+        /**
+         * @type {Result[]}
+         */
+        const results = JSON.parse(guesses);
+        results.forEach((g) => {
+            console.log(g);
+            const sq = buildSquares(g);
+            ret += sq;
+            lastDir = g.direction;
+            ret += ` ${lastDir}\n`;
+            cnt++;
         });
 
         if (ret) {
             const nbOfTries = lastDir === "✅" ? cnt : "X";
             ret = `${DIALOGUE.TITLE[initialStorage.lang]}le #${INITIAL_INFO.lvlNumber} ${nbOfTries}/${INITIAL_INFO.max}
-            
-            ${ret}
-            
-            #${DIALOGUE.TITLE[initialStorage.lang]}le`;
+
+${ret}
+
+#${DIALOGUE.TITLE[initialStorage.lang]}le`;
+
             if (navigator.clipboard) {
                 navigator.clipboard.writeText(ret);
                 return ret;
