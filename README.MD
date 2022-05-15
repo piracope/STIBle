@@ -50,7 +50,8 @@ and find out
 ## Contributing
 
 **TL;DR** I made this while not knowing anything about networking so please
-notify me of any security flaw.
+notify me of any security flaw. For actual features, let me know what you want
+but let me do it myself
 
 I discovered how to make HTTP requests, how to make an API, how to make a
 (somewhat) MVC webapp in like, two sleepless nights. I have not yet seen this at 
@@ -63,7 +64,10 @@ I don't have to deal with storing user info or anything like that, so there's
 nothing much to compromise... I think. Anyways, if you notice a security risk,
 please, please tell me/PR me something about it.
 
-Oh yeah and added functionality would be funny ig.
+As for new features, I accept suggestions, but this project is a huge learning
+opportunity for me, so I'd prefer of you just say "oh I want this" instead of
+giving me a PR with eerything already done.
+
 
 ## Trivia
 
@@ -91,15 +95,23 @@ I know who you are, where you are, and I am approaching rapidly. Start running.
 
 ## Authors and acknowledgments
 
-Well obviously REXA and Hatsena for the initial idea. I've picked a lot of
-concepts from @teuteuf's WORLDLE, which was also very inspired from Josh Wardle's Wordle.
++ Development : piracope
 
-This is hosted on REXA's Elitios network (well, not currently, but soon).
++ Hosting : [@REXAG0NE](https://www.twitter.com/rexag0ne)
 
-The inner functionment was inspired by cémantix's source code, which gave me the
-idea of doing a front-end and a back-end for the first time.
++ Original idea : [@Hatsenaa](https://www.twitter.com/hatsenaa)
 
-The data (stops, lines, ...) required to make the datasets that the game
++ Original idea's main inspiration : [WORLDLE](https://worldle.teuteuf.fr) by
+[@teuteuf](https://www.twitter.com/teuteuf)
+
++ Original idea's main inspiration's main inspiration :
+[Wordle](https://www.nytimes.com/games/wordle/index.html) by Josh Wardle0
+
++ The "front-end sends a request to the API and never knows what the word is"
+design came to me while combing through 
+[cémantix](https://cemantix.herokuapp.com/)'s source code.
+
++ The data (stops, lines, ...) required to make the datasets that the game
 runs on came from the [STIB's API](https://opendata.stib-mivb.be/store/data).
 
 ## License

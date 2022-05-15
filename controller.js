@@ -21,7 +21,6 @@ schedule.scheduleJob("0 0 * * *", () => {
     fs.writeFileSync("./lvlNumber.txt", String(++lvlNumber));
 });
 
-
 /* OPEN SERVER */
 const http = require("http");
 const path = require("path");
