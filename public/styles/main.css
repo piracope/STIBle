@@ -18,14 +18,16 @@
 }
 html {
     height: 100%;
+    width: min(100vw, 500px);
+    margin: auto auto;
     background-color: var(--black);
 }
 body {
+    padding-inline: 10px;
     font-family: Parisine, Arial, Helvetica, sans-serif;
     height: 100%;
     color: white;
     text-align: center;
-    width: 500px;
     margin: auto auto;
     box-sizing: border-box;
 }
@@ -71,13 +73,14 @@ hr {
 
 /* Modal Content/Box */
 .modal-content {
+    box-sizing: border-box;
     line-height: 1.5em;
     text-align: justify;
     background-color: var(--black);
     border: 3px solid var(--gray);
     margin: 5% auto; /* 5% from the top and centered */
     padding: 20px;
-    width: 600px; /* Could be more or less, depending on screen size */
+    width: min(100vw, 500px);
 }
 h1, h2, h3 {
     text-align: center;
