@@ -356,17 +356,6 @@ async function main() {
         let ret = "";
         let cnt = 0;
         let lastDir = "";
-        /* $("#game tbody tr").each((i, elem) => {
-            const sq = $(elem).find(".squares");
-            if (sq.text()) {
-                ret += `${sq.text()} `;
-                lastDir = sq.next().next()
-                    .text();
-                ret += lastDir;
-                ret += "\n";
-                cnt++;
-            }
-        }); */
 
         const guesses = localStorage.getItem("guesses");
         if (!guesses) {
@@ -387,11 +376,7 @@ async function main() {
 
         if (ret) {
             const nbOfTries = lastDir === "✅" ? cnt : "X";
-            ret = `${DIALOGUE.TITLE[initialStorage.lang]}le #${INITIAL_INFO.lvlNumber} ${nbOfTries}/${INITIAL_INFO.max}
-
-${ret}
-
-#${DIALOGUE.TITLE[initialStorage.lang]}le`;
+            ret = `#${DIALOGUE.TITLE[initialStorage.lang]}ble #${INITIAL_INFO.lvlNumber} ${nbOfTries}/${INITIAL_INFO.max}\n\n${ret}`;
 
             if (navigator.clipboard) {
                 navigator.clipboard.writeText(ret);
