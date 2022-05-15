@@ -15,11 +15,16 @@ const headers = {
 };
 
 let lvlNumber = 1;
-try {
-    lvlNumber = Number(fs.readFileSync("./lvlnumber.txt", "utf-8"));
-} catch {
-    fs.writeFileSync("./lvlnumber.txt", String(lvlNumber));
+if (process.env.DYNO) {
+    try {
+        lvlNumber = Number(fs.readFileSync("./lvlnumber.txt", "utf-8"));
+    } catch {
+        fs.writeFileSync("./lvlnumber.txt", String(lvlNumber));
+    }
+} else {
+    lvlNumber = Math.floor(Math.random() * 1000);
 }
+
 /*START GAME*/
 game.start();
 console.log(game.getSecret());
