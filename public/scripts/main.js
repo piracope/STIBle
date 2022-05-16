@@ -325,9 +325,11 @@ async function main() {
         }
         $("button.gameover").off("click");
         $("button.gameover").on("click", () => {
-            if (shareResults()) {
-                $("button.gameover").text(DIALOGUE.COPIED[initialStorage.lang]);
-            }
+            shareResults().then((ret) => {
+                if (ret) {
+                    $("button.gameover").text(DIALOGUE.COPIED[initialStorage.lang]);
+                }
+            });
         });
     }
 
@@ -358,7 +360,7 @@ async function main() {
      * Puts the correct game description in the clipboard.
      * @returns the string put in the clipboard
      */
-    function shareResults() {
+    async function shareResults() {
         let ret = "";
         let bestPercentage = 0;
         const guesses = localStorage.getItem("guesses");
@@ -380,8 +382,14 @@ async function main() {
             ret = `#${DIALOGUE.TITLE[initialStorage.lang]}Ble${INITIAL_INFO.minute_mode ? "-test" : ""} #${INITIAL_INFO.lvlNumber} ${nbOfTries}/${INITIAL_INFO.max} (${(bestPercentage * 100).toFixed(0) || "xx"}%)\n\n${ret}\n${INITIAL_INFO.minute_mode ? "https://stible-test.herokuapp.com/" : "https://stible.elitios.net/"}`;
 
             if (navigator.clipboard) {
-                navigator.clipboard.writeText(ret);
-                return ret;
+                const clipContent = await navigator.clipboard.writeText(ret)
+                    .then(() => navigator.clipboard.readText())
+                    .catch(() => undefined);
+                const willReturn = await clipContent;
+                console.log(willReturn);
+                if (willReturn) {
+                    return ret;
+                }
             }
             $("#shareModal .modal-content > div").empty();
             $("#shareModal .modal-content > div").append(
