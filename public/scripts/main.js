@@ -379,13 +379,7 @@ async function main() {
             const nbOfTries = ret.charAt(ret.length - 2) === "✅" ? ret.length : "X";
             ret = `#${DIALOGUE.TITLE[initialStorage.lang]}Ble${INITIAL_INFO.minute_mode ? "-test" : ""} #${INITIAL_INFO.lvlNumber} ${nbOfTries}/${INITIAL_INFO.max} (${(bestPercentage * 100).toFixed(0) || "xx"}%)\n\n${ret}\n${INITIAL_INFO.minute_mode ? "https://stible-test.herokuapp.com/" : "https://stible.elitios.net/"}`;
 
-            let clipboard = undefined;
-            try {
-                clipboard = navigator.clipboard.writeText;
-            } catch {
-                clipboard = undefined;
-            }
-            if (clipboard) {
+            if (navigator.clipboard) {
                 navigator.clipboard.writeText(ret);
                 return ret;
             }
