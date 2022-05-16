@@ -372,7 +372,6 @@ async function main() {
          */
         const results = JSON.parse(guesses);
         results.forEach((g) => {
-            console.log(g);
             const sq = buildSquares(g);
             ret += sq;
             lastDir = g.direction;
@@ -441,9 +440,7 @@ async function main() {
      */
     async function translateHistory(oldLang, newLang) {
         const guesses = JSON.parse(String(localStorage.getItem("guesses")));
-        console.log(oldLang);
         if (oldLang === newLang || !["fr", "nl"].includes(newLang)) {
-            console.log("xdd");
             return;
         }
         for (const g of guesses) {
