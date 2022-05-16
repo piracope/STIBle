@@ -465,8 +465,6 @@ async function main() {
     $("#help").on("click", () => $("#helpModal").show());
     $(".close").on("click", (e) => $(e.currentTarget).parents(".modal")
         .hide());
-
-    alert("showPicker" in HTMLInputElement.prototype);
 }
 
 $(main);
