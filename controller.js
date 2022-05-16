@@ -37,7 +37,6 @@ const scheduleRule = new schedule.RecurrenceRule();
 scheduleRule.tz = "Europe/Brussels";
 scheduleRule.minute = process.env.MINUTE_MODE ? "*/5" : 0;
 scheduleRule.hour = process.env.MINUTE_MODE ? "*" : 0;
-console.log(scheduleRule);
 schedule.scheduleJob(scheduleRule, () => {
     game.start();
     fs.writeFileSync("./currentSecret.json", JSON.stringify(game.getSecret()));
