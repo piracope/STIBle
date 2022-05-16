@@ -377,7 +377,7 @@ async function main() {
             bestPercentage = Math.max(bestPercentage, g.percentage);
         });
         if (ret) {
-            const nbOfTries = ret.charAt(ret.length - 2) === "✅" ? ret.length : "X";
+            const nbOfTries = ret.charAt(ret.length - 2) === "✅" ? results.length : "X";
             ret = `#${DIALOGUE.TITLE[initialStorage.lang]}Ble${INITIAL_INFO.minute_mode ? "-test" : ""} #${INITIAL_INFO.lvlNumber} ${nbOfTries}/${INITIAL_INFO.max} (${(bestPercentage * 100).toFixed(0) || "xx"}%)\n\n${ret}\n${INITIAL_INFO.minute_mode ? "https://stible-test.herokuapp.com/" : "https://stible.elitios.net/"}`;
 
             /* TODO : find a replacement to this UA sniffing */
