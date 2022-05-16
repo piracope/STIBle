@@ -336,7 +336,8 @@ async function main() {
      */
     function buildDatalist() {
         INITIAL_INFO.stops.forEach((s) => {
-            $("#stops").append($("<option>").attr("value", s));
+            $("#stops").append($("<option>").attr("value", s)
+                .text(s));
         });
     }
 
@@ -464,6 +465,8 @@ async function main() {
     $("#help").on("click", () => $("#helpModal").show());
     $(".close").on("click", (e) => $(e.currentTarget).parents(".modal")
         .hide());
+
+    alert("showPicker" in HTMLInputElement.prototype);
 }
 
 $(main);
