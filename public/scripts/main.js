@@ -380,7 +380,8 @@ async function main() {
             const nbOfTries = ret.charAt(ret.length - 2) === "✅" ? ret.length : "X";
             ret = `#${DIALOGUE.TITLE[initialStorage.lang]}Ble${INITIAL_INFO.minute_mode ? "-test" : ""} #${INITIAL_INFO.lvlNumber} ${nbOfTries}/${INITIAL_INFO.max} (${(bestPercentage * 100).toFixed(0) || "xx"}%)\n\n${ret}\n${INITIAL_INFO.minute_mode ? "https://stible-test.herokuapp.com/" : "https://stible.elitios.net/"}`;
 
-            if (navigator.clipboard) {
+            /* TODO : find a replacement to this UA sniffing */
+            if (navigator.clipboard && !/OPX/i.test(navigator.userAgent)) {
                 navigator.clipboard.writeText(ret);
                 return ret;
             }
