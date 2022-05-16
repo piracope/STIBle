@@ -28,7 +28,7 @@ td {
     line-height: 1.5rem;
 }
 td div {
-    padding-inline: .2em;
+    padding-inline: 0.2em;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -36,7 +36,7 @@ td div {
 tbody tr {
     display: grid;
     grid-auto-flow: column;
-    grid-template-columns: 50% 6rem auto 2rem;
+    grid-template-columns: 40% 6rem auto 2rem;
     gap: 2px;
     margin-bottom: 2px;
 }
@@ -71,4 +71,4 @@ img.emoji {
     width: 1em;
     vertical-align: -0.1em;
     pointer-events: none;
- }
+}

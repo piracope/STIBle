@@ -227,7 +227,7 @@ async function main() {
      * Handles a player guess.
      */
     async function guess() {
-        const input = String($("#guess").val());
+        const input = String($("#guess").val()).trim();
         if (INITIAL_INFO.stops.includes(input)) {
             fetch("/guess", {
                 method: "POST",
@@ -336,7 +336,8 @@ async function main() {
      */
     function buildDatalist() {
         INITIAL_INFO.stops.forEach((s) => {
-            $("#stops").append($("<option>").attr("value", s));
+            $("#stops").append($("<option>").attr("value", s)
+                .text(s));
         });
     }
 
@@ -379,7 +380,8 @@ async function main() {
             const nbOfTries = ret.charAt(ret.length - 2) === "✅" ? ret.length : "X";
             ret = `#${DIALOGUE.TITLE[initialStorage.lang]}Ble${INITIAL_INFO.minute_mode ? "-test" : ""} #${INITIAL_INFO.lvlNumber} ${nbOfTries}/${INITIAL_INFO.max} (${(bestPercentage * 100).toFixed(0) || "xx"}%)\n\n${ret}\n${INITIAL_INFO.minute_mode ? "https://stible-test.herokuapp.com/" : "https://stible.elitios.net/"}`;
 
-            if (navigator.clipboard) {
+            /* TODO : find a replacement to this UA sniffing */
+            if (navigator.clipboard && !/OPX/i.test(navigator.userAgent)) {
                 navigator.clipboard.writeText(ret);
                 return ret;
             }
@@ -387,7 +389,7 @@ async function main() {
             $("#shareModal .modal-content > div").append(
                 $("<p>").text(DIALOGUE.CANT_COPY[initialStorage.lang])
             )
-                .append($("<textarea>").text(ret));
+                .append($("<textarea rows='10'>").text(ret));
             $("#shareModal").show();
 
             return "";
