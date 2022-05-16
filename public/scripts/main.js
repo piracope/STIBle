@@ -360,9 +360,7 @@ async function main() {
      */
     function shareResults() {
         let ret = "";
-        let cnt = 0;
-        let lastDir = "";
-
+        let bestPercentage = 0;
         const guesses = localStorage.getItem("guesses");
         if (!guesses) {
             return "";
@@ -374,14 +372,12 @@ async function main() {
         results.forEach((g) => {
             const sq = buildSquares(g);
             ret += sq;
-            lastDir = g.direction;
-            ret += ` ${lastDir}\n`;
-            cnt++;
+            ret += ` ${g.direction}\n`;
+            bestPercentage = Math.max(bestPercentage, g.percentage);
         });
-
         if (ret) {
-            const nbOfTries = lastDir === "✅" ? cnt : "X";
-            ret = `#${DIALOGUE.TITLE[initialStorage.lang]}Ble${INITIAL_INFO.minute_mode ? "-test" : ""} #${INITIAL_INFO.lvlNumber} ${nbOfTries}/${INITIAL_INFO.max}\n\n${ret}\n${INITIAL_INFO.minute_mode ? "https://stible-test.herokuapp.com/" : "https://stible.elitios.net/"}`;
+            const nbOfTries = ret.charAt(ret.length - 2) === "✅" ? ret.length : "X";
+            ret = `#${DIALOGUE.TITLE[initialStorage.lang]}Ble${INITIAL_INFO.minute_mode ? "-test" : ""} #${INITIAL_INFO.lvlNumber} ${nbOfTries}/${INITIAL_INFO.max} (${(bestPercentage * 100).toFixed(0) || "xx"}%)\n\n${ret}\n${INITIAL_INFO.minute_mode ? "https://stible-test.herokuapp.com/" : "https://stible.elitios.net/"}`;
 
             if (navigator.clipboard) {
                 navigator.clipboard.writeText(ret);
