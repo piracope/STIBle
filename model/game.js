@@ -83,7 +83,7 @@ const game = {
      * Returns the secret stop.
      */
     getSecret() {
-        return secret;
+        return {secret, secretLines};
     },
     getAllStopNames() {
         return Stops.getAllStopNames();
@@ -151,6 +151,15 @@ const game = {
         }
         ret.sort((a, b) => a - b);
         console.log(ret[ret.length - 1]);
+    },
+
+    /**
+     * Forces a specific stop as secret
+     * @param {{secret: Stop, secretLines: Line[]}} secr the secret to set
+     */
+    forceSecret(secr) {
+        secret = secr.secret;
+        secretLines = secr.secretLines;
     },
 
 };

@@ -24,17 +24,20 @@ if (!process.env.DYNO) {
 } else {
     lvlNumber = Math.floor(Math.random() * 1000);
 }
-
+if (fs.existsSync("./currentSecret.json")) {
+    const secret = fs.readFileSync("./currentSecret.json").toString();
+    game.forceSecret(JSON.parse(secret));
+} else {
+    game.start();
+    fs.writeFileSync("./currentSecret.json", JSON.stringify(game.getSecret()));
+}
 /*START GAME*/
-game.start();
-console.log(game.getSecret());
-
 /*RESTART GAME AT MIDNIGHT*/
 const scheduleRule = process.env.MINUTE_MODE ? "*/5 * * * *" : "0 0 0 0 0";
 // TODO : change minute and hour to 0 on production
 schedule.scheduleJob(scheduleRule, () => {
     game.start();
-    console.log(game.getSecret());
+    fs.writeFileSync("./currentSecret.json", JSON.stringify(game.getSecret()));
     fs.writeFileSync("./lvlnumber.txt", String(++lvlNumber));
 });
 
@@ -113,7 +116,7 @@ const server = http.createServer((req, res) => {
                     return;
                 } else if (toSend?.direction === "✅"
                         || guess.currNb + 1 >= game.MAXIMUM_GUESS) {
-                    toSend.secret = game.getSecret();
+                    toSend.secret = game.getSecret().secret;
                 }
                 const nameToSend = game.realToTranslated(toSend.stop_name, guess.lang);
                 if (nameToSend) {
