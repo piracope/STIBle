@@ -33,8 +33,7 @@ if (fs.existsSync("./currentSecret.json")) {
 }
 /*START GAME*/
 /*RESTART GAME AT MIDNIGHT*/
-const scheduleRule = process.env.MINUTE_MODE ? "*/5 * * * *" : "0 0 0 0 0";
-// TODO : change minute and hour to 0 on production
+const scheduleRule = process.env.MINUTE_MODE ? "*/5 * * * *" : "0 0 * * *";
 schedule.scheduleJob(scheduleRule, () => {
     game.start();
     fs.writeFileSync("./currentSecret.json", JSON.stringify(game.getSecret()));
