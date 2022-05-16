@@ -28,7 +28,6 @@ if (!process.env.DYNO) {
 /*START GAME*/
 game.start();
 console.log(game.getSecret());
-console.log(`Niveau : ${lvlNumber}`);
 
 /*RESTART GAME AT MIDNIGHT*/
 const scheduleRule = process.env.MINUTE_MODE ? "*/5 * * * *" : "0 0 0 0 0";
@@ -37,7 +36,6 @@ schedule.scheduleJob(scheduleRule, () => {
     game.start();
     console.log(game.getSecret());
     fs.writeFileSync("./lvlnumber.txt", String(++lvlNumber));
-    console.log(`Niveau : ${lvlNumber}`);
 });
 
 /* OPEN SERVER */
@@ -90,7 +88,6 @@ const server = http.createServer((req, res) => {
             try {
                 const guess = JSON.parse(data);
                 /* server-side input verification */
-                console.log(guess);
                 if (!game.getAllTranslatedStopNames(guess.lang).includes(guess.input)) {
                     res.writeHead(400, headers);
                     res.end();
@@ -164,9 +161,6 @@ const server = http.createServer((req, res) => {
         serveFile(res, filename);
     }
 });
-server.listen(PORT);
-
-console.log(`Listening on port ${PORT}`);
 
 /**
  * Serves a file.
@@ -205,3 +199,7 @@ function serveFile(res, filename, status) {
         throw Error("500");
     }
 }
+
+server.listen(PORT);
+
+console.log(`Listening on port ${PORT}`);
