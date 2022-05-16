@@ -227,7 +227,7 @@ async function main() {
      * Handles a player guess.
      */
     async function guess() {
-        const input = String($("#guess").val());
+        const input = String($("#guess").val()).trim();
         if (INITIAL_INFO.stops.includes(input)) {
             fetch("/guess", {
                 method: "POST",
