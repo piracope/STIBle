@@ -395,7 +395,7 @@ async function main() {
             $("#shareModal .modal-content > div").append(
                 $("<p>").text(DIALOGUE.CANT_COPY[initialStorage.lang])
             )
-                .append($("<textarea>").text(ret));
+                .append($("<textarea rows='10'>").text(ret));
             $("#shareModal").show();
 
             return "";
