@@ -34,7 +34,7 @@ const help = {
             </td>
         </tr>
     </table>
-    <p>Votre essai (Lot Station) est à 15.9km de l'arrêt mystère.
+    <p>Votre essai (Lot Station) est à 15,9 km de l'arrêt mystère.
     Celui-ci se trouve au Nord-Est de votre essai.</p>
     <p>Les carrés représentent la proximité entre votre essai et
     l'arrêt mystère. Un carré vert vaut 20%, un carré vaut 10%.</p>
@@ -55,7 +55,59 @@ const help = {
 </div>
 `,
     nl:
-"<h1>I'm not translating that</h1>",
+`<div>
+    <p>Pas op ! Als u op Opera GX of Firefox for Android bent, zal deze website
+    niet good werken.</p>
+    <hr>
+    <h2>Hoe te spelen</h2>
+    <hr>
+    <p>Raad de
+    <strong><span class="blue">MIV</span><span class="red">B</span></strong>le
+    in ${game.MAXIMUM_GUESS} proeven.</p>
+    <p>Wij geven u de lijnen die de halte passeren waar u naar op zoek bent.</b>
+    <p>Elke test moet een willekeurige halte op het MIVB-net zijn.
+    <p>Na elke test krijgt u de afstand en richting tussen uw test en de mystery
+    stop</p>
+    <hr>
+    <h3>Voorbeeld</h3>
+    <table>
+        <tr>
+            <td class="guess">
+                <div>Lot Station</div>
+            </td>
+            <td class="squares">
+                🟩🟩⬛⬛⬛
+            </td>
+            <td class="distance">
+                15.9km
+            </td>
+            <td class="direction">
+                ↗️
+            </td>
+        </tr>
+    </table>
+    <p>Uw test (Lot Station) ligt op 15.9 km van demystery stop. Het ligt ten
+    noordoosten van de proef.</p>
+    <p>
+    Zoals je kunt zien, is het erg approximatief. Ik heb het WORLDLE systeem
+    overgenomen om kleine vierkantjes te hebben om te delen aan het eind, maar
+    verder is dat alles.</p>
+    <hr>
+    <h3>Elke dag zal er een nieuwe
+    <span class="blue">MIV</span><span class="red">B</span></strong>le
+    beschikbaar zijn!</h3>
+    <div style="margin: auto auto; width: fit-content">
+        <small>Om middernacht Brusselse tijd</small>
+    </div>
+    <hr>
+    <p><strong><span class="blue">MIV</span><span class="red">B</span></strong>le
+    was zeer, zeer geïnspireerd door WORLDLE van @teufteuf, die zelf geïnspireerd
+    was door Wordle, door Josh Wardle.</p>
+    <hr>
+    <p>Gemaakt door piracope naar een idee van REXAGONE en Hatsena.</p>
+    <p>Hulp-pagina vertaalt door REXAGONE</p>
+    <a href="https://github.com/piracope/STIBle">Broncode</a>
+</div>`,
 };
 
 module.exports = help;
