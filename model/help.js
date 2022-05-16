@@ -4,6 +4,9 @@ const help = {
     fr:
 `
 <div>
+    <p>Attention ! Si vous êtes sur Opera GX Mobile ou Firefox for Android, le
+    site ne fonctionnera pas des masses.</p>
+    <hr>
     <h2>Comment jouer</h2>
     <hr>
     <p>Devinez le
