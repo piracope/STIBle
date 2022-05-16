@@ -1,7 +1,8 @@
 # STIBle / MIVBle
 
-STIBle / MIVBle is a WorLdle clone, except that you don't guess a country, but
-a stop in the STIB's (Brussels' public transport company) network.
+[STIBle / MIVBle](https://stible.elitios.net) is a WorLdle clone, except that
+you don't guess a country, but a stop in the STIB's
+(Brussels' public transport company) network.
 
 ## Requirements
 
@@ -114,7 +115,7 @@ I know who you are, where you are, and I am approaching rapidly. Start running.
 
 + Development : piracope
 
-+ Hosting : [@REXAG0NE](https://www.twitter.com/rexag0ne)
++ Hosting : [@REXAG0NE](https://www.twitter.com/rexag0ne) and Elitios
 
 + Original idea : [@Hatsenaa](https://www.twitter.com/hatsenaa)
 
@@ -133,4 +134,6 @@ runs on came from the [STIB's API](https://opendata.stib-mivb.be/store/data).
 
 ## License
 
-Haven't decided on that yet :/
+MIT License
+
+Copyright (c) 2022 piracope

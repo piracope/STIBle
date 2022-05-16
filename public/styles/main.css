@@ -111,3 +111,8 @@ h1, h2, h3 {
 #help:hover {
     background-color: var(--near-black);
 }
+
+a {
+    color: white;
+    text-decoration: underline;
+}

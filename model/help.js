@@ -41,16 +41,18 @@ const help = {
     <hr>
     <h3><strong>Un nouveau <span class="blue">STI</span><span class="red">B</span>le
     sera disponible chaque jour !</strong></h3>
+    <div style="margin: auto auto; width: fit-content"><small>À minuit, heure de Bruxelles</small></div>
     <hr>
     <p><strong><span class="blue">STI</span><span class="red">B</span></strong>le a été
     <strong>très très</strong> inspiré de WORLDLE par @teufteuf, qui
     lui-même a été inspiré de Wordle, par Josh Wardle.</p>
     <hr>
     <p>Fait par piracope sur une idée de REXAGONE et Hatsena.</p>
+    <a href="https://github.com/piracope/STIBle">Code source</a>
 </div>
 `,
     nl:
-"<h1>lmao cope</h1>",
+"<h1>I'm not translating that</h1>",
 };
 
 module.exports = help;
