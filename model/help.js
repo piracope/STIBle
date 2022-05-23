@@ -47,10 +47,16 @@ const help = {
     <div style="margin: auto auto; width: fit-content"><small>À minuit, heure de Bruxelles</small></div>
     <hr>
     <p><strong><span class="blue">STI</span><span class="red">B</span></strong>le a été
-    <strong>très très</strong> inspiré de WORLDLE par @teuteuf, qui
-    lui-même a été inspiré de Wordle, par Josh Wardle.</p>
+    <strong>très très</strong> inspiré de
+    <a href="https://worldle.teuteuf.fr/">WORLDLE</a>
+    par <a href="https://twitter.com/teuteuf">@teuteuf</a>, qui
+    lui-même a été inspiré de
+    <a href="https://www.nytimes.com/games/wordle/index.html">Wordle</a>, par
+    <a href="https://twitter.com/powerlanguish">Josh Wardle</a>.</p>
     <hr>
-    <p>Fait par piracope sur une idée de REXAGONE et Hatsena.</p>
+    <p>Fait par <a href="https://twitter.com/piracope">@piracope</a> sur une idée de
+    <a href="https://twitter.com/rexag0ne">@REXAG0NE</a>
+    et <a href="https://twitter.com/Hatsenaa">@Hatsenaa</a>.</p>
     <a href="https://github.com/piracope/STIBle">Code source</a>
 </div>
 `,
@@ -101,11 +107,17 @@ const help = {
     </div>
     <hr>
     <p><strong><span class="blue">MIV</span><span class="red">B</span></strong>le
-    was zeer, zeer geïnspireerd door WORLDLE van @teufteuf, die zelf geïnspireerd
-    was door Wordle, door Josh Wardle.</p>
+    was zeer, zeer geïnspireerd door
+    <a href="https://worldle.teuteuf.fr/">WORLDLE</a> van
+    <a href="https://twitter.com/teuteuf">@teuteuf</a>, die zelf geïnspireerd
+    was door <a href="https://www.nytimes.com/games/wordle/index.html">Wordle</a>,
+    door <a href="https://twitter.com/powerlanguish">Josh Wardle</a>.</p>
     <hr>
-    <p>Gemaakt door piracope naar een idee van REXAGONE en Hatsena.</p>
-    <p>Hulp-pagina vertaalt door REXAGONE</p>
+    <p>Gemaakt door <a href="https://twitter.com/piracope">@piracope</a>
+    naar een idee van <a href="https://twitter.com/rexag0ne">@REXAG0NE</a> en
+    <a href="https://twitter.com/Hatsenaa">@Hatsenaa</a>.</p>
+    <p>Hulp-pagina vertaalt door REXAGONE en verbeterd door
+    <a href="https://github.com/jeremycoppey">Jeremy Coppey</a>.</p>
     <a href="https://github.com/piracope/STIBle">Broncode</a>
 </div>`,
 };
