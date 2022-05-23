@@ -57,16 +57,16 @@ const help = {
     nl:
 `<div>
     <p>Pas op ! Als u op Opera GX of Firefox for Android bent, zal deze website
-    niet good werken.</p>
+    niet goed werken.</p>
     <hr>
     <h2>Hoe te spelen</h2>
     <hr>
     <p>Raad de
     <strong><span class="blue">MIV</span><span class="red">B</span></strong>le
-    in ${game.MAXIMUM_GUESS} proeven.</p>
+    in ${game.MAXIMUM_GUESS} gokken.</p>
     <p>Wij geven u de lijnen die de halte passeren waar u naar op zoek bent.</b>
-    <p>Elke test moet een willekeurige halte op het MIVB-net zijn.
-    <p>Na elke test krijgt u de afstand en richting tussen uw test en de mystery
+    <p>Elke gok moet een willekeurige halte op het MIVB-net zijn.
+    <p>Na elke gok krijgt u de afstand en richting tussen uw gok en de mystery
     stop</p>
     <hr>
     <h3>Voorbeeld</h3>
@@ -86,7 +86,7 @@ const help = {
             </td>
         </tr>
     </table>
-    <p>Uw test (Lot Station) ligt op 15.9 km van demystery stop. Het ligt ten
+    <p>Uw gok (Lot Station) ligt op 15.9 km van demystery stop. Het ligt ten
     noordoosten van de proef.</p>
     <p>
     Zoals je kunt zien, is het erg approximatief. Ik heb het WORLDLE systeem
