@@ -90,7 +90,8 @@ h1, h2, h3 {
 .close {
     color: var(--gray);
     float: right;
-    font-size: 28px;
+    margin-left: 1rem;
+    font-size: 40px;
     font-weight: bold;
 }
 
@@ -101,16 +102,23 @@ h1, h2, h3 {
     cursor: pointer;
 }
 
-#help {
-    width: 5em;
-    height: 30px;
+.bigbutton {
+    padding: 0.25rem 1.2rem;
     background: none;
     color: white;
     font-weight: bold;
     border: 2px solid white;
 }
-#help:hover {
+.bigbutton.close {
+    float: none;
+    width: 100%;
+    margin: 0;
+    font-size: larger;
+    border-color: var(--blue);
+}
+.bigbutton:hover {
     background-color: var(--near-black);
+    color: initial;
 }
 
 a {

@@ -15,8 +15,9 @@ const help = {
     <p>Nous vous donnons les lignes qui passent sur l'arrêt que vous cherchez</p>
     <p>Chaque essai doit être un arrêt quelconque sur le réseau de la STIB.</p>
     <p>Après chaque essai, vous aurez la distance et la direction entre votre
-    essai et l'arrêt mystère.
-    <hr>
+    essai et l'arrêt mystère.</p>
+    <button class="close bigbutton">Commencer à jouer !</button>
+    <br>
     <h3>Exemple</h3>
     <table>
         <tr>
@@ -74,7 +75,8 @@ const help = {
     <p>Elke gok moet een willekeurige halte op het MIVB-net zijn.
     <p>Na elke gok krijgt u de afstand en richting tussen uw gok en de mystery
     stop</p>
-    <hr>
+    <button class="close bigbutton">Begin met spelen !</button>
+    <br>
     <h3>Voorbeeld</h3>
     <table>
         <tr>
