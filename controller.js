@@ -32,11 +32,8 @@ if (fs.existsSync("./currentSecret.json")) {
     fs.writeFileSync("./currentSecret.json", JSON.stringify(game.getSecret()));
 }
 /*START GAME*/
-/*RESTART GAME AT MIDNIGHT*/
-const scheduleRule = new schedule.RecurrenceRule();
-scheduleRule.tz = "Europe/Brussels";
-scheduleRule.minute = process.env.MINUTE_MODE ? "*/5" : 0;
-scheduleRule.hour = process.env.MINUTE_MODE ? "*" : 0;
+/*RESTART GAME AT MIDNIGHT - timezone dependent*/
+const scheduleRule = process.env.MINUTE_MODE ? "*/5 * * * *" : "0 0 * * *";
 schedule.scheduleJob(scheduleRule, () => {
     game.start();
     fs.writeFileSync("./currentSecret.json", JSON.stringify(game.getSecret()));
@@ -207,4 +204,5 @@ function serveFile(res, filename, status) {
 
 server.listen(PORT);
 
+console.log("Application is running.");
 console.log(`Listening on port ${PORT}`);
