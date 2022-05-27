@@ -1,7 +1,7 @@
 /*
     This file is part of STIBle, a STIB-MIVB focused wordle-like game.
 
-    Copyright (C) 2000  piracope, REXAGONE, Hatsena and contributors
+    Copyright (C) 2022  piracope, REXAGONE, Hatsena and contributors
 
     STIBle is free software: you can redistribute it and/or modify
     it under the terms of the GNU Affero General Public License as published
