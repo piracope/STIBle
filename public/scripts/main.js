@@ -126,6 +126,10 @@ const DIALOGUE = {
         fr: "Raté ! L'arrêt était : ",
         nl: "Verloren ! De halte was : ",
     },
+    WAIT: {
+        fr: "Patientez...",
+        nl: "Even geduld...",
+    },
 };
 
 /**
@@ -248,6 +252,10 @@ async function main() {
     async function guess() {
         const input = String($("#guess").val()).trim();
         if (INITIAL_INFO.stops.includes(input)) {
+            const slow = setTimeout(() => {
+                $("#submit").attr("disabled", "true")
+                    .text(DIALOGUE.WAIT[initialStorage.lang]);
+            }, 500);
             fetch("/guess", {
                 method: "POST",
                 body: JSON.stringify({
@@ -262,6 +270,9 @@ async function main() {
                 },
             })
                 .then((res) => {
+                    clearTimeout(slow);
+                    $("#submit").attr("disabled", null)
+                        .text(DIALOGUE.GUESS[initialStorage.lang]);
                     if (res.ok) {
                         if (res.status === 200) {
                             return res.json();
