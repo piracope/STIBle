@@ -252,9 +252,9 @@ async function main() {
     async function guess() {
         const input = String($("#guess").val()).trim();
         if (INITIAL_INFO.stops.includes(input)) {
+            $("#submit").attr("disabled", "true");
             const slow = setTimeout(() => {
-                $("#submit").attr("disabled", "true")
-                    .text(DIALOGUE.WAIT[initialStorage.lang]);
+                $("#submit").text(DIALOGUE.WAIT[initialStorage.lang]);
             }, 500);
             fetch("/guess", {
                 method: "POST",
