@@ -48,7 +48,7 @@ const line = {
                 let indicePoint = 0;
                 while (!dejaAjoute && indicePoint < l.points.length) {
                     const point = l.points[indicePoint];
-                    if (String(stop.stop_id) === point.id) {
+                    if (String(stop.stop_id).replace(/^0+/, "") === point.id) {
                         ret.push(l);
                         dejaAjoute = true;
                     }
