@@ -384,7 +384,7 @@ async function main() {
         $("button.gameover").on("click", () => {
             if (postMortem) {
                 /*TODO : find a replacement to this UA sniffing*/
-                if (navigator.clipboard && !/OPX/i.test(navigator.userAgent)) {
+                if (navigator.clipboard && !/(Android.*OPR)|OPX/i.test(navigator.userAgent)) {
                     navigator.clipboard.writeText(postMortem.text);
                     $("button.gameover").text(DIALOGUE.COPIED[initialStorage.lang]);
                 } else {
@@ -516,6 +516,37 @@ async function main() {
      */
     function buildStats() {
         const history = getHistory();
+        $("#stats_nbGames").text(history.length);
+
+        let nbWin = 0;
+        let currStreak = 0;
+        let bestStreak = 0;
+
+        for (let i = 1; i < history.length; i++) {
+            if (history[i].lvlNumber !== history[i - 1].lvlNumber + 1
+                || history[i].nbOfGuesses === "X") {
+                bestStreak = currStreak;
+                currStreak = 0;
+            }
+            if (history[i].nbOfGuesses !== "X") {
+                currStreak++;
+                nbWin++;
+                if (currStreak > bestStreak) {
+                    bestStreak = currStreak;
+                }
+            }
+        }
+        if (history.length === 1 && history[0].nbOfGuesses !== "X") {
+            currStreak = 1;
+            nbWin = 1;
+            bestStreak = currStreak;
+        }
+
+        $("#stats_nbGames").text(history.length);
+        $("#stats_winRate").text(history.length === 0 ? "/"
+            : `${(Number(nbWin) / history.length * 100).toFixed(0)}%`);
+        $("#stats_currStreak").text(currStreak);
+        $("#stats_bestStreak").text(bestStreak);
     }
 
     init();
@@ -531,6 +562,10 @@ async function main() {
         translateHistory(oldLang, e.currentTarget.id);
     });
     $("#help").on("click", () => $("#helpModal").show());
+    $("#stats").on("click", () => {
+        buildStats();
+        $("#statsModal").show();
+    });
     $(".close").on("click", (e) => $(e.currentTarget).parents(".modal")
         .hide());
 }
