@@ -26,7 +26,10 @@
     </header>
     <nav>
         <ul>
-            <li><button id="help" class="bigbutton"></button></li>
+            <li>
+                <button id="help" class="bigbutton"></button>
+                <button id="stats" class="bigbutton">Stats</button>
+            </li>
             <li>
                 <span class="lang" id="fr">🇫🇷</span> <span class="lang" id="nl">🇳🇱</span>
             </li>
@@ -68,6 +71,18 @@
     <div id="helpModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
+        </div>
+    </div>
+    <div id="statsModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Statistiques</h2>
+            <ul>
+                <li>Nombre de parties : <span id="stats_nbGames"></span></li>
+                <li>Pourcentage de victoires : <span id="stats_winRate"></span></li>
+                <li>Série actuelle : <span id="stats_currStreak"></span></li>
+                <li>Meilleure série : <span id="stats_bestStreak"></span></li>
+            </ul>
         </div>
     </div>
 </body>

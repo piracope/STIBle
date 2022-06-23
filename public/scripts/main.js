@@ -336,6 +336,19 @@ async function main() {
     }
 
     /**
+     * Gets the history of past games.
+     * @returns {{lvlNumber: Number, nbOfGuesses: Number | String, bestPercentage: Number,}[]}
+     */
+    function getHistory() {
+        const history = localStorage.getItem("history");
+        if (!history) {
+            return [];
+        }
+
+        return JSON.parse(history);
+    }
+
+    /**
      * Disables input and displays the according message.
      * Secret is returned by guess on a game over.
      * @param {Result} result the guess result
@@ -354,23 +367,16 @@ async function main() {
             $("#message").text(DIALOGUE.WIN[initialStorage.lang]);
         }
         const postMortem = buildPostMortem();
-        let history = initialStorage.getItem("history");
-        if (!history) {
-            history = "[]";
-        }
+        const history = getHistory();
         if (postMortem) {
-            /**
-             * @type {any[]}
-             */
-            const histArr = JSON.parse(history);
-            const lastNb = histArr.length > 0 ? histArr[histArr.length - 1].lvlNumber : undefined;
+            const lastNb = history.length > 0 ? history[history.length - 1].lvlNumber : undefined;
             if (!lastNb || lastNb < INITIAL_INFO.lvlNumber) {
-                histArr.push({
+                history.push({
                     lvlNumber: INITIAL_INFO.lvlNumber,
-                    currNb: postMortem.nbOfTries,
+                    nbOfGuesses: postMortem.nbOfTries,
                     bestPercentage: postMortem.bestPercentage,
                 });
-                localStorage.setItem("history", JSON.stringify(histArr));
+                localStorage.setItem("history", JSON.stringify(history));
             }
         }
 
@@ -503,6 +509,13 @@ async function main() {
 
         localStorage.setItem("guesses", JSON.stringify(guesses));
         location.reload();
+    }
+
+    /**
+     * Builds the statistics modal's content.
+     */
+    function buildStats() {
+        const history = getHistory();
     }
 
     init();
