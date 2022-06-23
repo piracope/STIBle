@@ -61,6 +61,7 @@ schedule.scheduleJob(scheduleRule, () => {
 
 /* OPEN SERVER */
 const server = http.createServer((req, res) => {
+    console.log(req.headers["user-agent"]);
     /* process.env.DYNO tests if it runs on heroku */
     if (process.env.DYNO && req.headers["x-forwarded-proto"] !== "https") {
         res.writeHead(302, {
