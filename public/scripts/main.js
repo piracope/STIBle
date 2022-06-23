@@ -283,7 +283,6 @@ async function main() {
                     return undefined;
                 })
                 .then((result) => {
-                    displayResult(result, currNb++);
                     const guesses = localStorage.getItem("guesses");
                     let guessesArr = [];
                     if (guesses) {
@@ -291,6 +290,7 @@ async function main() {
                         guessesArr.push(result);
                     }
                     localStorage.setItem("guesses", JSON.stringify(guessesArr));
+                    displayResult(result, currNb++);
                 })
                 /*
                 .catch(() => {
@@ -336,6 +336,19 @@ async function main() {
     }
 
     /**
+     * Gets the history of past games.
+     * @returns {{lvlNumber: Number, nbOfGuesses: Number | String, bestPercentage: Number,}[]}
+     */
+    function getHistory() {
+        const history = localStorage.getItem("history");
+        if (!history) {
+            return [];
+        }
+
+        return JSON.parse(history);
+    }
+
+    /**
      * Disables input and displays the according message.
      * Secret is returned by guess on a game over.
      * @param {Result} result the guess result
@@ -353,10 +366,35 @@ async function main() {
         } else {
             $("#message").text(DIALOGUE.WIN[initialStorage.lang]);
         }
+        const postMortem = buildPostMortem();
+        const history = getHistory();
+        if (postMortem) {
+            const lastNb = history.length > 0 ? history[history.length - 1].lvlNumber : undefined;
+            if (!lastNb || lastNb < INITIAL_INFO.lvlNumber) {
+                history.push({
+                    lvlNumber: INITIAL_INFO.lvlNumber,
+                    nbOfGuesses: postMortem.nbOfTries,
+                    bestPercentage: postMortem.bestPercentage,
+                });
+                localStorage.setItem("history", JSON.stringify(history));
+            }
+        }
+
         $("button.gameover").off("click");
         $("button.gameover").on("click", () => {
-            if (shareResults()) {
-                $("button.gameover").text(DIALOGUE.COPIED[initialStorage.lang]);
+            if (postMortem) {
+                /*TODO : find a replacement to this UA sniffing*/
+                if (navigator.clipboard && !/(Android.*OPR)|OPX/i.test(navigator.userAgent)) {
+                    navigator.clipboard.writeText(postMortem.text);
+                    $("button.gameover").text(DIALOGUE.COPIED[initialStorage.lang]);
+                } else {
+                    $("#shareModal .modal-content > div").empty();
+                    $("#shareModal .modal-content > div").append(
+                        $("<p>").text(DIALOGUE.CANT_COPY[initialStorage.lang])
+                    )
+                        .append($("<textarea rows='10'>").text(postMortem.text));
+                    $("#shareModal").show();
+                }
             }
         });
     }
@@ -376,7 +414,7 @@ async function main() {
      * 20% = green square
      * 10% = yellow square
      * @param {Result} result the result to get the squares from.
-     * @returns {String}
+     * @returns {String} the squares corresponding to a given result
      */
     function buildSquares(result) {
         const percentage = result.percentage * 100;
@@ -387,14 +425,14 @@ async function main() {
 
     /**
      * Puts the correct game description in the clipboard.
-     * @returns the string put in the clipboard
+     * @returns {{text: String, bestPercentage: Number, nbOfTries: Number | String} | undefined} the postmortem
      */
-    function shareResults() {
+    function buildPostMortem() {
         let ret = "";
         let bestPercentage = 0;
         const guesses = localStorage.getItem("guesses");
         if (!guesses) {
-            return "";
+            return undefined;
         }
         /**
          * @type {Result[]}
@@ -410,21 +448,13 @@ async function main() {
             const nbOfTries = ret.charAt(ret.length - 2) === "✅" ? results.length : "X";
             ret = `#${DIALOGUE.TITLE[initialStorage.lang]}Ble${INITIAL_INFO.minute_mode ? "-test" : ""} #${INITIAL_INFO.lvlNumber} ${nbOfTries}/${INITIAL_INFO.max} (${(bestPercentage * 100).toFixed(0) || "xx"}%)\n\n${ret}\n${INITIAL_INFO.minute_mode ? "https://stible-test.herokuapp.com/" : "https://stible.elitios.net/"}`;
 
-            /* TODO : find a replacement to this UA sniffing */
-            if (navigator.clipboard && !/(Android.*OPR)|OPX/i.test(navigator.userAgent)) {
-                navigator.clipboard.writeText(ret);
-                return ret;
-            }
-            $("#shareModal .modal-content > div").empty();
-            $("#shareModal .modal-content > div").append(
-                $("<p>").text(DIALOGUE.CANT_COPY[initialStorage.lang])
-            )
-                .append($("<textarea rows='10'>").text(ret));
-            $("#shareModal").show();
-
-            return "";
+            return {
+                text: ret,
+                bestPercentage: bestPercentage,
+                nbOfTries: nbOfTries,
+            };
         }
-        return "";
+        return undefined;
     }
     function init() {
         $("#guess").attr("placeholder", DIALOGUE.PLACEHOLDER[initialStorage.lang]);
@@ -481,6 +511,44 @@ async function main() {
         location.reload();
     }
 
+    /**
+     * Builds the statistics modal's content.
+     */
+    function buildStats() {
+        const history = getHistory();
+        $("#stats_nbGames").text(history.length);
+
+        let nbWin = 0;
+        let currStreak = 0;
+        let bestStreak = 0;
+
+        for (let i = 1; i < history.length; i++) {
+            if (history[i].lvlNumber !== history[i - 1].lvlNumber + 1
+                || history[i].nbOfGuesses === "X") {
+                bestStreak = currStreak;
+                currStreak = 0;
+            }
+            if (history[i].nbOfGuesses !== "X") {
+                currStreak++;
+                nbWin++;
+                if (currStreak > bestStreak) {
+                    bestStreak = currStreak;
+                }
+            }
+        }
+        if (history.length === 1 && history[0].nbOfGuesses !== "X") {
+            currStreak = 1;
+            nbWin = 1;
+            bestStreak = currStreak;
+        }
+
+        $("#stats_nbGames").text(history.length);
+        $("#stats_winRate").text(history.length === 0 ? "/"
+            : `${(Number(nbWin) / history.length * 100).toFixed(0)}%`);
+        $("#stats_currStreak").text(currStreak);
+        $("#stats_bestStreak").text(bestStreak);
+    }
+
     init();
     $("#game").on("submit", (e) => {
         e.preventDefault();
@@ -494,6 +562,10 @@ async function main() {
         translateHistory(oldLang, e.currentTarget.id);
     });
     $("#help").on("click", () => $("#helpModal").show());
+    $("#stats").on("click", () => {
+        buildStats();
+        $("#statsModal").show();
+    });
     $(".close").on("click", (e) => $(e.currentTarget).parents(".modal")
         .hide());
 }
