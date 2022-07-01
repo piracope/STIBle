@@ -411,7 +411,7 @@ async function main() {
             ret = `#${DIALOGUE.TITLE[initialStorage.lang]}Ble${INITIAL_INFO.minute_mode ? "-test" : ""} #${INITIAL_INFO.lvlNumber} ${nbOfTries}/${INITIAL_INFO.max} (${(bestPercentage * 100).toFixed(0) || "xx"}%)\n\n${ret}\n${INITIAL_INFO.minute_mode ? "https://stible-test.herokuapp.com/" : "https://stible.elitios.net/"}`;
 
             /* TODO : find a replacement to this UA sniffing */
-            if (navigator.clipboard && !/OPX/i.test(navigator.userAgent)) {
+            if (navigator.clipboard && !/(Android.*OPR)|OPX/i.test(navigator.userAgent)) {
                 navigator.clipboard.writeText(ret);
                 return ret;
             }
