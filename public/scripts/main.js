@@ -511,34 +511,47 @@ async function main() {
         location.reload();
     }
 
-    /**
-     * Fills a stat bar depending on the number of guesses it took to beat a
-     * specific game.
-     * @param {Number | String} nbOfGuesses the number of guesses of a specific game
-     */
-    function fillBar(nbOfGuesses) {
-        const bar = `#stats_${nbOfGuesses}`;
-        const nbToPlace = Number($(bar).text()) + 1;
-        console.log($(bar));
-        $(bar).text(nbToPlace);
+    function fillBar(bars, nbOfGuesses) {
+        if (nbOfGuesses === "X") {
+            bars[6]++;
+        } else {
+            bars[nbOfGuesses - 1]++;
+        }
     }
 
+    function drawBars(bars, history) {
+        for (let i = 0; i < bars.length - 1; i++) {
+            const nb = bars[i];
+            const bar = $(`#stats_${i + 1}`);
+            $(bar).text(nb);
+            const length = nb / history.length;
+            $(bar).width(`${length * 100}%`);
+        }
+        const nb = bars[6];
+        const bar = $("#stats_X");
+        $(bar).text(nb);
+        const length = nb / history.length;
+        $(bar).width(`${length * 100}%`);
+    }
     /**
      * Builds the statistics modal's content.
      */
     function buildStats() {
         const history = getHistory();
+        const bars = [0, 0, 0, 0, 0, 0, 0];
         $("#stats_nbGames").text(history.length);
 
         let nbWin = 0;
         let currStreak = 0;
         let bestStreak = 0;
 
-        if (history.length >= 1 && history[0].nbOfGuesses !== "X") {
-            currStreak = 1;
-            nbWin = 1;
-            bestStreak = currStreak;
-            fillBar(history[0].nbOfGuesses);
+        if (history.length >= 1) {
+            if (history[0].nbOfGuesses !== "X") {
+                currStreak = 1;
+                nbWin = 1;
+                bestStreak = currStreak;
+            }
+            fillBar(bars, history[0].nbOfGuesses);
         }
 
         for (let i = 1; i < history.length; i++) {
@@ -554,7 +567,7 @@ async function main() {
                 }
             }
 
-            fillBar(history[i].nbOfGuesses);
+            fillBar(bars, history[i].nbOfGuesses);
         }
 
         $("#stats_nbGames").text(history.length);
@@ -562,6 +575,7 @@ async function main() {
             : `${(Number(nbWin) / history.length * 100).toFixed(0)}%`);
         $("#stats_currStreak").text(currStreak);
         $("#stats_bestStreak").text(bestStreak);
+        drawBars(bars, history);
     }
 
     init();

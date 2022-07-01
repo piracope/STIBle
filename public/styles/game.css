@@ -72,3 +72,15 @@ img.emoji {
     vertical-align: -0.1em;
     pointer-events: none;
 }
+
+#statsGraph > li {
+    display: grid;
+    grid-template-columns: 1em 1fr;
+}
+.statsBar {
+    padding-right: 0.2em;
+    display: inline-block;
+    text-align: right;
+    min-width: 1em;
+    background-color: var(--near-black);
+}
