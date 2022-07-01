@@ -52,7 +52,7 @@ if (fs.existsSync("./currentSecret.json")) {
 }
 /*START GAME*/
 /*RESTART GAME AT MIDNIGHT - timezone dependent*/
-const scheduleRule = process.env.MINUTE_MODE ? "*/5 * * * *" : "0 0 * * *";
+const scheduleRule = process.env.MINUTE_MODE ? "* * * * *" : "0 0 * * *";
 schedule.scheduleJob(scheduleRule, () => {
     game.start();
     fs.writeFileSync("./currentSecret.json", JSON.stringify(game.getSecret()));
@@ -61,7 +61,6 @@ schedule.scheduleJob(scheduleRule, () => {
 
 /* OPEN SERVER */
 const server = http.createServer((req, res) => {
-    console.log(req.headers["user-agent"]);
     /* process.env.DYNO tests if it runs on heroku */
     if (process.env.DYNO && req.headers["x-forwarded-proto"] !== "https") {
         res.writeHead(302, {

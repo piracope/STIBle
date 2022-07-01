@@ -512,6 +512,18 @@ async function main() {
     }
 
     /**
+     * Fills a stat bar depending on the number of guesses it took to beat a
+     * specific game.
+     * @param {Number | String} nbOfGuesses the number of guesses of a specific game
+     */
+    function fillBar(nbOfGuesses) {
+        const bar = `#stats_${nbOfGuesses}`;
+        const nbToPlace = Number($(bar).text()) + 1;
+        console.log($(bar));
+        $(bar).text(nbToPlace);
+    }
+
+    /**
      * Builds the statistics modal's content.
      */
     function buildStats() {
@@ -522,10 +534,16 @@ async function main() {
         let currStreak = 0;
         let bestStreak = 0;
 
+        if (history.length >= 1 && history[0].nbOfGuesses !== "X") {
+            currStreak = 1;
+            nbWin = 1;
+            bestStreak = currStreak;
+            fillBar(history[0].nbOfGuesses);
+        }
+
         for (let i = 1; i < history.length; i++) {
             if (history[i].lvlNumber !== history[i - 1].lvlNumber + 1
                 || history[i].nbOfGuesses === "X") {
-                bestStreak = currStreak;
                 currStreak = 0;
             }
             if (history[i].nbOfGuesses !== "X") {
@@ -535,11 +553,8 @@ async function main() {
                     bestStreak = currStreak;
                 }
             }
-        }
-        if (history.length === 1 && history[0].nbOfGuesses !== "X") {
-            currStreak = 1;
-            nbWin = 1;
-            bestStreak = currStreak;
+
+            fillBar(history[i].nbOfGuesses);
         }
 
         $("#stats_nbGames").text(history.length);
