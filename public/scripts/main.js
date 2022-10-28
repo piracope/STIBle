@@ -570,6 +570,11 @@ async function main() {
             fillBar(bars, history[i].nbOfGuesses);
         }
 
+        if (history[history.length - 1].lvlNumber !== INITIAL_INFO.lvlNumber - 1
+            && history[history.length - 1].lvlNumber !== INITIAL_INFO.lvlNumber) {
+            currStreak = 0;
+        }
+
         $("#stats_nbGames").text(history.length);
         $("#stats_winRate").text(history.length === 0 ? "/"
             : `${(Number(nbWin) / history.length * 100).toFixed(0)}%`);
