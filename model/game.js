@@ -44,8 +44,10 @@ const game = {
      */
     MAXIMUM_GUESS: Number(process.env.MAXIMUM_GUESSES) || 6,
     start() {
-        secret = Stops.getRandomStop();
-        secretLines = Lines.getLines(Stops.getEquivalents(secret));
+        do {
+            secret = Stops.getRandomStop();
+            secretLines = Lines.getLines(Stops.getEquivalents(secret));
+        } while (secretLines.length === 0);
     },
 
     /**
