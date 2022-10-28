@@ -9,7 +9,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 28
+        "parent_station": 13
     },
     {
         "stop_id": "0470F",
@@ -21,7 +21,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 8
+        "parent_station": 38
     },
     {
         "stop_id": "0471",
@@ -33,7 +33,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 8
+        "parent_station": 38
     },
     {
         "stop_id": "0472",
@@ -45,7 +45,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 8
+        "parent_station": 38
     },
     {
         "stop_id": "0473F",
@@ -57,7 +57,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 8
+        "parent_station": 38
     },
     {
         "stop_id": "0501",
@@ -69,7 +69,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 41
+        "parent_station": 6
     },
     {
         "stop_id": "0506",
@@ -81,7 +81,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 41
+        "parent_station": 6
     },
     {
         "stop_id": "0511",
@@ -93,7 +93,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 23
+        "parent_station": 50
     },
     {
         "stop_id": "0516",
@@ -105,7 +105,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 23
+        "parent_station": 50
     },
     {
         "stop_id": "0521",
@@ -141,7 +141,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 23
+        "parent_station": 50
     },
     {
         "stop_id": "0531",
@@ -177,7 +177,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 23
+        "parent_station": 50
     },
     {
         "stop_id": "0601",
@@ -261,7 +261,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 14
+        "parent_station": 42
     },
     {
         "stop_id": "0636",
@@ -273,7 +273,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 14
+        "parent_station": 42
     },
     {
         "stop_id": "0702",
@@ -285,7 +285,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 14
+        "parent_station": 42
     },
     {
         "stop_id": "0703",
@@ -297,7 +297,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 15
+        "parent_station": 43
     },
     {
         "stop_id": "0704",
@@ -381,7 +381,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 15
+        "parent_station": 43
     },
     {
         "stop_id": "0726",
@@ -393,7 +393,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 14
+        "parent_station": 42
     },
     {
         "stop_id": "0801",
@@ -405,7 +405,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 28
+        "parent_station": 13
     },
     {
         "stop_id": "0806",
@@ -417,7 +417,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 28
+        "parent_station": 13
     },
     {
         "stop_id": "0811",
@@ -453,7 +453,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 70
+        "parent_station": 68
     },
     {
         "stop_id": "0826",
@@ -465,7 +465,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 70
+        "parent_station": 68
     },
     {
         "stop_id": "0901",
@@ -477,7 +477,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 68
+        "parent_station": 70
     },
     {
         "stop_id": "0906",
@@ -489,19 +489,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 68
-    },
-    {
-        "stop_id": 1009,
-        "stop_code": "",
-        "stop_name": "EUGENE TOUSSAINT",
-        "stop_desc": "",
-        "stop_lat": 50.881043,
-        "stop_lon": 4.32179,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
+        "parent_station": 70
     },
     {
         "stop_id": 1010,
@@ -588,7 +576,7 @@
         "parent_station": ""
     },
     {
-        "stop_id": 1024,
+        "stop_id": "1024B",
         "stop_code": "",
         "stop_name": "WTC",
         "stop_desc": "",
@@ -666,6 +654,18 @@
         "stop_desc": "",
         "stop_lat": 50.815564,
         "stop_lon": 4.37176,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 1049,
+        "stop_code": "",
+        "stop_name": "LEGRAND",
+        "stop_desc": "",
+        "stop_lat": 50.815519,
+        "stop_lon": 4.371065,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -774,18 +774,6 @@
         "stop_desc": "",
         "stop_lat": 50.881187,
         "stop_lon": 4.321846,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": 1072,
-        "stop_code": "",
-        "stop_name": "FOREST (BERVOETS)",
-        "stop_desc": "",
-        "stop_lat": 50.817226,
-        "stop_lon": 4.320107,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -1848,6 +1836,18 @@
         "parent_station": ""
     },
     {
+        "stop_id": 1225,
+        "stop_code": "",
+        "stop_name": "LEMONNIER",
+        "stop_desc": "",
+        "stop_lat": 50.840453,
+        "stop_lon": 4.341364,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
         "stop_id": 1227,
         "stop_code": "",
         "stop_name": "LEMONNIER",
@@ -1998,18 +1998,6 @@
         "stop_desc": "",
         "stop_lat": 50.854077,
         "stop_lon": 4.328448,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": 1245,
-        "stop_code": "",
-        "stop_name": "TRIANGLE",
-        "stop_desc": "",
-        "stop_lat": 50.850511,
-        "stop_lon": 4.336759,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -2178,6 +2166,18 @@
         "stop_desc": "",
         "stop_lat": 50.846234,
         "stop_lon": 4.38347,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 1276,
+        "stop_code": "",
+        "stop_name": "YSER",
+        "stop_desc": "",
+        "stop_lat": 50.857894,
+        "stop_lon": 4.349664,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -2520,24 +2520,24 @@
         "parent_station": ""
     },
     {
-        "stop_id": 1352,
-        "stop_code": "",
-        "stop_name": "ETANGS D'IXELLES",
-        "stop_desc": "",
-        "stop_lat": 50.823519,
-        "stop_lon": 4.373719,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
         "stop_id": 1356,
         "stop_code": "",
         "stop_name": "TOUR ET TAXIS",
         "stop_desc": "",
         "stop_lat": 50.865586,
         "stop_lon": 4.350999,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 1358,
+        "stop_code": "",
+        "stop_name": "COTEAUX",
+        "stop_desc": "",
+        "stop_lat": 50.85969,
+        "stop_lon": 4.376229,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -2820,6 +2820,18 @@
         "parent_station": ""
     },
     {
+        "stop_id": 1414,
+        "stop_code": "",
+        "stop_name": "FOREST CENTRE",
+        "stop_desc": "",
+        "stop_lat": 50.812012,
+        "stop_lon": 4.318754,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
         "stop_id": 1415,
         "stop_code": "",
         "stop_name": "STADE FALLON",
@@ -2940,12 +2952,72 @@
         "parent_station": ""
     },
     {
+        "stop_id": 1431,
+        "stop_code": "",
+        "stop_name": "SAINCTELETTE",
+        "stop_desc": "",
+        "stop_lat": 50.859349,
+        "stop_lon": 4.344522,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 1432,
+        "stop_code": "",
+        "stop_name": "RIBAUCOURT",
+        "stop_desc": "",
+        "stop_lat": 50.860517,
+        "stop_lon": 4.340558,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 1433,
+        "stop_code": "",
+        "stop_name": "OURTHE",
+        "stop_desc": "",
+        "stop_lat": 50.861682,
+        "stop_lon": 4.336469,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 1437,
+        "stop_code": "",
+        "stop_name": "OURTHE",
+        "stop_desc": "",
+        "stop_lat": 50.861367,
+        "stop_lon": 4.336463,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
         "stop_id": 1439,
         "stop_code": "",
         "stop_name": "SAINCTELETTE",
         "stop_desc": "",
         "stop_lat": 50.8589,
         "stop_lon": 4.344835,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 1440,
+        "stop_code": "",
+        "stop_name": "YSER",
+        "stop_desc": "",
+        "stop_lat": 50.85647,
+        "stop_lon": 4.354091,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -3960,6 +4032,18 @@
         "parent_station": ""
     },
     {
+        "stop_id": 1582,
+        "stop_code": "",
+        "stop_name": "SAINT-JOSSE",
+        "stop_desc": "",
+        "stop_lat": 50.850263,
+        "stop_lon": 4.374759,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
         "stop_id": 1584,
         "stop_code": "",
         "stop_name": "KLAKKEDELLE",
@@ -4002,18 +4086,6 @@
         "stop_desc": "",
         "stop_lat": 50.84839,
         "stop_lon": 4.459234,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": 1591,
-        "stop_code": "",
-        "stop_name": "MERODE",
-        "stop_desc": "",
-        "stop_lat": 50.838963,
-        "stop_lon": 4.398537,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -4104,6 +4176,18 @@
         "parent_station": ""
     },
     {
+        "stop_id": 1612,
+        "stop_code": "",
+        "stop_name": "CIM. D'ANDERLECHT",
+        "stop_desc": "",
+        "stop_lat": 50.814561,
+        "stop_lon": 4.281457,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
         "stop_id": "1614B",
         "stop_code": "",
         "stop_name": "RING 0",
@@ -4152,12 +4236,48 @@
         "parent_station": ""
     },
     {
+        "stop_id": 1618,
+        "stop_code": "",
+        "stop_name": "SAINT-NICOLAS",
+        "stop_desc": "",
+        "stop_lat": 50.814467,
+        "stop_lon": 4.288169,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 1619,
+        "stop_code": "",
+        "stop_name": "SAINT-NICOLAS",
+        "stop_desc": "",
+        "stop_lat": 50.814629,
+        "stop_lon": 4.288467,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
         "stop_id": "1620B",
         "stop_code": "",
         "stop_name": "HERNALSTEEN",
         "stop_desc": "",
         "stop_lat": 50.840141,
         "stop_lon": 4.489543,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 1624,
+        "stop_code": "",
+        "stop_name": "MERODE",
+        "stop_desc": "",
+        "stop_lat": 50.839166,
+        "stop_lon": 4.396742,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -4548,6 +4668,30 @@
         "parent_station": ""
     },
     {
+        "stop_id": 1670,
+        "stop_code": "",
+        "stop_name": "SUZAN DANIEL",
+        "stop_desc": "",
+        "stop_lat": 50.863052,
+        "stop_lon": 4.347176,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 1671,
+        "stop_code": "",
+        "stop_name": "SUZAN DANIEL",
+        "stop_desc": "",
+        "stop_lat": 50.86303,
+        "stop_lon": 4.347661,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
         "stop_id": 1673,
         "stop_code": "",
         "stop_name": "REINE ASTRID",
@@ -4800,6 +4944,42 @@
         "parent_station": ""
     },
     {
+        "stop_id": "1696F",
+        "stop_code": "",
+        "stop_name": "COTEAUX",
+        "stop_desc": "",
+        "stop_lat": 50.859872,
+        "stop_lon": 4.375848,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 1697,
+        "stop_code": "",
+        "stop_name": "COTEAUX",
+        "stop_desc": "",
+        "stop_lat": 50.859744,
+        "stop_lon": 4.376436,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": "1698F",
+        "stop_code": "",
+        "stop_name": "COTEAUX",
+        "stop_desc": "",
+        "stop_lat": 50.859573,
+        "stop_lon": 4.376816,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
         "stop_id": 1703,
         "stop_code": "",
         "stop_name": "GRAND SABLON",
@@ -4914,18 +5094,6 @@
         "stop_desc": "",
         "stop_lat": 50.824135,
         "stop_lon": 4.400458,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": 1718,
-        "stop_code": "",
-        "stop_name": "EGLISE ST-JULIEN",
-        "stop_desc": "",
-        "stop_lat": 50.821014,
-        "stop_lon": 4.408105,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -5400,12 +5568,12 @@
         "parent_station": ""
     },
     {
-        "stop_id": 1769,
+        "stop_id": "1769B",
         "stop_code": "",
         "stop_name": "MUSEUM",
         "stop_desc": "",
-        "stop_lat": 50.835862,
-        "stop_lon": 4.3748,
+        "stop_lat": 50.835839,
+        "stop_lon": 4.374913,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -5544,6 +5712,30 @@
         "parent_station": ""
     },
     {
+        "stop_id": 1796,
+        "stop_code": "",
+        "stop_name": "NEERSTALLE",
+        "stop_desc": "",
+        "stop_lat": 50.800255,
+        "stop_lon": 4.318326,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 1797,
+        "stop_code": "",
+        "stop_name": "NEERSTALLE",
+        "stop_desc": "",
+        "stop_lat": 50.800219,
+        "stop_lon": 4.31829,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
         "stop_id": 1801,
         "stop_code": "",
         "stop_name": "PORTE DE HAL",
@@ -5586,18 +5778,6 @@
         "stop_desc": "",
         "stop_lat": 50.83435,
         "stop_lon": 4.388044,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": 1805,
-        "stop_code": "",
-        "stop_name": "LA CHASSE",
-        "stop_desc": "",
-        "stop_lat": 50.830979,
-        "stop_lon": 4.390583,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -5946,18 +6126,6 @@
         "stop_desc": "",
         "stop_lat": 50.836926,
         "stop_lon": 4.467474,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": "1836B",
-        "stop_code": "",
-        "stop_name": "MAREYDE",
-        "stop_desc": "",
-        "stop_lat": 50.833421,
-        "stop_lon": 4.446906,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -7584,6 +7752,18 @@
         "parent_station": ""
     },
     {
+        "stop_id": 2070,
+        "stop_code": "",
+        "stop_name": "DE BROUCKERE",
+        "stop_desc": "",
+        "stop_lat": 50.853196,
+        "stop_lon": 4.353646,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
         "stop_id": 2071,
         "stop_code": "",
         "stop_name": "ANNECY",
@@ -8628,6 +8808,30 @@
         "parent_station": ""
     },
     {
+        "stop_id": 2180,
+        "stop_code": "",
+        "stop_name": "LEMONNIER",
+        "stop_desc": "",
+        "stop_lat": 50.840532,
+        "stop_lon": 4.340945,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 2181,
+        "stop_code": "",
+        "stop_name": "ANNEESSENS",
+        "stop_desc": "",
+        "stop_lat": 50.844661,
+        "stop_lon": 4.345722,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
         "stop_id": "2200F",
         "stop_code": "",
         "stop_name": "MABRU",
@@ -8700,6 +8904,18 @@
         "parent_station": ""
     },
     {
+        "stop_id": "2214B",
+        "stop_code": "",
+        "stop_name": "PTE D'ANDERLECHT",
+        "stop_desc": "",
+        "stop_lat": 50.845019,
+        "stop_lon": 4.339403,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
         "stop_id": 2215,
         "stop_code": "",
         "stop_name": "LIVERPOOL",
@@ -8754,18 +8970,6 @@
         "stop_desc": "",
         "stop_lat": 50.836822,
         "stop_lon": 4.318057,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": 2220,
-        "stop_code": "",
-        "stop_name": "RESISTANCE",
-        "stop_desc": "",
-        "stop_lat": 50.835642,
-        "stop_lon": 4.3115,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -8958,6 +9162,30 @@
         "stop_desc": "",
         "stop_lat": 50.832176,
         "stop_lon": 4.302036,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": "2256B",
+        "stop_code": "",
+        "stop_name": "SAINT-GUIDON",
+        "stop_desc": "",
+        "stop_lat": 50.834812,
+        "stop_lon": 4.306674,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": "2257B",
+        "stop_code": "",
+        "stop_name": "RESISTANCE",
+        "stop_desc": "",
+        "stop_lat": 50.835713,
+        "stop_lon": 4.312224,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -9768,18 +9996,6 @@
         "parent_station": ""
     },
     {
-        "stop_id": 2380,
-        "stop_code": "",
-        "stop_name": "DAUTZENBERG",
-        "stop_desc": "",
-        "stop_lat": 50.827661,
-        "stop_lon": 4.366475,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
         "stop_id": "2380F",
         "stop_code": "",
         "stop_name": "DAUTZENBERG",
@@ -9804,6 +10020,18 @@
         "parent_station": ""
     },
     {
+        "stop_id": 2383,
+        "stop_code": "",
+        "stop_name": "CERIA",
+        "stop_desc": "",
+        "stop_lat": 50.816172,
+        "stop_lon": 4.29016,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
         "stop_id": 2384,
         "stop_code": "",
         "stop_name": "CERIA",
@@ -9816,12 +10044,48 @@
         "parent_station": ""
     },
     {
+        "stop_id": 2387,
+        "stop_code": "",
+        "stop_name": "STADE",
+        "stop_desc": "",
+        "stop_lat": 50.892437,
+        "stop_lon": 4.332735,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 2388,
+        "stop_code": "",
+        "stop_name": "STIENON",
+        "stop_desc": "",
+        "stop_lat": 50.890678,
+        "stop_lon": 4.32992,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
         "stop_id": 2392,
         "stop_code": "",
         "stop_name": "BOURSE",
         "stop_desc": "",
         "stop_lat": 50.846598,
         "stop_lon": 4.348295,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 2395,
+        "stop_code": "",
+        "stop_name": "LA CHASSE",
+        "stop_desc": "",
+        "stop_lat": 50.830979,
+        "stop_lon": 4.390583,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -10116,12 +10380,24 @@
         "parent_station": ""
     },
     {
-        "stop_id": 2437,
+        "stop_id": 2438,
         "stop_code": "",
-        "stop_name": "WOESTE",
+        "stop_name": "STIENON",
         "stop_desc": "",
-        "stop_lat": 50.87528,
-        "stop_lon": 4.333655,
+        "stop_lat": 50.89072,
+        "stop_lon": 4.330309,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 2439,
+        "stop_code": "",
+        "stop_name": "POLYCL. BRUGMANN",
+        "stop_desc": "",
+        "stop_lat": 50.889061,
+        "stop_lon": 4.335045,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -10320,24 +10596,12 @@
         "parent_station": ""
     },
     {
-        "stop_id": 2479,
+        "stop_id": 2498,
         "stop_code": "",
-        "stop_name": "BAILLI",
+        "stop_name": "DEMINEURS",
         "stop_desc": "",
-        "stop_lat": 50.827518,
-        "stop_lon": 4.364122,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": 2490,
-        "stop_code": "",
-        "stop_name": "HERRMANN-DEBROUX",
-        "stop_desc": "",
-        "stop_lat": 50.812079,
-        "stop_lon": 4.426657,
+        "stop_lat": 50.879096,
+        "stop_lon": 4.332662,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -10590,18 +10854,6 @@
         "stop_desc": "",
         "stop_lat": 50.838895,
         "stop_lon": 4.309863,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": "2535B",
-        "stop_code": "",
-        "stop_name": "SAINT-GUIDON",
-        "stop_desc": "",
-        "stop_lat": 50.834614,
-        "stop_lon": 4.305255,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -11184,18 +11436,6 @@
         "parent_station": ""
     },
     {
-        "stop_id": 2604,
-        "stop_code": "",
-        "stop_name": "MONACO",
-        "stop_desc": "",
-        "stop_lat": 50.812948,
-        "stop_lon": 4.322708,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
         "stop_id": "2604F",
         "stop_code": "",
         "stop_name": "MONACO",
@@ -11256,18 +11496,6 @@
         "parent_station": ""
     },
     {
-        "stop_id": "2608F",
-        "stop_code": "",
-        "stop_name": "BEMPT",
-        "stop_desc": "",
-        "stop_lat": 50.802167,
-        "stop_lon": 4.31625,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
         "stop_id": 2609,
         "stop_code": "",
         "stop_name": "RUE LONGUE",
@@ -11298,18 +11526,6 @@
         "stop_desc": "",
         "stop_lat": 50.794791,
         "stop_lon": 4.306641,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": 2612,
-        "stop_code": "",
-        "stop_name": "FOREST NATIONAL",
-        "stop_desc": "",
-        "stop_lat": 50.809541,
-        "stop_lon": 4.324953,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -11520,30 +11736,6 @@
         "parent_station": ""
     },
     {
-        "stop_id": "2637F",
-        "stop_code": "",
-        "stop_name": "SAINT-LAMBERT",
-        "stop_desc": "",
-        "stop_lat": 50.889932,
-        "stop_lon": 4.345032,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": 2646,
-        "stop_code": "",
-        "stop_name": "JANSON",
-        "stop_desc": "",
-        "stop_lat": 50.825787,
-        "stop_lon": 4.355232,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
         "stop_id": 2647,
         "stop_code": "",
         "stop_name": "WESTLAND SHOPPING",
@@ -11568,9 +11760,33 @@
         "parent_station": ""
     },
     {
+        "stop_id": 2654,
+        "stop_code": "",
+        "stop_name": "DOCKS BRUXSEL",
+        "stop_desc": "",
+        "stop_lat": 50.878994,
+        "stop_lon": 4.374195,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 2655,
+        "stop_code": "",
+        "stop_name": "DOCKS BRUXSEL",
+        "stop_desc": "",
+        "stop_lat": 50.878765,
+        "stop_lon": 4.374388,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
         "stop_id": 2657,
         "stop_code": "",
-        "stop_name": "ALTITUDE 100",
+        "stop_name": "ALTITUDE CENT",
         "stop_desc": "",
         "stop_lat": 50.816333,
         "stop_lon": 4.337562,
@@ -11582,7 +11798,7 @@
     {
         "stop_id": 2658,
         "stop_code": "",
-        "stop_name": "ALTITUDE 100",
+        "stop_name": "ALTITUDE CENT",
         "stop_desc": "",
         "stop_lat": 50.816261,
         "stop_lon": 4.337633,
@@ -11632,8 +11848,8 @@
         "stop_code": "",
         "stop_name": "UCCLE SPORT",
         "stop_desc": "",
-        "stop_lat": 50.798516,
-        "stop_lon": 4.313105,
+        "stop_lat": 50.798675,
+        "stop_lon": 4.313548,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -11645,18 +11861,6 @@
         "stop_name": "NEERSTALLE",
         "stop_desc": "",
         "stop_lat": 50.801295,
-        "stop_lon": 4.317314,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": "2663G",
-        "stop_code": "",
-        "stop_name": "NEERSTALLE",
-        "stop_desc": "",
-        "stop_lat": 50.801277,
         "stop_lon": 4.317314,
         "zone_id": "",
         "stop_url": "",
@@ -11682,18 +11886,6 @@
         "stop_desc": "",
         "stop_lat": 50.806607,
         "stop_lon": 4.314443,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": "2665F",
-        "stop_code": "",
-        "stop_name": "MAX WALLER",
-        "stop_desc": "",
-        "stop_lat": 50.806607,
-        "stop_lon": 4.314429,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -11742,18 +11934,6 @@
         "stop_desc": "",
         "stop_lat": 50.802607,
         "stop_lon": 4.315696,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": "2669F",
-        "stop_code": "",
-        "stop_name": "BEMPT",
-        "stop_desc": "",
-        "stop_lat": 50.802607,
-        "stop_lon": 4.31571,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -11832,6 +12012,30 @@
         "parent_station": ""
     },
     {
+        "stop_id": 2675,
+        "stop_code": "",
+        "stop_name": "BOILEAU",
+        "stop_desc": "",
+        "stop_lat": 50.832321,
+        "stop_lon": 4.404675,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": "2679F",
+        "stop_code": "",
+        "stop_name": "VERBOEKHOVEN",
+        "stop_desc": "",
+        "stop_lat": 50.87137,
+        "stop_lon": 4.376768,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
         "stop_id": 2680,
         "stop_code": "",
         "stop_name": "CLOVIS",
@@ -11904,24 +12108,36 @@
         "parent_station": ""
     },
     {
-        "stop_id": 2689,
-        "stop_code": "",
-        "stop_name": "JANSON",
-        "stop_desc": "",
-        "stop_lat": 50.825907,
-        "stop_lon": 4.355286,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
         "stop_id": 2695,
         "stop_code": "",
         "stop_name": "GENEVE",
         "stop_desc": "",
         "stop_lat": 50.863832,
         "stop_lon": 4.403241,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 2698,
+        "stop_code": "",
+        "stop_name": "PETILLON",
+        "stop_desc": "",
+        "stop_lat": 50.829732,
+        "stop_lon": 4.403331,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 2699,
+        "stop_code": "",
+        "stop_name": "BOILEAU",
+        "stop_desc": "",
+        "stop_lat": 50.832418,
+        "stop_lon": 4.405272,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -11982,6 +12198,18 @@
         "stop_desc": "",
         "stop_lat": 50.79236,
         "stop_lon": 4.348895,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 2707,
+        "stop_code": "",
+        "stop_name": "FROISSART",
+        "stop_desc": "",
+        "stop_lat": 50.840392,
+        "stop_lon": 4.380564,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -12072,6 +12300,18 @@
         "parent_station": ""
     },
     {
+        "stop_id": 2719,
+        "stop_code": "",
+        "stop_name": "MAELBEEK",
+        "stop_desc": "",
+        "stop_lat": 50.84433,
+        "stop_lon": 4.378052,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
         "stop_id": "2720F",
         "stop_code": "",
         "stop_name": "LIEDTS",
@@ -12090,18 +12330,6 @@
         "stop_desc": "",
         "stop_lat": 50.799427,
         "stop_lon": 4.379305,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": 2723,
-        "stop_code": "",
-        "stop_name": "HERRMANN-DEBROUX",
-        "stop_desc": "",
-        "stop_lat": 50.812556,
-        "stop_lon": 4.42609,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -12240,18 +12468,6 @@
         "parent_station": ""
     },
     {
-        "stop_id": 2737,
-        "stop_code": "",
-        "stop_name": "ROUPPE",
-        "stop_desc": "",
-        "stop_lat": 50.843186,
-        "stop_lon": 4.345098,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
         "stop_id": 2738,
         "stop_code": "",
         "stop_name": "PIERRE DECOSTER",
@@ -12360,12 +12576,12 @@
         "parent_station": ""
     },
     {
-        "stop_id": 2748,
+        "stop_id": "2748B",
         "stop_code": "",
         "stop_name": "PRINCE DE LIEGE",
         "stop_desc": "",
-        "stop_lat": 50.846656,
-        "stop_lon": 4.299275,
+        "stop_lat": 50.846027,
+        "stop_lon": 4.299534,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -12444,12 +12660,12 @@
         "parent_station": ""
     },
     {
-        "stop_id": 2755,
+        "stop_id": "2755B",
         "stop_code": "",
         "stop_name": "FORUM",
         "stop_desc": "",
-        "stop_lat": 50.899209,
-        "stop_lon": 4.357462,
+        "stop_lat": 50.898675,
+        "stop_lon": 4.357229,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -12852,18 +13068,6 @@
         "parent_station": ""
     },
     {
-        "stop_id": 2796,
-        "stop_code": "",
-        "stop_name": "SAINTE-MARIE",
-        "stop_desc": "",
-        "stop_lat": 50.859936,
-        "stop_lon": 4.369285,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
         "stop_id": 2801,
         "stop_code": "",
         "stop_name": "CROCQ",
@@ -12894,6 +13098,18 @@
         "stop_desc": "",
         "stop_lat": 50.882853,
         "stop_lon": 4.330882,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 2805,
+        "stop_code": "",
+        "stop_name": "CIM. DE JETTE",
+        "stop_desc": "",
+        "stop_lat": 50.879312,
+        "stop_lon": 4.333755,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -12952,8 +13168,8 @@
         "stop_code": "",
         "stop_name": "SCHOLA EUROPEA",
         "stop_desc": "",
-        "stop_lat": 50.885195,
-        "stop_lon": 4.353362,
+        "stop_lat": 50.885467,
+        "stop_lon": 4.353311,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -13128,18 +13344,6 @@
         "parent_station": ""
     },
     {
-        "stop_id": 2832,
-        "stop_code": "",
-        "stop_name": "YSER",
-        "stop_desc": "",
-        "stop_lat": 50.856517,
-        "stop_lon": 4.353927,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
         "stop_id": 2835,
         "stop_code": "",
         "stop_name": "YSER",
@@ -13158,18 +13362,6 @@
         "stop_desc": "",
         "stop_lat": 50.852586,
         "stop_lon": 4.353919,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": 2839,
-        "stop_code": "",
-        "stop_name": "LEHON",
-        "stop_desc": "",
-        "stop_lat": 50.864638,
-        "stop_lon": 4.371997,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -13206,18 +13398,6 @@
         "stop_desc": "",
         "stop_lat": 50.892546,
         "stop_lon": 4.323333,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": 2843,
-        "stop_code": "",
-        "stop_name": "MARIE-CHRISTINE",
-        "stop_desc": "",
-        "stop_lat": 50.874022,
-        "stop_lon": 4.359347,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -13488,18 +13668,6 @@
         "parent_station": ""
     },
     {
-        "stop_id": 2869,
-        "stop_code": "",
-        "stop_name": "CIM. DE JETTE",
-        "stop_desc": "",
-        "stop_lat": 50.879699,
-        "stop_lon": 4.334494,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
         "stop_id": 2870,
         "stop_code": "",
         "stop_name": "MARIE-CHRISTINE",
@@ -13608,6 +13776,18 @@
         "parent_station": ""
     },
     {
+        "stop_id": "2879B",
+        "stop_code": "",
+        "stop_name": "MARIE-CHRISTINE",
+        "stop_desc": "",
+        "stop_lat": 50.874022,
+        "stop_lon": 4.359319,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
         "stop_id": "2879F",
         "stop_code": "",
         "stop_name": "MARIE-CHRISTINE",
@@ -13632,84 +13812,12 @@
         "parent_station": ""
     },
     {
-        "stop_id": 2889,
-        "stop_code": "",
-        "stop_name": "SAINT-JOSSE",
-        "stop_desc": "",
-        "stop_lat": 50.849717,
-        "stop_lon": 4.375378,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": 2891,
-        "stop_code": "",
-        "stop_name": "HERMAN",
-        "stop_desc": "",
-        "stop_lat": 50.86383,
-        "stop_lon": 4.377811,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": 2892,
-        "stop_code": "",
-        "stop_name": "GRIBAUMONT",
-        "stop_desc": "",
-        "stop_lat": 50.842657,
-        "stop_lon": 4.417829,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": 2893,
-        "stop_code": "",
-        "stop_name": "TOMBERG",
-        "stop_desc": "",
-        "stop_lat": 50.84284,
-        "stop_lon": 4.425409,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": 2894,
-        "stop_code": "",
-        "stop_name": "MEUDON",
-        "stop_desc": "",
-        "stop_lat": 50.84474,
-        "stop_lon": 4.417744,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
         "stop_id": 2895,
         "stop_code": "",
         "stop_name": "HAREN",
         "stop_desc": "",
         "stop_lat": 50.892834,
         "stop_lon": 4.421413,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": 2897,
-        "stop_code": "",
-        "stop_name": "MAELBEEK",
-        "stop_desc": "",
-        "stop_lat": 50.84433,
-        "stop_lon": 4.378052,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -13836,18 +13944,6 @@
         "parent_station": ""
     },
     {
-        "stop_id": 2908,
-        "stop_code": "",
-        "stop_name": "BIPLAN",
-        "stop_desc": "",
-        "stop_lat": 50.885733,
-        "stop_lon": 4.41031,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
         "stop_id": "2908B",
         "stop_code": "",
         "stop_name": "BIPLAN",
@@ -13908,30 +14004,6 @@
         "parent_station": ""
     },
     {
-        "stop_id": 2916,
-        "stop_code": "",
-        "stop_name": "CHAZAL",
-        "stop_desc": "",
-        "stop_lat": 50.859673,
-        "stop_lon": 4.39152,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": 2917,
-        "stop_code": "",
-        "stop_name": "PATRIE",
-        "stop_desc": "",
-        "stop_lat": 50.856985,
-        "stop_lon": 4.390113,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
         "stop_id": 2918,
         "stop_code": "",
         "stop_name": "DAILLY",
@@ -13968,24 +14040,24 @@
         "parent_station": ""
     },
     {
-        "stop_id": "2922B",
-        "stop_code": "",
-        "stop_name": "LIVINGSTONE",
-        "stop_desc": "",
-        "stop_lat": 50.845024,
-        "stop_lon": 4.377557,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
         "stop_id": 2924,
         "stop_code": "",
         "stop_name": "OUD-KAPELLEKE",
         "stop_desc": "",
         "stop_lat": 50.874152,
         "stop_lon": 4.403007,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 2925,
+        "stop_code": "",
+        "stop_name": "MAELBEEK",
+        "stop_desc": "",
+        "stop_lat": 50.843737,
+        "stop_lon": 4.378322,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -14184,12 +14256,12 @@
         "parent_station": ""
     },
     {
-        "stop_id": "2953B",
+        "stop_id": 2953,
         "stop_code": "",
         "stop_name": "FOREST NATIONAL",
         "stop_desc": "",
-        "stop_lat": 50.810201,
-        "stop_lon": 4.325422,
+        "stop_lat": 50.810432,
+        "stop_lon": 4.326243,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -14316,48 +14388,12 @@
         "parent_station": ""
     },
     {
-        "stop_id": 2966,
-        "stop_code": "",
-        "stop_name": "BAILLI",
-        "stop_desc": "",
-        "stop_lat": 50.827394,
-        "stop_lon": 4.36404,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
         "stop_id": "2967B",
         "stop_code": "",
         "stop_name": "PORTE DE NAMUR",
         "stop_desc": "",
         "stop_lat": 50.838163,
         "stop_lon": 4.362038,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": 2968,
-        "stop_code": "",
-        "stop_name": "HOPITAL BRACOPS",
-        "stop_desc": "",
-        "stop_lat": 50.832722,
-        "stop_lon": 4.293857,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": "2970B",
-        "stop_code": "",
-        "stop_name": "LIVINGSTONE",
-        "stop_desc": "",
-        "stop_lat": 50.845721,
-        "stop_lon": 4.378078,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -14418,30 +14454,6 @@
         "stop_desc": "",
         "stop_lat": 50.853714,
         "stop_lon": 4.388478,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": 2975,
-        "stop_code": "",
-        "stop_name": "PATRIE",
-        "stop_desc": "",
-        "stop_lat": 50.857129,
-        "stop_lon": 4.390241,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": 2976,
-        "stop_code": "",
-        "stop_name": "CHAZAL",
-        "stop_desc": "",
-        "stop_lat": 50.860536,
-        "stop_lon": 4.392046,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -14736,18 +14748,6 @@
         "parent_station": ""
     },
     {
-        "stop_id": 3054,
-        "stop_code": "",
-        "stop_name": "YSER",
-        "stop_desc": "",
-        "stop_lat": 50.857998,
-        "stop_lon": 4.348289,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
         "stop_id": 3055,
         "stop_code": "",
         "stop_name": "BIESTEBROECK",
@@ -14788,8 +14788,8 @@
         "stop_code": "",
         "stop_name": "AVANT-PORT",
         "stop_desc": "",
-        "stop_lat": 50.885807,
-        "stop_lon": 4.379738,
+        "stop_lat": 50.885733,
+        "stop_lon": 4.379612,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -14910,18 +14910,6 @@
         "stop_desc": "",
         "stop_lat": 50.857343,
         "stop_lon": 4.353551,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": 3077,
-        "stop_code": "",
-        "stop_name": "TERVUREN STATION",
-        "stop_desc": "",
-        "stop_lat": 50.831093,
-        "stop_lon": 4.518121,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -15288,18 +15276,6 @@
         "parent_station": ""
     },
     {
-        "stop_id": 3115,
-        "stop_code": "",
-        "stop_name": "CIM. DE JETTE",
-        "stop_desc": "",
-        "stop_lat": 50.877768,
-        "stop_lon": 4.332424,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
         "stop_id": 3117,
         "stop_code": "",
         "stop_name": "PARC LEOPOLD",
@@ -15408,48 +15384,60 @@
         "parent_station": ""
     },
     {
-        "stop_id": 3136,
+        "stop_id": 3137,
         "stop_code": "",
-        "stop_name": "FLAGEY",
+        "stop_name": "CAMBRE-ETOILE",
         "stop_desc": "",
-        "stop_lat": 50.82672,
-        "stop_lon": 4.372343,
+        "stop_lat": 50.816883,
+        "stop_lon": 4.375924,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
         "parent_station": ""
     },
     {
-        "stop_id": 3143,
+        "stop_id": 3140,
         "stop_code": "",
-        "stop_name": "JUBILE",
+        "stop_name": "STADE",
         "stop_desc": "",
-        "stop_lat": 50.861254,
-        "stop_lon": 4.3383,
+        "stop_lat": 50.892486,
+        "stop_lon": 4.333445,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
         "parent_station": ""
     },
     {
-        "stop_id": 3144,
+        "stop_id": 3142,
         "stop_code": "",
-        "stop_name": "BRUSSELSESTEENWEG",
+        "stop_name": "POLYCL. BRUGMANN",
         "stop_desc": "",
-        "stop_lat": 50.822306,
-        "stop_lon": 4.4977,
+        "stop_lat": 50.88822,
+        "stop_lon": 4.335447,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
         "parent_station": ""
     },
     {
-        "stop_id": 3149,
+        "stop_id": 3150,
         "stop_code": "",
-        "stop_name": "MARGUERITE DURAS",
+        "stop_name": "PARC",
         "stop_desc": "",
-        "stop_lat": 50.856153,
-        "stop_lon": 4.344308,
+        "stop_lat": 50.84756,
+        "stop_lon": 4.363669,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 3153,
+        "stop_code": "",
+        "stop_name": "ROUPPE",
+        "stop_desc": "",
+        "stop_lat": 50.843259,
+        "stop_lon": 4.346303,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -15510,6 +15498,54 @@
         "stop_desc": "",
         "stop_lat": 50.836113,
         "stop_lon": 4.380833,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 3162,
+        "stop_code": "",
+        "stop_name": "HOUWAERT",
+        "stop_desc": "",
+        "stop_lat": 50.853203,
+        "stop_lon": 4.373496,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 3163,
+        "stop_code": "",
+        "stop_name": "GEEFS",
+        "stop_desc": "",
+        "stop_lat": 50.856933,
+        "stop_lon": 4.375584,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 3164,
+        "stop_code": "",
+        "stop_name": "COTEAUX",
+        "stop_desc": "",
+        "stop_lat": 50.859855,
+        "stop_lon": 4.377757,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 3165,
+        "stop_code": "",
+        "stop_name": "HERMAN",
+        "stop_desc": "",
+        "stop_lat": 50.863361,
+        "stop_lon": 4.37736,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -15654,6 +15690,150 @@
         "stop_desc": "",
         "stop_lat": 50.876556,
         "stop_lon": 4.385391,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 3183,
+        "stop_code": "",
+        "stop_name": "PATRIE",
+        "stop_desc": "",
+        "stop_lat": 50.857129,
+        "stop_lon": 4.390241,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 3184,
+        "stop_code": "",
+        "stop_name": "PATRIE",
+        "stop_desc": "",
+        "stop_lat": 50.856985,
+        "stop_lon": 4.390113,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 3185,
+        "stop_code": "",
+        "stop_name": "CHAZAL",
+        "stop_desc": "",
+        "stop_lat": 50.860536,
+        "stop_lon": 4.392046,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 3186,
+        "stop_code": "",
+        "stop_name": "CHAZAL",
+        "stop_desc": "",
+        "stop_lat": 50.859673,
+        "stop_lon": 4.39152,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 3188,
+        "stop_code": "",
+        "stop_name": "GLOBE",
+        "stop_desc": "",
+        "stop_lat": 50.799891,
+        "stop_lon": 4.336409,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 3189,
+        "stop_code": "",
+        "stop_name": "XAVIER DE BUE",
+        "stop_desc": "",
+        "stop_lat": 50.802745,
+        "stop_lon": 4.336524,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 3190,
+        "stop_code": "",
+        "stop_name": "BENS",
+        "stop_desc": "",
+        "stop_lat": 50.806877,
+        "stop_lon": 4.33672,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 3191,
+        "stop_code": "",
+        "stop_name": "XAVIER DE BUE",
+        "stop_desc": "",
+        "stop_lat": 50.803193,
+        "stop_lon": 4.336665,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 3192,
+        "stop_code": "",
+        "stop_name": "BENS",
+        "stop_desc": "",
+        "stop_lat": 50.806752,
+        "stop_lon": 4.33686,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 3194,
+        "stop_code": "",
+        "stop_name": "SAINT-DENIS",
+        "stop_desc": "",
+        "stop_lat": 50.809427,
+        "stop_lon": 4.313018,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 3196,
+        "stop_code": "",
+        "stop_name": "SAINT-DENIS",
+        "stop_desc": "",
+        "stop_lat": 50.809701,
+        "stop_lon": 4.313231,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 3198,
+        "stop_code": "",
+        "stop_name": "NEERSTALLE",
+        "stop_desc": "",
+        "stop_lat": 50.799891,
+        "stop_lon": 4.315292,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -15816,6 +15996,18 @@
         "parent_station": ""
     },
     {
+        "stop_id": 3220,
+        "stop_code": "",
+        "stop_name": "SAINT-DENIS",
+        "stop_desc": "",
+        "stop_lat": 50.809483,
+        "stop_lon": 4.317429,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
         "stop_id": 3221,
         "stop_code": "",
         "stop_name": "DANSAERT",
@@ -15906,6 +16098,18 @@
         "stop_desc": "",
         "stop_lat": 50.849975,
         "stop_lon": 4.334359,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 3229,
+        "stop_code": "",
+        "stop_name": "EUGENE TOUSSAINT",
+        "stop_desc": "",
+        "stop_lat": 50.880576,
+        "stop_lon": 4.321762,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -16008,6 +16212,18 @@
         "parent_station": ""
     },
     {
+        "stop_id": 3237,
+        "stop_code": "",
+        "stop_name": "PARC",
+        "stop_desc": "",
+        "stop_lat": 50.847651,
+        "stop_lon": 4.36355,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
         "stop_id": 3238,
         "stop_code": "",
         "stop_name": "CONDOR",
@@ -16038,6 +16254,90 @@
         "stop_desc": "",
         "stop_lat": 50.862095,
         "stop_lon": 4.409177,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 3241,
+        "stop_code": "",
+        "stop_name": "MAX WALLER",
+        "stop_desc": "",
+        "stop_lat": 50.805989,
+        "stop_lon": 4.311602,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 3242,
+        "stop_code": "",
+        "stop_name": "NEERSTALLE",
+        "stop_desc": "",
+        "stop_lat": 50.800151,
+        "stop_lon": 4.318408,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 3243,
+        "stop_code": "",
+        "stop_name": "FOREST (BERVOETS)",
+        "stop_desc": "",
+        "stop_lat": 50.817226,
+        "stop_lon": 4.320107,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 3244,
+        "stop_code": "",
+        "stop_name": "ALBERT II",
+        "stop_desc": "",
+        "stop_lat": 50.857532,
+        "stop_lon": 4.356298,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 3245,
+        "stop_code": "",
+        "stop_name": "WTC",
+        "stop_desc": "",
+        "stop_lat": 50.861313,
+        "stop_lon": 4.356188,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 3247,
+        "stop_code": "",
+        "stop_name": "MAX WALLER",
+        "stop_desc": "",
+        "stop_lat": 50.807399,
+        "stop_lon": 4.312267,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 3250,
+        "stop_code": "",
+        "stop_name": "NEERSTALLE",
+        "stop_desc": "",
+        "stop_lat": 50.799278,
+        "stop_lon": 4.315336,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -16092,6 +16392,30 @@
         "parent_station": ""
     },
     {
+        "stop_id": 3254,
+        "stop_code": "",
+        "stop_name": "NEERSTALLE",
+        "stop_desc": "",
+        "stop_lat": 50.800374,
+        "stop_lon": 4.316833,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 3255,
+        "stop_code": "",
+        "stop_name": "NEERSTALLE",
+        "stop_desc": "",
+        "stop_lat": 50.800296,
+        "stop_lon": 4.31828,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
         "stop_id": 3257,
         "stop_code": "",
         "stop_name": "QUATRE-VENTS",
@@ -16116,7 +16440,7 @@
         "parent_station": ""
     },
     {
-        "stop_id": "3259B",
+        "stop_id": "3259C",
         "stop_code": "",
         "stop_name": "PORTE DE NINOVE",
         "stop_desc": "",
@@ -16158,6 +16482,18 @@
         "stop_desc": "",
         "stop_lat": 50.849449,
         "stop_lon": 4.32937,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 3265,
+        "stop_code": "",
+        "stop_name": "DELTA",
+        "stop_desc": "",
+        "stop_lat": 50.818949,
+        "stop_lon": 4.407743,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -16404,11 +16740,11 @@
         "parent_station": ""
     },
     {
-        "stop_id": "3309F",
+        "stop_id": 3309,
         "stop_code": "",
         "stop_name": "COTEAUX",
         "stop_desc": "",
-        "stop_lat": 50.859423,
+        "stop_lat": 50.859441,
         "stop_lon": 4.377857,
         "zone_id": "",
         "stop_url": "",
@@ -16476,6 +16812,30 @@
         "parent_station": ""
     },
     {
+        "stop_id": 3325,
+        "stop_code": "",
+        "stop_name": "MERIDIEN",
+        "stop_desc": "",
+        "stop_lat": 50.856412,
+        "stop_lon": 4.369051,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 3332,
+        "stop_code": "",
+        "stop_name": "MADOU",
+        "stop_desc": "",
+        "stop_lat": 50.849887,
+        "stop_lon": 4.369025,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
         "stop_id": "3334F",
         "stop_code": "",
         "stop_name": "EUROCONTROL",
@@ -16536,6 +16896,102 @@
         "parent_station": ""
     },
     {
+        "stop_id": 3339,
+        "stop_code": "",
+        "stop_name": "PTE D'ANDERLECHT",
+        "stop_desc": "",
+        "stop_lat": 50.844591,
+        "stop_lon": 4.339351,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 3340,
+        "stop_code": "",
+        "stop_name": "VAN CUTSEM",
+        "stop_desc": "",
+        "stop_lat": 50.879825,
+        "stop_lon": 4.406675,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 3341,
+        "stop_code": "",
+        "stop_name": "GARE DU MIDI",
+        "stop_desc": "",
+        "stop_lat": 50.836172,
+        "stop_lon": 4.338154,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 3342,
+        "stop_code": "",
+        "stop_name": "PETER BENOIT",
+        "stop_desc": "",
+        "stop_lat": 50.895474,
+        "stop_lon": 4.388007,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 3343,
+        "stop_code": "",
+        "stop_name": "CROIX DE GUERRE",
+        "stop_desc": "",
+        "stop_lat": 50.89405,
+        "stop_lon": 4.389192,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 3344,
+        "stop_code": "",
+        "stop_name": "HEEMBEEK",
+        "stop_desc": "",
+        "stop_lat": 50.886163,
+        "stop_lon": 4.378237,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 3345,
+        "stop_code": "",
+        "stop_name": "HEEMBEEK",
+        "stop_desc": "",
+        "stop_lat": 50.886347,
+        "stop_lon": 4.378544,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 3346,
+        "stop_code": "",
+        "stop_name": "CROIX DE GUERRE",
+        "stop_desc": "",
+        "stop_lat": 50.894152,
+        "stop_lon": 4.389226,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
         "stop_id": 3347,
         "stop_code": "",
         "stop_name": "GARE CENTRALE",
@@ -16578,6 +17034,30 @@
         "stop_desc": "",
         "stop_lat": 50.850066,
         "stop_lon": 4.369073,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 3356,
+        "stop_code": "",
+        "stop_name": "BEMPT",
+        "stop_desc": "",
+        "stop_lat": 50.803316,
+        "stop_lon": 4.308992,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 3357,
+        "stop_code": "",
+        "stop_name": "BEMPT",
+        "stop_desc": "",
+        "stop_lat": 50.803219,
+        "stop_lon": 4.309104,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -16638,6 +17118,18 @@
         "stop_desc": "",
         "stop_lat": 50.872524,
         "stop_lon": 4.407538,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 3365,
+        "stop_code": "",
+        "stop_name": "FOREST CENTRE",
+        "stop_desc": "",
+        "stop_lat": 50.812012,
+        "stop_lon": 4.318754,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -17064,18 +17556,6 @@
         "parent_station": ""
     },
     {
-        "stop_id": "3507F",
-        "stop_code": "",
-        "stop_name": "FLAGEY",
-        "stop_desc": "",
-        "stop_lat": 50.82672,
-        "stop_lon": 4.372343,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
         "stop_id": 3508,
         "stop_code": "",
         "stop_name": "FLAGEY",
@@ -17094,18 +17574,6 @@
         "stop_desc": "",
         "stop_lat": 50.827324,
         "stop_lon": 4.371906,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": 3510,
-        "stop_code": "",
-        "stop_name": "GEO BERNIER",
-        "stop_desc": "",
-        "stop_lat": 50.820157,
-        "stop_lon": 4.377153,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -17424,18 +17892,6 @@
         "parent_station": ""
     },
     {
-        "stop_id": 3562,
-        "stop_code": "",
-        "stop_name": "GEO BERNIER",
-        "stop_desc": "",
-        "stop_lat": 50.820903,
-        "stop_lon": 4.376529,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
         "stop_id": "3562B",
         "stop_code": "",
         "stop_name": "GEO BERNIER",
@@ -17574,6 +18030,30 @@
         "stop_desc": "",
         "stop_lat": 50.827133,
         "stop_lon": 4.288701,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 3616,
+        "stop_code": "",
+        "stop_name": "SAINT-GUIDON",
+        "stop_desc": "",
+        "stop_lat": 50.834182,
+        "stop_lon": 4.304929,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 3619,
+        "stop_code": "",
+        "stop_name": "VIER FONTEINEN",
+        "stop_desc": "",
+        "stop_lat": 50.915207,
+        "stop_lon": 4.421094,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -19932,18 +20412,6 @@
         "parent_station": ""
     },
     {
-        "stop_id": 4370,
-        "stop_code": "",
-        "stop_name": "LUXEMBOURG",
-        "stop_desc": "",
-        "stop_lat": 50.839539,
-        "stop_lon": 4.371222,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
         "stop_id": 4401,
         "stop_code": "",
         "stop_name": "LOUTRIER",
@@ -20424,18 +20892,6 @@
         "parent_station": ""
     },
     {
-        "stop_id": "4955F",
-        "stop_code": "",
-        "stop_name": "STUYVENBERGH",
-        "stop_desc": "",
-        "stop_lat": 50.886272,
-        "stop_lon": 4.342107,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
         "stop_id": 4956,
         "stop_code": "",
         "stop_name": "STUYVENBERGH",
@@ -20460,36 +20916,12 @@
         "parent_station": ""
     },
     {
-        "stop_id": "4958F",
+        "stop_id": 5006,
         "stop_code": "",
-        "stop_name": "STUYVENBERGH",
+        "stop_name": "DEMINEURS",
         "stop_desc": "",
-        "stop_lat": 50.886389,
-        "stop_lon": 4.342476,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": "5001F",
-        "stop_code": "",
-        "stop_name": "DE WAND",
-        "stop_desc": "",
-        "stop_lat": 50.895267,
-        "stop_lon": 4.355039,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": 5003,
-        "stop_code": "",
-        "stop_name": "ERNEST SALU",
-        "stop_desc": "",
-        "stop_lat": 50.88424,
-        "stop_lon": 4.337788,
+        "stop_lat": 50.87764,
+        "stop_lon": 4.332876,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -20544,18 +20976,6 @@
         "parent_station": ""
     },
     {
-        "stop_id": 5010,
-        "stop_code": "",
-        "stop_name": "GUILL. DE GREEF",
-        "stop_desc": "",
-        "stop_lat": 50.882189,
-        "stop_lon": 4.335515,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
         "stop_id": 5011,
         "stop_code": "",
         "stop_name": "VANDERSTICHELEN",
@@ -20574,18 +20994,6 @@
         "stop_desc": "",
         "stop_lat": 50.865946,
         "stop_lon": 4.338822,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": 5012,
-        "stop_code": "",
-        "stop_name": "GUILL. DE GREEF",
-        "stop_desc": "",
-        "stop_lat": 50.883056,
-        "stop_lon": 4.335295,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -21144,18 +21552,6 @@
         "parent_station": ""
     },
     {
-        "stop_id": 5073,
-        "stop_code": "",
-        "stop_name": "RIBAUCOURT",
-        "stop_desc": "",
-        "stop_lat": 50.86004,
-        "stop_lon": 4.342297,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
         "stop_id": 5074,
         "stop_code": "",
         "stop_name": "VANDERSTICHELEN",
@@ -21174,18 +21570,6 @@
         "stop_desc": "",
         "stop_lat": 50.866207,
         "stop_lon": 4.338439,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": 5075,
-        "stop_code": "",
-        "stop_name": "RIBAUCOURT",
-        "stop_desc": "",
-        "stop_lat": 50.859695,
-        "stop_lon": 4.342195,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -21246,54 +21630,6 @@
         "stop_desc": "",
         "stop_lat": 50.877973,
         "stop_lon": 4.332833,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": "5081F",
-        "stop_code": "",
-        "stop_name": "GUILL. DE GREEF",
-        "stop_desc": "",
-        "stop_lat": 50.882612,
-        "stop_lon": 4.335615,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": 5082,
-        "stop_code": "",
-        "stop_name": "ERNEST SALU",
-        "stop_desc": "",
-        "stop_lat": 50.884725,
-        "stop_lon": 4.338981,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": 5085,
-        "stop_code": "",
-        "stop_name": "MARGUERITE DURAS",
-        "stop_desc": "",
-        "stop_lat": 50.855491,
-        "stop_lon": 4.346631,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": "5086F",
-        "stop_code": "",
-        "stop_name": "DE WAND",
-        "stop_desc": "",
-        "stop_lat": 50.895282,
-        "stop_lon": 4.355491,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -21516,18 +21852,6 @@
         "parent_station": ""
     },
     {
-        "stop_id": 5121,
-        "stop_code": "",
-        "stop_name": "FOREST CENTRE",
-        "stop_desc": "",
-        "stop_lat": 50.81194,
-        "stop_lon": 4.31919,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
         "stop_id": "5121F",
         "stop_code": "",
         "stop_name": "FOREST CENTRE",
@@ -21565,18 +21889,6 @@
     },
     {
         "stop_id": 5152,
-        "stop_code": "",
-        "stop_name": "SAINT-DENIS",
-        "stop_desc": "",
-        "stop_lat": 50.810537,
-        "stop_lon": 4.317971,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": "5152G",
         "stop_code": "",
         "stop_name": "SAINT-DENIS",
         "stop_desc": "",
@@ -21641,18 +21953,6 @@
         "stop_name": "FOREST CENTRE",
         "stop_desc": "",
         "stop_lat": 50.811535,
-        "stop_lon": 4.318751,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": "5161F",
-        "stop_code": "",
-        "stop_name": "FOREST CENTRE",
-        "stop_desc": "",
-        "stop_lat": 50.811553,
         "stop_lon": 4.318751,
         "zone_id": "",
         "stop_url": "",
@@ -22464,7 +22764,7 @@
         "parent_station": ""
     },
     {
-        "stop_id": "5307G",
+        "stop_id": "5307H",
         "stop_code": "",
         "stop_name": "CHAZAL",
         "stop_desc": "",
@@ -22536,6 +22836,18 @@
         "parent_station": ""
     },
     {
+        "stop_id": "5315B",
+        "stop_code": "",
+        "stop_name": "SCHAERBEEK GARE",
+        "stop_desc": "",
+        "stop_lat": 50.877411,
+        "stop_lon": 4.379423,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
         "stop_id": "5317G",
         "stop_code": "",
         "stop_name": "HOP. PAUL BRIEN",
@@ -22596,7 +22908,7 @@
         "parent_station": ""
     },
     {
-        "stop_id": 5355,
+        "stop_id": "5355F",
         "stop_code": "",
         "stop_name": "CHAZAL",
         "stop_desc": "",
@@ -22686,66 +22998,6 @@
         "stop_desc": "",
         "stop_lat": 50.878141,
         "stop_lon": 4.409916,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": "5398F",
-        "stop_code": "",
-        "stop_name": "POLYCL. BRUGMANN",
-        "stop_desc": "",
-        "stop_lat": 50.889219,
-        "stop_lon": 4.334089,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": "5399F",
-        "stop_code": "",
-        "stop_name": "POLYCL. BRUGMANN",
-        "stop_desc": "",
-        "stop_lat": 50.889039,
-        "stop_lon": 4.334672,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": 5400,
-        "stop_code": "",
-        "stop_name": "STADE",
-        "stop_desc": "",
-        "stop_lat": 50.893407,
-        "stop_lon": 4.332111,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": 5402,
-        "stop_code": "",
-        "stop_name": "STIENON",
-        "stop_desc": "",
-        "stop_lat": 50.890647,
-        "stop_lon": 4.330038,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": 5403,
-        "stop_code": "",
-        "stop_name": "HOPITAL BRUGMANN",
-        "stop_desc": "",
-        "stop_lat": 50.886036,
-        "stop_lon": 4.333523,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -23238,42 +23490,6 @@
         "stop_desc": "",
         "stop_lat": 50.833183,
         "stop_lon": 4.357651,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": 5471,
-        "stop_code": "",
-        "stop_name": "HOPITAL BRUGMANN",
-        "stop_desc": "",
-        "stop_lat": 50.886216,
-        "stop_lon": 4.333964,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": 5472,
-        "stop_code": "",
-        "stop_name": "STIENON",
-        "stop_desc": "",
-        "stop_lat": 50.890881,
-        "stop_lon": 4.330308,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": 5474,
-        "stop_code": "",
-        "stop_name": "STADE",
-        "stop_desc": "",
-        "stop_lat": 50.893839,
-        "stop_lon": 4.331926,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -24000,18 +24216,6 @@
         "parent_station": ""
     },
     {
-        "stop_id": "5719H",
-        "stop_code": "",
-        "stop_name": "SAINT-DENIS",
-        "stop_desc": "",
-        "stop_lat": 50.809871,
-        "stop_lon": 4.317575,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
         "stop_id": 5720,
         "stop_code": "",
         "stop_name": "MAX WALLER",
@@ -24024,36 +24228,12 @@
         "parent_station": ""
     },
     {
-        "stop_id": "5720F",
-        "stop_code": "",
-        "stop_name": "MAX WALLER",
-        "stop_desc": "",
-        "stop_lat": 50.806418,
-        "stop_lon": 4.31406,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
         "stop_id": 5721,
         "stop_code": "",
         "stop_name": "NEERSTALLE",
         "stop_desc": "",
         "stop_lat": 50.800828,
         "stop_lon": 4.317514,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": "5721G",
-        "stop_code": "",
-        "stop_name": "NEERSTALLE",
-        "stop_desc": "",
-        "stop_lat": 50.800837,
-        "stop_lon": 4.317471,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -24300,6 +24480,18 @@
         "parent_station": ""
     },
     {
+        "stop_id": 5758,
+        "stop_code": "",
+        "stop_name": "DOCKS BRUXSEL",
+        "stop_desc": "",
+        "stop_lat": 50.879173,
+        "stop_lon": 4.374834,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
         "stop_id": "5758F",
         "stop_code": "",
         "stop_name": "DOCKS BRUXSEL",
@@ -24444,18 +24636,6 @@
         "parent_station": ""
     },
     {
-        "stop_id": 5779,
-        "stop_code": "",
-        "stop_name": "DE WAND",
-        "stop_desc": "",
-        "stop_lat": 50.895188,
-        "stop_lon": 4.355108,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
         "stop_id": 5801,
         "stop_code": "",
         "stop_name": "PAIX",
@@ -24528,6 +24708,30 @@
         "parent_station": ""
     },
     {
+        "stop_id": 5807,
+        "stop_code": "",
+        "stop_name": "HELMET",
+        "stop_desc": "",
+        "stop_lat": 50.873501,
+        "stop_lon": 4.38695,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 5808,
+        "stop_code": "",
+        "stop_name": "HELMET",
+        "stop_desc": "",
+        "stop_lat": 50.873992,
+        "stop_lon": 4.38762,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
         "stop_id": 5810,
         "stop_code": "",
         "stop_name": "TIMMERMANS",
@@ -24570,42 +24774,6 @@
         "stop_desc": "",
         "stop_lat": 50.810319,
         "stop_lon": 4.337566,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": 5814,
-        "stop_code": "",
-        "stop_name": "BENS",
-        "stop_desc": "",
-        "stop_lat": 50.808206,
-        "stop_lon": 4.3369,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": 5815,
-        "stop_code": "",
-        "stop_name": "XAVIER DE BUE",
-        "stop_desc": "",
-        "stop_lat": 50.803594,
-        "stop_lon": 4.33662,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": "5816B",
-        "stop_code": "",
-        "stop_name": "GLOBE",
-        "stop_desc": "",
-        "stop_lat": 50.801077,
-        "stop_lon": 4.336479,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -24696,6 +24864,126 @@
         "parent_station": ""
     },
     {
+        "stop_id": "5827F",
+        "stop_code": "",
+        "stop_name": "GLOBE",
+        "stop_desc": "",
+        "stop_lat": 50.80061,
+        "stop_lon": 4.33648,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": "5828F",
+        "stop_code": "",
+        "stop_name": "XAVIER DE BUE",
+        "stop_desc": "",
+        "stop_lat": 50.804197,
+        "stop_lon": 4.33669,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": "5830F",
+        "stop_code": "",
+        "stop_name": "BENS",
+        "stop_desc": "",
+        "stop_lat": 50.807235,
+        "stop_lon": 4.336844,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": "5831F",
+        "stop_code": "",
+        "stop_name": "BENS",
+        "stop_desc": "",
+        "stop_lat": 50.807469,
+        "stop_lon": 4.336801,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": "5832F",
+        "stop_code": "",
+        "stop_name": "ROOSENDAEL",
+        "stop_desc": "",
+        "stop_lat": 50.810714,
+        "stop_lon": 4.337778,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": "5833F",
+        "stop_code": "",
+        "stop_name": "ROOSENDAEL",
+        "stop_desc": "",
+        "stop_lat": 50.809636,
+        "stop_lon": 4.337297,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": "5834F",
+        "stop_code": "",
+        "stop_name": "COGHEN",
+        "stop_desc": "",
+        "stop_lat": 50.813241,
+        "stop_lon": 4.338827,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": "5835F",
+        "stop_code": "",
+        "stop_name": "COGHEN",
+        "stop_desc": "",
+        "stop_lat": 50.812899,
+        "stop_lon": 4.338628,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": "5836F",
+        "stop_code": "",
+        "stop_name": "ALTITUDE CENT",
+        "stop_desc": "",
+        "stop_lat": 50.816971,
+        "stop_lon": 4.336994,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": "5837F",
+        "stop_code": "",
+        "stop_name": "ALTITUDE CENT",
+        "stop_desc": "",
+        "stop_lat": 50.816566,
+        "stop_lon": 4.336214,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
         "stop_id": "5853B",
         "stop_code": "",
         "stop_name": "GLOBE",
@@ -24714,30 +25002,6 @@
         "stop_desc": "",
         "stop_lat": 50.799531,
         "stop_lon": 4.336466,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": 5854,
-        "stop_code": "",
-        "stop_name": "XAVIER DE BUE",
-        "stop_desc": "",
-        "stop_lat": 50.804197,
-        "stop_lon": 4.33669,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": 5855,
-        "stop_code": "",
-        "stop_name": "BENS",
-        "stop_desc": "",
-        "stop_lat": 50.807829,
-        "stop_lon": 4.336901,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -24870,6 +25134,18 @@
         "stop_desc": "",
         "stop_lat": 50.871499,
         "stop_lon": 4.406216,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 5879,
+        "stop_code": "",
+        "stop_name": "PAIX",
+        "stop_desc": "",
+        "stop_lat": 50.876937,
+        "stop_lon": 4.400669,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -25740,18 +26016,6 @@
         "parent_station": ""
     },
     {
-        "stop_id": 6154,
-        "stop_code": "",
-        "stop_name": "BUYL",
-        "stop_desc": "",
-        "stop_lat": 50.818683,
-        "stop_lon": 4.378912,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
         "stop_id": "6155F",
         "stop_code": "",
         "stop_name": "LA CHASSE",
@@ -25956,6 +26220,18 @@
         "parent_station": ""
     },
     {
+        "stop_id": "6177F",
+        "stop_code": "",
+        "stop_name": "THOMAS",
+        "stop_desc": "",
+        "stop_lat": 50.867119,
+        "stop_lon": 4.363786,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
         "stop_id": 6178,
         "stop_code": "",
         "stop_name": "MASUI",
@@ -25980,12 +26256,12 @@
         "parent_station": ""
     },
     {
-        "stop_id": "6189F",
+        "stop_id": "6188F",
         "stop_code": "",
-        "stop_name": "LIEDTS",
+        "stop_name": "BOCKSTAEL",
         "stop_desc": "",
-        "stop_lat": 50.863856,
-        "stop_lon": 4.366531,
+        "stop_lat": 50.87737,
+        "stop_lon": 4.349118,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -26040,7 +26316,7 @@
         "parent_station": ""
     },
     {
-        "stop_id": "6203F",
+        "stop_id": 6203,
         "stop_code": "",
         "stop_name": "COTEAUX",
         "stop_desc": "",
@@ -26052,7 +26328,7 @@
         "parent_station": ""
     },
     {
-        "stop_id": 6204,
+        "stop_id": "6204F",
         "stop_code": "",
         "stop_name": "PATRIE",
         "stop_desc": "",
@@ -26112,7 +26388,7 @@
         "parent_station": ""
     },
     {
-        "stop_id": 6258,
+        "stop_id": "6258F",
         "stop_code": "",
         "stop_name": "PATRIE",
         "stop_desc": "",
@@ -26274,18 +26550,6 @@
         "stop_desc": "",
         "stop_lat": 50.835673,
         "stop_lon": 4.355167,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": 6351,
-        "stop_code": "",
-        "stop_name": "LOUISE",
-        "stop_desc": "",
-        "stop_lat": 50.835888,
-        "stop_lon": 4.355039,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -26520,24 +26784,24 @@
         "parent_station": ""
     },
     {
-        "stop_id": 6370,
+        "stop_id": 6369,
         "stop_code": "",
-        "stop_name": "VAN PRAET",
+        "stop_name": "MERIDIEN",
         "stop_desc": "",
-        "stop_lat": 50.881383,
-        "stop_lon": 4.374005,
+        "stop_lat": 50.856808,
+        "stop_lon": 4.369349,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
         "parent_station": ""
     },
     {
-        "stop_id": "6371F",
+        "stop_id": 6370,
         "stop_code": "",
-        "stop_name": "MARGUERITE DURAS",
+        "stop_name": "VAN PRAET",
         "stop_desc": "",
-        "stop_lat": 50.855667,
-        "stop_lon": 4.345887,
+        "stop_lat": 50.881383,
+        "stop_lon": 4.374005,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -26628,12 +26892,36 @@
         "parent_station": ""
     },
     {
+        "stop_id": 6416,
+        "stop_code": "",
+        "stop_name": "ROBIANO",
+        "stop_desc": "",
+        "stop_lat": 50.86008,
+        "stop_lon": 4.371124,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
         "stop_id": "6416F",
         "stop_code": "",
         "stop_name": "ROBIANO",
         "stop_desc": "",
         "stop_lat": 50.860089,
         "stop_lon": 4.371153,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 6418,
+        "stop_code": "",
+        "stop_name": "ROBIANO",
+        "stop_desc": "",
+        "stop_lat": 50.860305,
+        "stop_lon": 4.371337,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -27432,6 +27720,18 @@
         "parent_station": ""
     },
     {
+        "stop_id": "6608B",
+        "stop_code": "",
+        "stop_name": "ARTS ET METIERS",
+        "stop_desc": "",
+        "stop_lat": 50.848003,
+        "stop_lon": 4.338123,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
         "stop_id": "6608G",
         "stop_code": "",
         "stop_name": "ARTS ET METIERS",
@@ -27522,6 +27822,18 @@
         "stop_desc": "",
         "stop_lat": 50.853685,
         "stop_lon": 4.341809,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 6655,
+        "stop_code": "",
+        "stop_name": "PTE D'ANDERLECHT",
+        "stop_desc": "",
+        "stop_lat": 50.845082,
+        "stop_lon": 4.338906,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -27696,18 +28008,6 @@
         "parent_station": ""
     },
     {
-        "stop_id": 6809,
-        "stop_code": "",
-        "stop_name": "DOUVRES",
-        "stop_desc": "",
-        "stop_lat": 50.836065,
-        "stop_lon": 4.313969,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
         "stop_id": "6811B",
         "stop_code": "",
         "stop_name": "YSAYE",
@@ -27726,6 +28026,18 @@
         "stop_desc": "",
         "stop_lat": 50.830357,
         "stop_lon": 4.296602,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": "6858C",
+        "stop_code": "",
+        "stop_name": "DOUVRES",
+        "stop_desc": "",
+        "stop_lat": 50.836115,
+        "stop_lon": 4.314685,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -27876,156 +28188,96 @@
         "parent_station": ""
     },
     {
-        "stop_id": 7222,
+        "stop_id": 7241,
         "stop_code": "",
-        "stop_name": "TERVUREN STATION",
+        "stop_name": "EGLISE ST-SERVAIS",
         "stop_desc": "",
-        "stop_lat": 50.829481,
-        "stop_lon": 4.513351,
+        "stop_lat": 50.864251,
+        "stop_lon": 4.373511,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
         "parent_station": ""
     },
     {
-        "stop_id": 7223,
+        "stop_id": 7243,
         "stop_code": "",
-        "stop_name": "OPPEMSTRAAT",
+        "stop_name": "VERBOEKHOVEN",
         "stop_desc": "",
-        "stop_lat": 50.82563,
-        "stop_lon": 4.50719,
+        "stop_lat": 50.87104,
+        "stop_lon": 4.375144,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
         "parent_station": ""
     },
     {
-        "stop_id": 7292,
+        "stop_id": 7246,
         "stop_code": "",
-        "stop_name": "PORTE DE FLANDRE",
+        "stop_name": "FOYER SCHAERBEEK.",
         "stop_desc": "",
-        "stop_lat": 50.852876,
-        "stop_lon": 4.341287,
+        "stop_lat": 50.871918,
+        "stop_lon": 4.384991,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
         "parent_station": ""
     },
     {
-        "stop_id": 7300,
+        "stop_id": 7248,
         "stop_code": "",
-        "stop_name": "QUATRE BRAS",
+        "stop_name": "TILLEUL",
         "stop_desc": "",
-        "stop_lat": 50.820439,
-        "stop_lon": 4.477103,
+        "stop_lat": 50.875827,
+        "stop_lon": 4.392352,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
         "parent_station": ""
     },
     {
-        "stop_id": 7301,
+        "stop_id": 7249,
         "stop_code": "",
-        "stop_name": "RAVENSTEIN",
+        "stop_name": "PAIX",
         "stop_desc": "",
-        "stop_lat": 50.817188,
-        "stop_lon": 4.48307,
+        "stop_lat": 50.876904,
+        "stop_lon": 4.400864,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
         "parent_station": ""
     },
     {
-        "stop_id": 7303,
+        "stop_id": "7252B",
         "stop_code": "",
-        "stop_name": "BRUSSELSESTEENWEG",
+        "stop_name": "FOYER SCHAERBEEK.",
         "stop_desc": "",
-        "stop_lat": 50.822887,
-        "stop_lon": 4.501556,
+        "stop_lat": 50.871648,
+        "stop_lon": 4.384366,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
         "parent_station": ""
     },
     {
-        "stop_id": 7304,
+        "stop_id": 7254,
         "stop_code": "",
-        "stop_name": "OPPEMSTRAAT",
+        "stop_name": "EENENS",
         "stop_desc": "",
-        "stop_lat": 50.825306,
-        "stop_lon": 4.507927,
+        "stop_lat": 50.868602,
+        "stop_lon": 4.374847,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
         "parent_station": ""
     },
     {
-        "stop_id": 7305,
+        "stop_id": 7283,
         "stop_code": "",
-        "stop_name": "TERVUREN STATION",
+        "stop_name": "SAINTE-MARIE",
         "stop_desc": "",
-        "stop_lat": 50.829605,
-        "stop_lon": 4.513954,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": 7341,
-        "stop_code": "",
-        "stop_name": "DAUTZENBERG",
-        "stop_desc": "",
-        "stop_lat": 50.827637,
-        "stop_lon": 4.36729,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": 7351,
-        "stop_code": "",
-        "stop_name": "RIBAUCOURT",
-        "stop_desc": "",
-        "stop_lat": 50.860122,
-        "stop_lon": 4.340743,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": 7352,
-        "stop_code": "",
-        "stop_name": "SAINCTELETTE",
-        "stop_desc": "",
-        "stop_lat": 50.8589,
-        "stop_lon": 4.344835,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": 7355,
-        "stop_code": "",
-        "stop_name": "YSER",
-        "stop_desc": "",
-        "stop_lat": 50.857175,
-        "stop_lon": 4.348897,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": 7356,
-        "stop_code": "",
-        "stop_name": "SAINCTELETTE",
-        "stop_desc": "",
-        "stop_lat": 50.859421,
-        "stop_lon": 4.344593,
+        "stop_lat": 50.859168,
+        "stop_lon": 4.36915,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -28128,60 +28380,12 @@
         "parent_station": ""
     },
     {
-        "stop_id": 7452,
+        "stop_id": 7484,
         "stop_code": "",
-        "stop_name": "BELGICA",
+        "stop_name": "WAELHEM",
         "stop_desc": "",
-        "stop_lat": 50.867411,
-        "stop_lon": 4.335994,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": 7455,
-        "stop_code": "",
-        "stop_name": "DEMINEURS",
-        "stop_desc": "",
-        "stop_lat": 50.877635,
-        "stop_lon": 4.332759,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": 7458,
-        "stop_code": "",
-        "stop_name": "ODON WARLAND",
-        "stop_desc": "",
-        "stop_lat": 50.870548,
-        "stop_lon": 4.3346,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": 7460,
-        "stop_code": "",
-        "stop_name": "CIM. DE JETTE",
-        "stop_desc": "",
-        "stop_lat": 50.879162,
-        "stop_lon": 4.334071,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": 7483,
-        "stop_code": "",
-        "stop_name": "ODON WARLAND",
-        "stop_desc": "",
-        "stop_lat": 50.870855,
-        "stop_lon": 4.334789,
+        "stop_lat": 50.870052,
+        "stop_lon": 4.381494,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -28200,18 +28404,6 @@
         "parent_station": ""
     },
     {
-        "stop_id": 7520,
-        "stop_code": "",
-        "stop_name": "DEFACQZ",
-        "stop_desc": "",
-        "stop_lat": 50.828554,
-        "stop_lon": 4.362114,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
         "stop_id": 7568,
         "stop_code": "",
         "stop_name": "ALBERT I",
@@ -28224,48 +28416,60 @@
         "parent_station": ""
     },
     {
-        "stop_id": 7629,
+        "stop_id": 7618,
         "stop_code": "",
-        "stop_name": "MUSEE DU TRAM",
+        "stop_name": "CAMBRE-ETOILE",
         "stop_desc": "",
-        "stop_lat": 50.830855,
-        "stop_lon": 4.433678,
+        "stop_lat": 50.816119,
+        "stop_lon": 4.377723,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
         "parent_station": ""
     },
     {
-        "stop_id": 7681,
+        "stop_id": 7641,
         "stop_code": "",
-        "stop_name": "JAM'IN JETTE",
+        "stop_name": "ROBIANO",
         "stop_desc": "",
-        "stop_lat": 50.881477,
-        "stop_lon": 4.331372,
+        "stop_lat": 50.860979,
+        "stop_lon": 4.370727,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
         "parent_station": ""
     },
     {
-        "stop_id": 7682,
+        "stop_id": 7671,
         "stop_code": "",
-        "stop_name": "WOESTE",
+        "stop_name": "EDDY MERCKX",
         "stop_desc": "",
-        "stop_lat": 50.874359,
-        "stop_lon": 4.333603,
+        "stop_lat": 50.816611,
+        "stop_lon": 4.281609,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
         "parent_station": ""
     },
     {
-        "stop_id": 7715,
+        "stop_id": 7675,
         "stop_code": "",
-        "stop_name": "STOCKEL",
+        "stop_name": "EDDY MERCKX",
         "stop_desc": "",
-        "stop_lat": 50.840322,
-        "stop_lon": 4.465208,
+        "stop_lat": 50.81636,
+        "stop_lon": 4.282202,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 7734,
+        "stop_code": "",
+        "stop_name": "LEMONNIER",
+        "stop_desc": "",
+        "stop_lat": 50.840349,
+        "stop_lon": 4.340046,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -28284,24 +28488,84 @@
         "parent_station": ""
     },
     {
-        "stop_id": 7859,
+        "stop_id": 7899,
         "stop_code": "",
-        "stop_name": "GRIBAUMONT",
+        "stop_name": "LEMONNIER",
         "stop_desc": "",
-        "stop_lat": 50.84262,
-        "stop_lon": 4.418446,
+        "stop_lat": 50.840458,
+        "stop_lon": 4.340812,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
         "parent_station": ""
     },
     {
-        "stop_id": 7883,
+        "stop_id": 7929,
         "stop_code": "",
-        "stop_name": "GUILL. DE GREEF",
+        "stop_name": "LEGRAND",
         "stop_desc": "",
-        "stop_lat": 50.883327,
-        "stop_lon": 4.335375,
+        "stop_lat": 50.815564,
+        "stop_lon": 4.37176,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 7930,
+        "stop_code": "",
+        "stop_name": "BASCULE",
+        "stop_desc": "",
+        "stop_lat": 50.81497,
+        "stop_lon": 4.36756,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 7932,
+        "stop_code": "",
+        "stop_name": "VERBOEKHOVEN",
+        "stop_desc": "",
+        "stop_lat": 50.870505,
+        "stop_lon": 4.376234,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": "7968B",
+        "stop_code": "",
+        "stop_name": "PETILLON",
+        "stop_desc": "",
+        "stop_lat": 50.830021,
+        "stop_lon": 4.402957,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 7976,
+        "stop_code": "",
+        "stop_name": "SAINTE-MARIE",
+        "stop_desc": "",
+        "stop_lat": 50.858974,
+        "stop_lon": 4.369732,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 7998,
+        "stop_code": "",
+        "stop_name": "WAELHEM",
+        "stop_desc": "",
+        "stop_lat": 50.870156,
+        "stop_lon": 4.382109,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -28317,7 +28581,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 41
+        "parent_station": 6
     },
     {
         "stop_id": 8012,
@@ -28329,7 +28593,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 41
+        "parent_station": 6
     },
     {
         "stop_id": 8021,
@@ -28341,7 +28605,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 40
+        "parent_station": 7
     },
     {
         "stop_id": 8022,
@@ -28353,7 +28617,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 40
+        "parent_station": 7
     },
     {
         "stop_id": 8031,
@@ -28365,7 +28629,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 39
+        "parent_station": 8
     },
     {
         "stop_id": 8032,
@@ -28377,7 +28641,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 39
+        "parent_station": 8
     },
     {
         "stop_id": 8041,
@@ -28389,7 +28653,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 20
+        "parent_station": 9
     },
     {
         "stop_id": 8042,
@@ -28401,7 +28665,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 20
+        "parent_station": 9
     },
     {
         "stop_id": 8051,
@@ -28413,7 +28677,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 38
+        "parent_station": 10
     },
     {
         "stop_id": 8052,
@@ -28425,7 +28689,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 38
+        "parent_station": 10
     },
     {
         "stop_id": 8061,
@@ -28437,7 +28701,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 37
+        "parent_station": 11
     },
     {
         "stop_id": 8062,
@@ -28449,7 +28713,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 37
+        "parent_station": 11
     },
     {
         "stop_id": 8071,
@@ -28461,7 +28725,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 27
+        "parent_station": 12
     },
     {
         "stop_id": 8072,
@@ -28473,7 +28737,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 27
+        "parent_station": 12
     },
     {
         "stop_id": 8081,
@@ -28485,7 +28749,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 28
+        "parent_station": 13
     },
     {
         "stop_id": 8082,
@@ -28497,7 +28761,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 28
+        "parent_station": 13
     },
     {
         "stop_id": 8091,
@@ -28509,7 +28773,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 29
+        "parent_station": 14
     },
     {
         "stop_id": 8092,
@@ -28521,7 +28785,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 29
+        "parent_station": 14
     },
     {
         "stop_id": 8101,
@@ -28533,7 +28797,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 30
+        "parent_station": 15
     },
     {
         "stop_id": 8102,
@@ -28545,7 +28809,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 30
+        "parent_station": 15
     },
     {
         "stop_id": 8111,
@@ -28557,7 +28821,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 31
+        "parent_station": 16
     },
     {
         "stop_id": 8112,
@@ -28569,7 +28833,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 31
+        "parent_station": 16
     },
     {
         "stop_id": 8121,
@@ -28581,7 +28845,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 32
+        "parent_station": 17
     },
     {
         "stop_id": 8122,
@@ -28593,7 +28857,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 32
+        "parent_station": 17
     },
     {
         "stop_id": 8131,
@@ -28605,7 +28869,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 33
+        "parent_station": 18
     },
     {
         "stop_id": 8132,
@@ -28617,7 +28881,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 33
+        "parent_station": 18
     },
     {
         "stop_id": 8141,
@@ -28629,7 +28893,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 34
+        "parent_station": 19
     },
     {
         "stop_id": 8142,
@@ -28641,7 +28905,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 34
+        "parent_station": 19
     },
     {
         "stop_id": 8151,
@@ -28653,7 +28917,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 35
+        "parent_station": 20
     },
     {
         "stop_id": 8152,
@@ -28665,7 +28929,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 35
+        "parent_station": 20
     },
     {
         "stop_id": 8161,
@@ -28677,7 +28941,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 36
+        "parent_station": 21
     },
     {
         "stop_id": 8162,
@@ -28689,7 +28953,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 36
+        "parent_station": 21
     },
     {
         "stop_id": 8201,
@@ -28701,7 +28965,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 48
+        "parent_station": 31
     },
     {
         "stop_id": 8202,
@@ -28713,7 +28977,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 48
+        "parent_station": 31
     },
     {
         "stop_id": 8211,
@@ -28725,7 +28989,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 47
+        "parent_station": 32
     },
     {
         "stop_id": 8212,
@@ -28737,7 +29001,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 47
+        "parent_station": 32
     },
     {
         "stop_id": 8221,
@@ -28749,7 +29013,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 46
+        "parent_station": 33
     },
     {
         "stop_id": 8222,
@@ -28761,7 +29025,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 46
+        "parent_station": 33
     },
     {
         "stop_id": 8231,
@@ -28773,7 +29037,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 45
+        "parent_station": 34
     },
     {
         "stop_id": 8232,
@@ -28785,7 +29049,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 45
+        "parent_station": 34
     },
     {
         "stop_id": 8241,
@@ -28797,7 +29061,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 58
+        "parent_station": 35
     },
     {
         "stop_id": 8242,
@@ -28809,7 +29073,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 58
+        "parent_station": 35
     },
     {
         "stop_id": 8251,
@@ -28821,7 +29085,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 59
+        "parent_station": 36
     },
     {
         "stop_id": 8252,
@@ -28833,7 +29097,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 59
+        "parent_station": 36
     },
     {
         "stop_id": 8261,
@@ -28845,7 +29109,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 60
+        "parent_station": 37
     },
     {
         "stop_id": 8262,
@@ -28857,7 +29121,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 60
+        "parent_station": 37
     },
     {
         "stop_id": 8271,
@@ -28869,7 +29133,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 42
+        "parent_station": 5
     },
     {
         "stop_id": 8272,
@@ -28881,7 +29145,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 42
+        "parent_station": 5
     },
     {
         "stop_id": 8281,
@@ -28893,7 +29157,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 43
+        "parent_station": 4
     },
     {
         "stop_id": 8282,
@@ -28905,7 +29169,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 43
+        "parent_station": 4
     },
     {
         "stop_id": 8291,
@@ -28917,7 +29181,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 44
+        "parent_station": 3
     },
     {
         "stop_id": 8292,
@@ -28929,7 +29193,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 44
+        "parent_station": 3
     },
     {
         "stop_id": 8301,
@@ -28941,7 +29205,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 19
+        "parent_station": 47
     },
     {
         "stop_id": 8302,
@@ -28953,7 +29217,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 19
+        "parent_station": 47
     },
     {
         "stop_id": 8311,
@@ -28965,7 +29229,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 18
+        "parent_station": 46
     },
     {
         "stop_id": 8312,
@@ -28977,7 +29241,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 18
+        "parent_station": 46
     },
     {
         "stop_id": 8321,
@@ -28989,7 +29253,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 17
+        "parent_station": 45
     },
     {
         "stop_id": 8322,
@@ -29001,7 +29265,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 17
+        "parent_station": 45
     },
     {
         "stop_id": 8331,
@@ -29013,7 +29277,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 16
+        "parent_station": 44
     },
     {
         "stop_id": 8332,
@@ -29025,7 +29289,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 16
+        "parent_station": 44
     },
     {
         "stop_id": 8341,
@@ -29037,7 +29301,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 15
+        "parent_station": 43
     },
     {
         "stop_id": 8342,
@@ -29049,7 +29313,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 15
+        "parent_station": 43
     },
     {
         "stop_id": 8351,
@@ -29061,7 +29325,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 14
+        "parent_station": 42
     },
     {
         "stop_id": 8352,
@@ -29073,7 +29337,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 14
+        "parent_station": 42
     },
     {
         "stop_id": 8361,
@@ -29085,7 +29349,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 13
+        "parent_station": 41
     },
     {
         "stop_id": 8362,
@@ -29097,7 +29361,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 13
+        "parent_station": 41
     },
     {
         "stop_id": 8371,
@@ -29109,7 +29373,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 12
+        "parent_station": 40
     },
     {
         "stop_id": 8372,
@@ -29121,7 +29385,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 12
+        "parent_station": 40
     },
     {
         "stop_id": 8381,
@@ -29133,7 +29397,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 11
+        "parent_station": 1
     },
     {
         "stop_id": 8382,
@@ -29145,7 +29409,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 11
+        "parent_station": 1
     },
     {
         "stop_id": 8401,
@@ -29157,7 +29421,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 20
+        "parent_station": 9
     },
     {
         "stop_id": 8402,
@@ -29169,7 +29433,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 20
+        "parent_station": 9
     },
     {
         "stop_id": 8411,
@@ -29181,7 +29445,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 21
+        "parent_station": 48
     },
     {
         "stop_id": 8412,
@@ -29193,7 +29457,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 21
+        "parent_station": 48
     },
     {
         "stop_id": 8421,
@@ -29205,7 +29469,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 22
+        "parent_station": 49
     },
     {
         "stop_id": 8422,
@@ -29217,7 +29481,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 22
+        "parent_station": 49
     },
     {
         "stop_id": 8431,
@@ -29229,7 +29493,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 23
+        "parent_station": 50
     },
     {
         "stop_id": 8432,
@@ -29241,7 +29505,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 23
+        "parent_station": 50
     },
     {
         "stop_id": 8441,
@@ -29253,7 +29517,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 24
+        "parent_station": 51
     },
     {
         "stop_id": 8442,
@@ -29265,7 +29529,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 24
+        "parent_station": 51
     },
     {
         "stop_id": 8461,
@@ -29277,7 +29541,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 25
+        "parent_station": 52
     },
     {
         "stop_id": 8462,
@@ -29289,7 +29553,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 25
+        "parent_station": 52
     },
     {
         "stop_id": 8471,
@@ -29301,7 +29565,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 26
+        "parent_station": 53
     },
     {
         "stop_id": 8472,
@@ -29313,7 +29577,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 26
+        "parent_station": 53
     },
     {
         "stop_id": 8641,
@@ -29325,7 +29589,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 57
+        "parent_station": 22
     },
     {
         "stop_id": 8642,
@@ -29337,7 +29601,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 57
+        "parent_station": 22
     },
     {
         "stop_id": 8651,
@@ -29349,7 +29613,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 56
+        "parent_station": 23
     },
     {
         "stop_id": 8652,
@@ -29361,7 +29625,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 56
+        "parent_station": 23
     },
     {
         "stop_id": 8661,
@@ -29373,7 +29637,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 55
+        "parent_station": 24
     },
     {
         "stop_id": 8662,
@@ -29385,7 +29649,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 55
+        "parent_station": 24
     },
     {
         "stop_id": 8671,
@@ -29397,7 +29661,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 54
+        "parent_station": 25
     },
     {
         "stop_id": 8672,
@@ -29409,7 +29673,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 54
+        "parent_station": 25
     },
     {
         "stop_id": 8681,
@@ -29421,7 +29685,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 53
+        "parent_station": 26
     },
     {
         "stop_id": 8682,
@@ -29433,7 +29697,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 53
+        "parent_station": 26
     },
     {
         "stop_id": 8691,
@@ -29445,7 +29709,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 52
+        "parent_station": 27
     },
     {
         "stop_id": 8692,
@@ -29457,7 +29721,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 52
+        "parent_station": 27
     },
     {
         "stop_id": 8701,
@@ -29469,7 +29733,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 51
+        "parent_station": 28
     },
     {
         "stop_id": 8702,
@@ -29481,7 +29745,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 51
+        "parent_station": 28
     },
     {
         "stop_id": 8711,
@@ -29493,7 +29757,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 50
+        "parent_station": 29
     },
     {
         "stop_id": 8712,
@@ -29505,7 +29769,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 50
+        "parent_station": 29
     },
     {
         "stop_id": 8721,
@@ -29517,7 +29781,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 49
+        "parent_station": 30
     },
     {
         "stop_id": 8722,
@@ -29529,7 +29793,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 49
+        "parent_station": 30
     },
     {
         "stop_id": 8731,
@@ -29541,7 +29805,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 11
+        "parent_station": 1
     },
     {
         "stop_id": 8732,
@@ -29553,7 +29817,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 11
+        "parent_station": 1
     },
     {
         "stop_id": 8733,
@@ -29565,7 +29829,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 11
+        "parent_station": 1
     },
     {
         "stop_id": 8741,
@@ -29577,7 +29841,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 10
+        "parent_station": 2
     },
     {
         "stop_id": 8742,
@@ -29589,7 +29853,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 10
+        "parent_station": 2
     },
     {
         "stop_id": 8743,
@@ -29601,7 +29865,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 10
+        "parent_station": 2
     },
     {
         "stop_id": 8744,
@@ -29613,7 +29877,31 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 10
+        "parent_station": 2
+    },
+    {
+        "stop_id": 8753,
+        "stop_code": "",
+        "stop_name": "OSSEGHEM",
+        "stop_desc": "",
+        "stop_lat": 50.857115,
+        "stop_lon": 4.325218,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": 39
+    },
+    {
+        "stop_id": 8754,
+        "stop_code": "",
+        "stop_name": "OSSEGHEM",
+        "stop_desc": "",
+        "stop_lat": 50.85685,
+        "stop_lon": 4.325246,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": 39
     },
     {
         "stop_id": 8763,
@@ -29625,7 +29913,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 8
+        "parent_station": 38
     },
     {
         "stop_id": 8764,
@@ -29637,7 +29925,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 8
+        "parent_station": 38
     },
     {
         "stop_id": 8773,
@@ -29649,7 +29937,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 7
+        "parent_station": 54
     },
     {
         "stop_id": 8774,
@@ -29661,7 +29949,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 7
+        "parent_station": 54
     },
     {
         "stop_id": 8783,
@@ -29673,7 +29961,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 6
+        "parent_station": 55
     },
     {
         "stop_id": 8784,
@@ -29685,7 +29973,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 6
+        "parent_station": 55
     },
     {
         "stop_id": 8793,
@@ -29697,7 +29985,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 5
+        "parent_station": 56
     },
     {
         "stop_id": 8794,
@@ -29709,7 +29997,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 5
+        "parent_station": 56
     },
     {
         "stop_id": 8803,
@@ -29721,7 +30009,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 4
+        "parent_station": 57
     },
     {
         "stop_id": 8804,
@@ -29733,7 +30021,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 4
+        "parent_station": 57
     },
     {
         "stop_id": 8813,
@@ -29745,7 +30033,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 3
+        "parent_station": 58
     },
     {
         "stop_id": 8814,
@@ -29757,7 +30045,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 3
+        "parent_station": 58
     },
     {
         "stop_id": 8823,
@@ -29769,7 +30057,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 2
+        "parent_station": 59
     },
     {
         "stop_id": 8824,
@@ -29781,7 +30069,19 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 2
+        "parent_station": 59
+    },
+    {
+        "stop_id": 8825,
+        "stop_code": "",
+        "stop_name": "HEYSEL",
+        "stop_desc": "",
+        "stop_lat": 50.897102,
+        "stop_lon": 4.33543,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
     },
     {
         "stop_id": 8833,
@@ -29793,7 +30093,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 1
+        "parent_station": 60
     },
     {
         "stop_id": 8834,
@@ -29805,7 +30105,7 @@
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
-        "parent_station": 1
+        "parent_station": 60
     },
     {
         "stop_id": "9023B",
@@ -29892,6 +30192,18 @@
         "parent_station": ""
     },
     {
+        "stop_id": 9064,
+        "stop_code": "",
+        "stop_name": "RUE TRAVERSIERE",
+        "stop_desc": "",
+        "stop_lat": 50.855235,
+        "stop_lon": 4.36898,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
         "stop_id": 9103,
         "stop_code": "",
         "stop_name": "SQ. DU CENTENAIRE",
@@ -29922,6 +30234,18 @@
         "stop_desc": "",
         "stop_lat": 50.853235,
         "stop_lon": 4.501137,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 9212,
+        "stop_code": "",
+        "stop_name": "CIMETIERE D'UCCLE",
+        "stop_desc": "",
+        "stop_lat": 50.786641,
+        "stop_lon": 4.352049,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -30204,6 +30528,18 @@
         "parent_station": ""
     },
     {
+        "stop_id": "9649B",
+        "stop_code": "",
+        "stop_name": "DORENT",
+        "stop_desc": "",
+        "stop_lat": 50.79408,
+        "stop_lon": 4.301838,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
         "stop_id": 9651,
         "stop_code": "",
         "stop_name": "KERK RUISBROEK",
@@ -30396,6 +30732,18 @@
         "parent_station": ""
     },
     {
+        "stop_id": "9686B",
+        "stop_code": "",
+        "stop_name": "DORENT",
+        "stop_desc": "",
+        "stop_lat": 50.794407,
+        "stop_lon": 4.302507,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
         "stop_id": 9701,
         "stop_code": "",
         "stop_name": "KERK MACHELEN",
@@ -30414,6 +30762,18 @@
         "stop_desc": "",
         "stop_lat": 50.908129,
         "stop_lon": 4.431667,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 9703,
+        "stop_code": "",
+        "stop_name": "KASTEEL BEAULIEU",
+        "stop_desc": "",
+        "stop_lat": 50.902953,
+        "stop_lon": 4.427396,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -30498,18 +30858,6 @@
         "stop_desc": "",
         "stop_lat": 50.921767,
         "stop_lon": 4.428813,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 0,
-        "parent_station": ""
-    },
-    {
-        "stop_id": "9754B",
-        "stop_code": "",
-        "stop_name": "VIER FONTEINEN",
-        "stop_desc": "",
-        "stop_lat": 50.915987,
-        "stop_lon": 4.421998,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -30672,24 +31020,24 @@
         "parent_station": ""
     },
     {
-        "stop_id": 9876,
+        "stop_id": "9863F",
         "stop_code": "",
-        "stop_name": "LENNEKE MARE",
+        "stop_name": "ARGONNE",
         "stop_desc": "",
-        "stop_lat": 50.856491,
-        "stop_lon": 4.450316,
+        "stop_lat": 50.838666,
+        "stop_lon": 4.337293,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
         "parent_station": ""
     },
     {
-        "stop_id": "9920F",
+        "stop_id": 9876,
         "stop_code": "",
-        "stop_name": "SAINT-DENIS",
+        "stop_name": "LENNEKE MARE",
         "stop_desc": "",
-        "stop_lat": 50.809857,
-        "stop_lon": 4.317517,
+        "stop_lat": 50.856491,
+        "stop_lon": 4.450316,
         "zone_id": "",
         "stop_url": "",
         "location_type": 0,
@@ -30816,7 +31164,7 @@
         "parent_station": ""
     },
     {
-        "stop_id": 34,
+        "stop_id": 19,
         "stop_code": "",
         "stop_name": "ALMA",
         "stop_desc": "",
@@ -30840,31 +31188,31 @@
         "parent_station": ""
     },
     {
-        "stop_id": 20,
+        "stop_id": 9,
         "stop_code": "",
         "stop_name": "ARTS-LOI",
         "stop_desc": "",
-        "stop_lat": 50.845585,
-        "stop_lon": 4.368867,
+        "stop_lat": 50.845333,
+        "stop_lon": 4.36962,
         "zone_id": "",
         "stop_url": "",
         "location_type": 1,
         "parent_station": ""
     },
     {
-        "stop_id": 50,
+        "stop_id": 29,
         "stop_code": "",
         "stop_name": "AUMALE",
         "stop_desc": "",
-        "stop_lat": 50.839462,
-        "stop_lon": 4.312081,
+        "stop_lat": 50.839675,
+        "stop_lon": 4.312518,
         "zone_id": "",
         "stop_url": "",
         "location_type": 1,
         "parent_station": ""
     },
     {
-        "stop_id": 58,
+        "stop_id": 35,
         "stop_code": "",
         "stop_name": "BEAULIEU",
         "stop_desc": "",
@@ -30876,67 +31224,67 @@
         "parent_station": ""
     },
     {
-        "stop_id": 10,
+        "stop_id": 2,
         "stop_code": "",
         "stop_name": "BEEKKANT",
         "stop_desc": "",
-        "stop_lat": 50.85335,
-        "stop_lon": 4.323113,
+        "stop_lat": 50.853386,
+        "stop_lon": 4.322974,
         "zone_id": "",
         "stop_url": "",
         "location_type": 1,
         "parent_station": ""
     },
     {
-        "stop_id": 7,
+        "stop_id": 54,
         "stop_code": "",
         "stop_name": "BELGICA",
         "stop_desc": "",
-        "stop_lat": 50.868474,
-        "stop_lon": 4.336964,
+        "stop_lat": 50.868525,
+        "stop_lon": 4.33685,
         "zone_id": "",
         "stop_url": "",
         "location_type": 1,
         "parent_station": ""
     },
     {
-        "stop_id": 53,
+        "stop_id": 26,
         "stop_code": "",
         "stop_name": "BIZET",
         "stop_desc": "",
-        "stop_lat": 50.824934,
-        "stop_lon": 4.297078,
+        "stop_lat": 50.825167,
+        "stop_lon": 4.297643,
         "zone_id": "",
         "stop_url": "",
         "location_type": 1,
         "parent_station": ""
     },
     {
-        "stop_id": 5,
+        "stop_id": 56,
         "stop_code": "",
         "stop_name": "BOCKSTAEL",
         "stop_desc": "",
-        "stop_lat": 50.879152,
-        "stop_lon": 4.347993,
+        "stop_lat": 50.879149,
+        "stop_lon": 4.347845,
         "zone_id": "",
         "stop_url": "",
         "location_type": 1,
         "parent_station": ""
     },
     {
-        "stop_id": 68,
+        "stop_id": 70,
         "stop_code": "",
         "stop_name": "BOILEAU",
         "stop_desc": "",
-        "stop_lat": 50.833663,
-        "stop_lon": 4.405561,
+        "stop_lat": 50.832955,
+        "stop_lon": 4.405187,
         "zone_id": "",
         "stop_url": "",
         "location_type": 1,
         "parent_station": ""
     },
     {
-        "stop_id": 22,
+        "stop_id": 49,
         "stop_code": "",
         "stop_name": "BOTANIQUE",
         "stop_desc": "",
@@ -30960,19 +31308,19 @@
         "parent_station": ""
     },
     {
-        "stop_id": 55,
+        "stop_id": 24,
         "stop_code": "",
         "stop_name": "CERIA",
         "stop_desc": "",
-        "stop_lat": 50.816162,
-        "stop_lon": 4.289054,
+        "stop_lat": 50.816451,
+        "stop_lon": 4.290203,
         "zone_id": "",
         "stop_url": "",
         "location_type": 1,
         "parent_station": ""
     },
     {
-        "stop_id": 13,
+        "stop_id": 41,
         "stop_code": "",
         "stop_name": "CLEMENCEAU",
         "stop_desc": "",
@@ -30984,19 +31332,19 @@
         "parent_station": ""
     },
     {
-        "stop_id": 43,
+        "stop_id": 4,
         "stop_code": "",
         "stop_name": "COMTE DE FLANDRE",
         "stop_desc": "",
-        "stop_lat": 50.854968,
-        "stop_lon": 4.340056,
+        "stop_lat": 50.854705,
+        "stop_lon": 4.340542,
         "zone_id": "",
         "stop_url": "",
         "location_type": 1,
         "parent_station": ""
     },
     {
-        "stop_id": 35,
+        "stop_id": 20,
         "stop_code": "",
         "stop_name": "CRAINHEM",
         "stop_desc": "",
@@ -31008,19 +31356,19 @@
         "parent_station": ""
     },
     {
-        "stop_id": 41,
+        "stop_id": 6,
         "stop_code": "",
         "stop_name": "DE BROUCKERE",
         "stop_desc": "",
-        "stop_lat": 50.850095,
-        "stop_lon": 4.352165,
+        "stop_lat": 50.849821,
+        "stop_lon": 4.352486,
         "zone_id": "",
         "stop_url": "",
         "location_type": 1,
         "parent_station": ""
     },
     {
-        "stop_id": 12,
+        "stop_id": 40,
         "stop_code": "",
         "stop_name": "DELACROIX",
         "stop_desc": "",
@@ -31032,19 +31380,19 @@
         "parent_station": ""
     },
     {
-        "stop_id": 45,
+        "stop_id": 34,
         "stop_code": "",
         "stop_name": "DELTA",
         "stop_desc": "",
-        "stop_lat": 50.818685,
-        "stop_lon": 4.404406,
+        "stop_lat": 50.818202,
+        "stop_lon": 4.404056,
         "zone_id": "",
         "stop_url": "",
         "location_type": 1,
         "parent_station": ""
     },
     {
-        "stop_id": 59,
+        "stop_id": 36,
         "stop_code": "",
         "stop_name": "DEMEY",
         "stop_desc": "",
@@ -31056,31 +31404,31 @@
         "parent_station": ""
     },
     {
-        "stop_id": 70,
+        "stop_id": 68,
         "stop_code": "",
         "stop_name": "DIAMANT",
         "stop_desc": "",
-        "stop_lat": 50.849394,
-        "stop_lon": 4.402198,
+        "stop_lat": 50.848931,
+        "stop_lon": 4.402428,
         "zone_id": "",
         "stop_url": "",
         "location_type": 1,
         "parent_station": ""
     },
     {
-        "stop_id": 56,
+        "stop_id": 23,
         "stop_code": "",
         "stop_name": "EDDY MERCKX",
         "stop_desc": "",
-        "stop_lat": 50.816767,
-        "stop_lon": 4.280609,
+        "stop_lat": 50.816504,
+        "stop_lon": 4.281547,
         "zone_id": "",
         "stop_url": "",
         "location_type": 1,
         "parent_station": ""
     },
     {
-        "stop_id": 26,
+        "stop_id": 53,
         "stop_code": "",
         "stop_name": "ELISABETH",
         "stop_desc": "",
@@ -31092,7 +31440,7 @@
         "parent_station": ""
     },
     {
-        "stop_id": 57,
+        "stop_id": 22,
         "stop_code": "",
         "stop_name": "ERASME",
         "stop_desc": "",
@@ -31104,43 +31452,43 @@
         "parent_station": ""
     },
     {
-        "stop_id": 44,
+        "stop_id": 3,
         "stop_code": "",
         "stop_name": "ETANGS NOIRS",
         "stop_desc": "",
-        "stop_lat": 50.857096,
-        "stop_lon": 4.332019,
+        "stop_lat": 50.857125,
+        "stop_lon": 4.333143,
         "zone_id": "",
         "stop_url": "",
         "location_type": 1,
         "parent_station": ""
     },
     {
-        "stop_id": 40,
+        "stop_id": 7,
         "stop_code": "",
         "stop_name": "GARE CENTRALE",
         "stop_desc": "",
-        "stop_lat": 50.846679,
-        "stop_lon": 4.358551,
+        "stop_lat": 50.846349,
+        "stop_lon": 4.358776,
         "zone_id": "",
         "stop_url": "",
         "location_type": 1,
         "parent_station": ""
     },
     {
-        "stop_id": 11,
+        "stop_id": 1,
         "stop_code": "",
         "stop_name": "GARE DE L'OUEST",
         "stop_desc": "",
-        "stop_lat": 50.848922,
-        "stop_lon": 4.321442,
+        "stop_lat": 50.848999,
+        "stop_lon": 4.320948,
         "zone_id": "",
         "stop_url": "",
         "location_type": 1,
         "parent_station": ""
     },
     {
-        "stop_id": 14,
+        "stop_id": 42,
         "stop_code": "",
         "stop_name": "GARE DU MIDI",
         "stop_desc": "",
@@ -31168,15 +31516,15 @@
         "stop_code": "",
         "stop_name": "GEORGES HENRI",
         "stop_desc": "",
-        "stop_lat": 50.843896,
-        "stop_lon": 4.405406,
+        "stop_lat": 50.843453,
+        "stop_lon": 4.405598,
         "zone_id": "",
         "stop_url": "",
         "location_type": 1,
         "parent_station": ""
     },
     {
-        "stop_id": 30,
+        "stop_id": 15,
         "stop_code": "",
         "stop_name": "GRIBAUMONT",
         "stop_desc": "",
@@ -31188,19 +31536,19 @@
         "parent_station": ""
     },
     {
-        "stop_id": 46,
+        "stop_id": 33,
         "stop_code": "",
         "stop_name": "HANKAR",
         "stop_desc": "",
-        "stop_lat": 50.821592,
-        "stop_lon": 4.405618,
+        "stop_lat": 50.820888,
+        "stop_lon": 4.405382,
         "zone_id": "",
         "stop_url": "",
         "location_type": 1,
         "parent_station": ""
     },
     {
-        "stop_id": 60,
+        "stop_id": 37,
         "stop_code": "",
         "stop_name": "HERRMANN-DEBROUX",
         "stop_desc": "",
@@ -31212,12 +31560,12 @@
         "parent_station": ""
     },
     {
-        "stop_id": 2,
+        "stop_id": 59,
         "stop_code": "",
         "stop_name": "HEYSEL",
         "stop_desc": "",
-        "stop_lat": 50.897198,
-        "stop_lon": 4.335515,
+        "stop_lat": 50.897076,
+        "stop_lon": 4.335408,
         "zone_id": "",
         "stop_url": "",
         "location_type": 1,
@@ -31236,7 +31584,7 @@
         "parent_station": ""
     },
     {
-        "stop_id": 16,
+        "stop_id": 44,
         "stop_code": "",
         "stop_name": "HOTEL DES MONNAIES",
         "stop_desc": "",
@@ -31248,31 +31596,31 @@
         "parent_station": ""
     },
     {
-        "stop_id": 3,
+        "stop_id": 58,
         "stop_code": "",
         "stop_name": "HOUBA-BRUGMANN",
         "stop_desc": "",
-        "stop_lat": 50.8896,
-        "stop_lon": 4.337736,
+        "stop_lat": 50.889549,
+        "stop_lon": 4.337629,
         "zone_id": "",
         "stop_url": "",
         "location_type": 1,
         "parent_station": ""
     },
     {
-        "stop_id": 49,
+        "stop_id": 30,
         "stop_code": "",
         "stop_name": "JACQUES BREL",
         "stop_desc": "",
-        "stop_lat": 50.843785,
-        "stop_lon": 4.318032,
+        "stop_lat": 50.84399,
+        "stop_lon": 4.318169,
         "zone_id": "",
         "stop_url": "",
         "location_type": 1,
         "parent_station": ""
     },
     {
-        "stop_id": 29,
+        "stop_id": 14,
         "stop_code": "",
         "stop_name": "JOSEPH.-CHARLOTTE",
         "stop_desc": "",
@@ -31284,12 +31632,12 @@
         "parent_station": ""
     },
     {
-        "stop_id": 54,
+        "stop_id": 25,
         "stop_code": "",
         "stop_name": "LA ROUE",
         "stop_desc": "",
-        "stop_lat": 50.82092,
-        "stop_lon": 4.293693,
+        "stop_lat": 50.821263,
+        "stop_lon": 4.294043,
         "zone_id": "",
         "stop_url": "",
         "location_type": 1,
@@ -31308,7 +31656,7 @@
         "parent_station": ""
     },
     {
-        "stop_id": 17,
+        "stop_id": 45,
         "stop_code": "",
         "stop_name": "LOUISE",
         "stop_desc": "",
@@ -31320,7 +31668,7 @@
         "parent_station": ""
     },
     {
-        "stop_id": 21,
+        "stop_id": 48,
         "stop_code": "",
         "stop_name": "MADOU",
         "stop_desc": "",
@@ -31332,19 +31680,19 @@
         "parent_station": ""
     },
     {
-        "stop_id": 38,
+        "stop_id": 10,
         "stop_code": "",
         "stop_name": "MAELBEEK",
         "stop_desc": "",
-        "stop_lat": 50.84379,
-        "stop_lon": 4.377084,
+        "stop_lat": 50.843654,
+        "stop_lon": 4.377588,
         "zone_id": "",
         "stop_url": "",
         "location_type": 1,
         "parent_station": ""
     },
     {
-        "stop_id": 27,
+        "stop_id": 12,
         "stop_code": "",
         "stop_name": "MERODE",
         "stop_desc": "",
@@ -31356,7 +31704,7 @@
         "parent_station": ""
     },
     {
-        "stop_id": 28,
+        "stop_id": 13,
         "stop_code": "",
         "stop_name": "MONTGOMERY",
         "stop_desc": "",
@@ -31368,7 +31716,7 @@
         "parent_station": ""
     },
     {
-        "stop_id": 9,
+        "stop_id": 39,
         "stop_code": "",
         "stop_name": "OSSEGHEM",
         "stop_desc": "",
@@ -31380,24 +31728,24 @@
         "parent_station": ""
     },
     {
-        "stop_id": 6,
+        "stop_id": 55,
         "stop_code": "",
         "stop_name": "PANNENHUIS",
         "stop_desc": "",
-        "stop_lat": 50.873614,
-        "stop_lon": 4.343137,
+        "stop_lat": 50.873666,
+        "stop_lon": 4.343031,
         "zone_id": "",
         "stop_url": "",
         "location_type": 1,
         "parent_station": ""
     },
     {
-        "stop_id": 39,
+        "stop_id": 8,
         "stop_code": "",
         "stop_name": "PARC",
         "stop_desc": "",
-        "stop_lat": 50.845628,
-        "stop_lon": 4.362431,
+        "stop_lat": 50.845688,
+        "stop_lon": 4.362979,
         "zone_id": "",
         "stop_url": "",
         "location_type": 1,
@@ -31416,19 +31764,19 @@
         "parent_station": ""
     },
     {
-        "stop_id": 47,
+        "stop_id": 32,
         "stop_code": "",
         "stop_name": "PETILLON",
         "stop_desc": "",
-        "stop_lat": 50.827929,
-        "stop_lon": 4.403859,
+        "stop_lat": 50.827461,
+        "stop_lon": 4.403987,
         "zone_id": "",
         "stop_url": "",
         "location_type": 1,
         "parent_station": ""
     },
     {
-        "stop_id": 15,
+        "stop_id": 43,
         "stop_code": "",
         "stop_name": "PORTE DE HAL",
         "stop_desc": "",
@@ -31440,7 +31788,7 @@
         "parent_station": ""
     },
     {
-        "stop_id": 18,
+        "stop_id": 46,
         "stop_code": "",
         "stop_name": "PORTE DE NAMUR",
         "stop_desc": "",
@@ -31452,7 +31800,7 @@
         "parent_station": ""
     },
     {
-        "stop_id": 25,
+        "stop_id": 52,
         "stop_code": "",
         "stop_name": "RIBAUCOURT",
         "stop_desc": "",
@@ -31464,7 +31812,7 @@
         "parent_station": ""
     },
     {
-        "stop_id": 23,
+        "stop_id": 50,
         "stop_code": "",
         "stop_name": "ROGIER",
         "stop_desc": "",
@@ -31476,7 +31824,7 @@
         "parent_station": ""
     },
     {
-        "stop_id": 1,
+        "stop_id": 60,
         "stop_code": "",
         "stop_name": "ROI BAUDOUIN",
         "stop_desc": "",
@@ -31488,7 +31836,7 @@
         "parent_station": ""
     },
     {
-        "stop_id": 32,
+        "stop_id": 17,
         "stop_code": "",
         "stop_name": "ROODEBEEK",
         "stop_desc": "",
@@ -31500,43 +31848,43 @@
         "parent_station": ""
     },
     {
-        "stop_id": 51,
+        "stop_id": 28,
         "stop_code": "",
         "stop_name": "SAINT-GUIDON",
         "stop_desc": "",
-        "stop_lat": 50.834649,
-        "stop_lon": 4.305052,
+        "stop_lat": 50.834929,
+        "stop_lon": 4.305315,
         "zone_id": "",
         "stop_url": "",
         "location_type": 1,
         "parent_station": ""
     },
     {
-        "stop_id": 42,
+        "stop_id": 5,
         "stop_code": "",
         "stop_name": "SAINTE-CATHERINE",
         "stop_desc": "",
-        "stop_lat": 50.852347,
-        "stop_lon": 4.347749,
+        "stop_lat": 50.8519,
+        "stop_lon": 4.348012,
         "zone_id": "",
         "stop_url": "",
         "location_type": 1,
         "parent_station": ""
     },
     {
-        "stop_id": 37,
+        "stop_id": 11,
         "stop_code": "",
         "stop_name": "SCHUMAN",
         "stop_desc": "",
-        "stop_lat": 50.842972,
-        "stop_lon": 4.380974,
+        "stop_lat": 50.842756,
+        "stop_lon": 4.381829,
         "zone_id": "",
         "stop_url": "",
         "location_type": 1,
         "parent_station": ""
     },
     {
-        "stop_id": 8,
+        "stop_id": 38,
         "stop_code": "",
         "stop_name": "SIMONIS",
         "stop_desc": "",
@@ -31548,36 +31896,24 @@
         "parent_station": ""
     },
     {
-        "stop_id": 36,
+        "stop_id": 21,
         "stop_code": "",
         "stop_name": "STOCKEL",
         "stop_desc": "",
-        "stop_lat": 50.841872,
-        "stop_lon": 4.464541,
+        "stop_lat": 50.841855,
+        "stop_lon": 4.464405,
         "zone_id": "",
         "stop_url": "",
         "location_type": 1,
         "parent_station": ""
     },
     {
-        "stop_id": 4,
+        "stop_id": 57,
         "stop_code": "",
         "stop_name": "STUYVENBERGH",
         "stop_desc": "",
-        "stop_lat": 50.88564,
-        "stop_lon": 4.342738,
-        "zone_id": "",
-        "stop_url": "",
-        "location_type": 1,
-        "parent_station": ""
-    },
-    {
-        "stop_id": 48,
-        "stop_code": "",
-        "stop_name": "THIEFFRY",
-        "stop_desc": "",
-        "stop_lat": 50.83369,
-        "stop_lon": 4.401677,
+        "stop_lat": 50.885587,
+        "stop_lon": 4.342629,
         "zone_id": "",
         "stop_url": "",
         "location_type": 1,
@@ -31585,6 +31921,18 @@
     },
     {
         "stop_id": 31,
+        "stop_code": "",
+        "stop_name": "THIEFFRY",
+        "stop_desc": "",
+        "stop_lat": 50.833128,
+        "stop_lon": 4.401864,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 1,
+        "parent_station": ""
+    },
+    {
+        "stop_id": 16,
         "stop_code": "",
         "stop_name": "TOMBERG",
         "stop_desc": "",
@@ -31596,7 +31944,7 @@
         "parent_station": ""
     },
     {
-        "stop_id": 19,
+        "stop_id": 47,
         "stop_code": "",
         "stop_name": "TRONE",
         "stop_desc": "",
@@ -31608,7 +31956,7 @@
         "parent_station": ""
     },
     {
-        "stop_id": 33,
+        "stop_id": 18,
         "stop_code": "",
         "stop_name": "VANDERVELDE",
         "stop_desc": "",
@@ -31620,19 +31968,19 @@
         "parent_station": ""
     },
     {
-        "stop_id": 52,
+        "stop_id": 27,
         "stop_code": "",
         "stop_name": "VEEWEYDE",
         "stop_desc": "",
-        "stop_lat": 50.829391,
-        "stop_lon": 4.300578,
+        "stop_lat": 50.829611,
+        "stop_lon": 4.300732,
         "zone_id": "",
         "stop_url": "",
         "location_type": 1,
         "parent_station": ""
     },
     {
-        "stop_id": 24,
+        "stop_id": 51,
         "stop_code": "",
         "stop_name": "YSER",
         "stop_desc": "",

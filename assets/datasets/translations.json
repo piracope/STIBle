@@ -30,6 +30,11 @@
         "nl": "Albert I"
     },
     {
+        "stop_name": "ALBERT II",
+        "fr": "Albert II",
+        "nl": "Albert II"
+    },
+    {
         "stop_name": "ALCYONS",
         "fr": "Alcyons",
         "nl": "Alcyons"
@@ -45,14 +50,9 @@
         "nl": "Alphonse XIII"
     },
     {
-        "stop_name": "ALTITUDE 100",
+        "stop_name": "ALTITUDE CENT",
         "fr": "Altitude 100",
         "nl": "Hoogte 100"
-    },
-    {
-        "stop_name": "ALTITUDE CENT",
-        "fr": "Altitude Cent",
-        "nl": "Hoogte Honderd"
     },
     {
         "stop_name": "AMBIORIX",
@@ -143,6 +143,11 @@
         "stop_name": "ARENBERG",
         "fr": "Arenberg",
         "nl": "Arenberg"
+    },
+    {
+        "stop_name": "ARGONNE",
+        "fr": "Argonne",
+        "nl": "Argonne"
     },
     {
         "stop_name": "ARIANE",
@@ -805,6 +810,11 @@
         "nl": "Cicero"
     },
     {
+        "stop_name": "CIM. D'ANDERLECHT",
+        "fr": "Cimetière d'Anderlecht",
+        "nl": "Begraafplaats van Anderlecht"
+    },
+    {
         "stop_name": "CIM. D'IXELLES",
         "fr": "Cimetière d'Ixelles",
         "nl": "Begraafplaats van Elsene"
@@ -823,6 +833,11 @@
         "stop_name": "CIM. DE MOLENBEEK",
         "fr": "Cimetière de Molenbeek",
         "nl": "Begraafplaats van Molenbeek"
+    },
+    {
+        "stop_name": "CIMETIERE D'UCCLE",
+        "fr": "Cimetière d'Uccle",
+        "nl": "Begraafplaats van Ukkel"
     },
     {
         "stop_name": "CIMETIERES",
@@ -1215,6 +1230,11 @@
         "nl": "Don Bosco"
     },
     {
+        "stop_name": "DORENT",
+        "fr": "Dorent",
+        "nl": "Dorent"
+    },
+    {
         "stop_name": "DOUVRES",
         "fr": "Douvres",
         "nl": "Dover"
@@ -1385,11 +1405,6 @@
         "nl": "Ernest Laude"
     },
     {
-        "stop_name": "ERNEST SALU",
-        "fr": "Ernest Salu",
-        "nl": "Ernest Salu"
-    },
-    {
         "stop_name": "ESCRIME",
         "fr": "Escrime",
         "nl": "Schermkunst"
@@ -1506,8 +1521,8 @@
     },
     {
         "stop_name": "FOREST (BERVOETS)",
-        "fr": "Forest Centre (Bervoets)",
-        "nl": "Vorst Centrum (Bervoets)"
+        "fr": "Forest (Bervoets)",
+        "nl": "Vorst (Bervoets)"
     },
     {
         "stop_name": "FOREST CENTRE",
@@ -2115,11 +2130,6 @@
         "nl": "Jakob Smits"
     },
     {
-        "stop_name": "JAM'IN JETTE",
-        "fr": "Jam'in Jette",
-        "nl": "Jam'in Jette"
-    },
-    {
         "stop_name": "JAMBLINNE DE MEUX",
         "fr": "de Jamblinne de Meux",
         "nl": "de Jamblinne de Meux"
@@ -2420,11 +2430,6 @@
         "nl": "Liverpool"
     },
     {
-        "stop_name": "LIVINGSTONE",
-        "fr": "Livingstone",
-        "nl": "Livingstone"
-    },
-    {
         "stop_name": "LOISIRS",
         "fr": "Loisirs",
         "nl": "Vrijetijd"
@@ -2705,6 +2710,11 @@
         "nl": "Mercurius"
     },
     {
+        "stop_name": "MERIDIEN",
+        "fr": "Méridien",
+        "nl": "Middaglijn"
+    },
+    {
         "stop_name": "MERLO",
         "fr": "Merlo",
         "nl": "Merlo"
@@ -2983,6 +2993,11 @@
         "stop_name": "OUD-KAPELLEKE",
         "fr": "Oud-Kapelleke",
         "nl": "Oud-Kapelleke"
+    },
+    {
+        "stop_name": "OURTHE",
+        "fr": "Ourthe",
+        "nl": "Ourthe"
     },
     {
         "stop_name": "PADDOCK",
@@ -3610,6 +3625,11 @@
         "nl": "Saint-Louis"
     },
     {
+        "stop_name": "SAINT-NICOLAS",
+        "fr": "Saint-Nicolas",
+        "nl": "Sint Niklaas"
+    },
+    {
         "stop_name": "SAINT-VINCENT",
         "fr": "Saint-Vincent",
         "nl": "Sint-Vincentius"
@@ -3828,6 +3848,11 @@
         "stop_name": "SUEDE",
         "fr": "Suède",
         "nl": "Zweden"
+    },
+    {
+        "stop_name": "SUZAN DANIEL",
+        "fr": "Suzan Daniel",
+        "nl": "Suzan Daniel"
     },
     {
         "stop_name": "TAMARIS",
