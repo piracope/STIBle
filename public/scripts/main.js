@@ -130,6 +130,30 @@ const DIALOGUE = {
         fr: "Patientez...",
         nl: "Even geduld...",
     },
+    STATS_TITLE: {
+        fr: "Statistiques",
+        nl: "Statistieken",
+    },
+    NUMBER_OF_GAMES: {
+        fr: "Nombre de parties : ",
+        nl: "Spelen gespeeld : ",
+    },
+    WIN_RATE: {
+        fr: "Pourcentage de victoires : ",
+        nl: "Winstpercentage : ",
+    },
+    CURRENT_STREAK: {
+        fr: "Série actuelle : ",
+        nl: "Huidige reeks : ",
+    },
+    BEST_STREAK: {
+        fr: "Meilleure série :",
+        nl: "Max reeks : ",
+    },
+    GRAPH: {
+        fr: "Graphique",
+        nl: "Grafiek",
+    },
 };
 
 /**
@@ -461,6 +485,13 @@ async function main() {
         $("#help").text(DIALOGUE.HELP[initialStorage.lang]);
         $("#game button").text(DIALOGUE.GUESS[initialStorage.lang]);
         $("header .blue").text(DIALOGUE.TITLE[initialStorage.lang]);
+
+        $("#statsTxt").text(DIALOGUE.STATS_TITLE[initialStorage.lang]);
+        $("#nbGamesTxt").text(DIALOGUE.NUMBER_OF_GAMES[initialStorage.lang]);
+        $("#winRateTxt").text(DIALOGUE.WIN_RATE[initialStorage.lang]);
+        $("#currStreakTxt").text(DIALOGUE.CURRENT_STREAK[initialStorage.lang]);
+        $("#bestStreakTxt").text(DIALOGUE.BEST_STREAK[initialStorage.lang]);
+        $("#graphTxt").text(DIALOGUE.GRAPH[initialStorage.lang]);
 
         if (INITIAL_INFO) {
             $("#helpModal .modal-content").append(INITIAL_INFO.helpModal);
