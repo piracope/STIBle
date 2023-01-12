@@ -349,7 +349,10 @@ async function main() {
 
         // Another CDN moment
         // @ts-ignore
-        twemoji.parse(document.querySelector("#game tbody"));
+        twemoji.parse(
+            document.querySelector("#game tbody"),
+            {base: "https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/"}
+        );
     }
     /**
      * Reloads the page.
@@ -518,7 +521,10 @@ async function main() {
 
         // CDN moment
         // @ts-ignore
-        twemoji.parse(document.body);
+        twemoji.parse(
+            document.body,
+            {base: "https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/"}
+        );
         $("body").show();
     }
 
