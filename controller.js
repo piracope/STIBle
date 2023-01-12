@@ -20,7 +20,6 @@
 /*ENVIRONMENT VARIABLES*/
 require("dotenv").config();
 /* GAME CONSTANTS */
-const schedule = require("node-schedule");
 const game = require("./model/game.js");
 const help = require("./model/help.js");
 
@@ -28,6 +27,8 @@ const help = require("./model/help.js");
 const fs = require("fs");
 const http = require("http");
 const path = require("path");
+const schedule = require("node-schedule");
+const { nextTick } = require("process");
 const PORT = process.env.PORT || 3000;
 const headers = {
     "Strict-Transport-Security": "max-age=63072000",
@@ -61,6 +62,15 @@ schedule.scheduleJob(scheduleRule, () => {
 
 /* OPEN SERVER */
 const server = http.createServer((req, res) => {
+    /* copy pasted from nocache */
+    res.setHeader("Surrogate-Control", "no-store");
+    res.setHeader(
+        "Cache-Control",
+        "no-store, no-cache, must-revalidate, proxy-revalidate"
+    );
+    res.setHeader("Pragma", "no-cache");
+    res.setHeader("Expires", "0");
+
     /* process.env.DYNO tests if it runs on heroku */
     if (process.env.DYNO && req.headers["x-forwarded-proto"] !== "https") {
         res.writeHead(302, {

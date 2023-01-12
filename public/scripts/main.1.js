@@ -147,7 +147,7 @@ const DIALOGUE = {
         nl: "Huidige reeks : ",
     },
     BEST_STREAK: {
-        fr: "Meilleure série :",
+        fr: "Meilleure série : ",
         nl: "Max reeks : ",
     },
     GRAPH: {
@@ -607,7 +607,8 @@ async function main() {
             fillBar(bars, history[i].nbOfGuesses);
         }
 
-        if (history[history.length - 1].lvlNumber !== INITIAL_INFO.lvlNumber - 1
+        if (history.length > 0
+            && history[history.length - 1].lvlNumber !== INITIAL_INFO.lvlNumber - 1
             && history[history.length - 1].lvlNumber !== INITIAL_INFO.lvlNumber) {
             currStreak = 0;
         }
