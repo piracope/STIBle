@@ -57,7 +57,7 @@ const help = {
     <p>Votre essai (Lot Station) est à 15,9 km de l'arrêt mystère.
     Celui-ci se trouve au Nord-Est de votre essai.</p>
     <p>Les carrés représentent la proximité entre votre essai et
-    l'arrêt mystère. Un carré vert vaut 20%, un carré vaut 10%.</p>
+    l'arrêt mystère. Un carré vert vaut 20%, un carré orange vaut 10%.</p>
     <p>Comme vous le voyez, c'est très approximatif. J'ai juste
     repompé le système de WORLDLE pour avoir des ptits carrés à
     partager à la fin mais sinon voilà quoi.</p>
@@ -76,7 +76,7 @@ const help = {
     <hr>
     <p>Fait par <a href="https://twitter.com/piracope">@piracope</a> sur une idée de
     <a href="https://twitter.com/rexag0ne">@REXAG0NE</a>
-    et <a href="https://twitter.com/Hatsenaa">@Hatsenaa</a>.</p>
+    et <a href="https://twitter.com/AthunBrean">@AthunBrean</a>.</p>
     <a href="https://github.com/piracope/STIBle">Code source</a>
 </div>
 `,
@@ -136,7 +136,7 @@ const help = {
     <hr>
     <p>Gemaakt door <a href="https://twitter.com/piracope">@piracope</a>
     naar een idee van <a href="https://twitter.com/rexag0ne">@REXAG0NE</a> en
-    <a href="https://twitter.com/Hatsenaa">@Hatsenaa</a>.</p>
+    <a href="https://twitter.com/AthunBrean">@AthunBrean</a>.</p>
     <p>Hulp-pagina vertaalt door REXAGONE en verbeterd door
     <a href="https://github.com/jeremycoppey">Jeremy Coppey</a>.</p>
     <a href="https://github.com/piracope/STIBle">Broncode</a>
