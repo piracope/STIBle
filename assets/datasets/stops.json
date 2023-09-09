@@ -336,6 +336,30 @@
         "parent_station": 67
     },
     {
+        "stop_id": "0711F",
+        "stop_code": "",
+        "stop_name": "ALBERT",
+        "stop_desc": "",
+        "stop_lat": 50.820802,
+        "stop_lon": 4.340965,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": 67
+    },
+    {
+        "stop_id": "0712F",
+        "stop_code": "",
+        "stop_name": "ALBERT",
+        "stop_desc": "",
+        "stop_lat": 50.821021,
+        "stop_lon": 4.341497,
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": 0,
+        "parent_station": 67
+    },
+    {
         "stop_id": "0722",
         "stop_code": "",
         "stop_name": "ALBERT",
