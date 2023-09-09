@@ -1,6 +1,6 @@
 [
     {
-        "route_id": 1,
+        "route_id": 4,
         "route_short_name": 1,
         "route_long_name": "GARE DE L'OUEST - STOCKEL",
         "route_desc": "",
@@ -10,7 +10,7 @@
         "route_text_color": "FFFFFF"
     },
     {
-        "route_id": 3,
+        "route_id": 2,
         "route_short_name": 2,
         "route_long_name": "SIMONIS - ELISABETH",
         "route_desc": "",
@@ -40,7 +40,7 @@
         "route_text_color": "000000"
     },
     {
-        "route_id": 2,
+        "route_id": 3,
         "route_short_name": 5,
         "route_long_name": "ERASME - HERRMANN-DEBROUX",
         "route_desc": "",
@@ -50,7 +50,7 @@
         "route_text_color": "FFFFFF"
     },
     {
-        "route_id": 4,
+        "route_id": 1,
         "route_short_name": 6,
         "route_long_name": "ROI BAUDOUIN - ELISABETH",
         "route_desc": "",
@@ -90,7 +90,7 @@
         "route_text_color": "FFFFFF"
     },
     {
-        "route_id": 14,
+        "route_id": 13,
         "route_short_name": 12,
         "route_long_name": "BRUSSELS AIRPORT - BRUSSELS CITY",
         "route_desc": "",
@@ -100,7 +100,7 @@
         "route_text_color": "FFFFFF"
     },
     {
-        "route_id": 16,
+        "route_id": 15,
         "route_short_name": 13,
         "route_long_name": "ETANGS NOIRS - UZ-VUB",
         "route_desc": "",
@@ -110,7 +110,7 @@
         "route_text_color": "000000"
     },
     {
-        "route_id": 17,
+        "route_id": 16,
         "route_short_name": 14,
         "route_long_name": "UZ-VUB - GARE DU NORD",
         "route_desc": "",
@@ -120,7 +120,7 @@
         "route_text_color": "000000"
     },
     {
-        "route_id": 18,
+        "route_id": 17,
         "route_short_name": 17,
         "route_long_name": "BEAULIEU - HEILIGENBORRE",
         "route_desc": "",
@@ -128,6 +128,16 @@
         "route_url": "",
         "route_color": "E43C2E",
         "route_text_color": "FFFFFF"
+    },
+    {
+        "route_id": 18,
+        "route_short_name": 18,
+        "route_long_name": "ALBERT - VAN HAELEN",
+        "route_desc": "",
+        "route_type": 0,
+        "route_url": "",
+        "route_color": "91BEE7",
+        "route_text_color": "000000"
     },
     {
         "route_id": 12,
@@ -150,7 +160,7 @@
         "route_text_color": "000000"
     },
     {
-        "route_id": 13,
+        "route_id": 14,
         "route_short_name": 21,
         "route_long_name": "MAES - LUXEMBOURG",
         "route_desc": "",
@@ -200,7 +210,7 @@
         "route_text_color": "FFFFFF"
     },
     {
-        "route_id": 28,
+        "route_id": 27,
         "route_short_name": 33,
         "route_long_name": "DANSAERT - LOUISE",
         "route_desc": "",
@@ -210,7 +220,7 @@
         "route_text_color": "000000"
     },
     {
-        "route_id": 29,
+        "route_id": 28,
         "route_short_name": 34,
         "route_long_name": "PORTE DE NAMUR - SAINTE-ANNE",
         "route_desc": "",
@@ -220,7 +230,7 @@
         "route_text_color": "000000"
     },
     {
-        "route_id": 30,
+        "route_id": 29,
         "route_short_name": 36,
         "route_long_name": "SCHUMAN - KONKEL",
         "route_desc": "",
@@ -230,7 +240,7 @@
         "route_text_color": "000000"
     },
     {
-        "route_id": 32,
+        "route_id": 31,
         "route_short_name": 37,
         "route_long_name": "ALBERT - GARE DE LINKEBEEK",
         "route_desc": "",
@@ -240,7 +250,7 @@
         "route_text_color": "FFFFFF"
     },
     {
-        "route_id": 34,
+        "route_id": 32,
         "route_short_name": 38,
         "route_long_name": "GARE CENTRALE - HEROS",
         "route_desc": "",
@@ -250,7 +260,7 @@
         "route_text_color": "FFFFFF"
     },
     {
-        "route_id": 36,
+        "route_id": 34,
         "route_short_name": 39,
         "route_long_name": "MONTGOMERY - BAN-EIK",
         "route_desc": "",
@@ -260,7 +270,7 @@
         "route_text_color": "FFFFFF"
     },
     {
-        "route_id": 38,
+        "route_id": 36,
         "route_short_name": 41,
         "route_long_name": "HEROS - TRANSVAAL",
         "route_desc": "",
@@ -270,7 +280,7 @@
         "route_text_color": "000000"
     },
     {
-        "route_id": 40,
+        "route_id": 38,
         "route_short_name": 42,
         "route_long_name": "ROODEBEEK - VIADUC E40",
         "route_desc": "",
@@ -280,7 +290,7 @@
         "route_text_color": "FFFFFF"
     },
     {
-        "route_id": 31,
+        "route_id": 30,
         "route_short_name": 43,
         "route_long_name": "OBSERVATOIRE - VIVIER D'OIE",
         "route_desc": "",
@@ -300,7 +310,7 @@
         "route_text_color": "000000"
     },
     {
-        "route_id": 39,
+        "route_id": 37,
         "route_short_name": 45,
         "route_long_name": "ROODEBEEK - SAINT-VINCENT",
         "route_desc": "",
@@ -310,7 +320,7 @@
         "route_text_color": "FFFFFF"
     },
     {
-        "route_id": 26,
+        "route_id": 39,
         "route_short_name": 46,
         "route_long_name": "MOORTEBEEK - WTC-GLIBERT",
         "route_desc": "",
@@ -320,7 +330,7 @@
         "route_text_color": "FFFFFF"
     },
     {
-        "route_id": 42,
+        "route_id": 40,
         "route_short_name": 47,
         "route_long_name": "HEEMBEEK - VILVOORDE STATION",
         "route_desc": "",
@@ -330,7 +340,7 @@
         "route_text_color": "FFFFFF"
     },
     {
-        "route_id": 43,
+        "route_id": 41,
         "route_short_name": 48,
         "route_long_name": "ANNEESSENS - DECROLY",
         "route_desc": "",
@@ -340,7 +350,7 @@
         "route_text_color": "FFFFFF"
     },
     {
-        "route_id": 44,
+        "route_id": 42,
         "route_short_name": 49,
         "route_long_name": "GARE DU MIDI - SIMONIS",
         "route_desc": "",
@@ -350,7 +360,7 @@
         "route_text_color": "FFFFFF"
     },
     {
-        "route_id": 45,
+        "route_id": 43,
         "route_short_name": 50,
         "route_long_name": "GARE DU MIDI - LOT STATION",
         "route_desc": "",
@@ -360,9 +370,9 @@
         "route_text_color": "000000"
     },
     {
-        "route_id": 46,
+        "route_id": 44,
         "route_short_name": 51,
-        "route_long_name": "STADE - VAN HAELEN",
+        "route_long_name": "STADE - GARE DU MIDI",
         "route_desc": "",
         "route_type": 0,
         "route_url": "",
@@ -370,7 +380,7 @@
         "route_text_color": "000000"
     },
     {
-        "route_id": 27,
+        "route_id": 26,
         "route_short_name": 52,
         "route_long_name": "GARE CENTRALE - FOREST (BERVOETS)",
         "route_desc": "",
@@ -380,7 +390,7 @@
         "route_text_color": "000000"
     },
     {
-        "route_id": 48,
+        "route_id": 46,
         "route_short_name": 53,
         "route_long_name": "WESTLAND SHOPPING - HOPITAL MILITAIRE",
         "route_desc": "",
@@ -390,7 +400,7 @@
         "route_text_color": "FFFFFF"
     },
     {
-        "route_id": 49,
+        "route_id": 47,
         "route_short_name": 54,
         "route_long_name": "TRONE - FOREST (BERVOETS)",
         "route_desc": "",
@@ -410,7 +420,7 @@
         "route_text_color": "000000"
     },
     {
-        "route_id": 51,
+        "route_id": 48,
         "route_short_name": 56,
         "route_long_name": "SCHUMAN - BUDA",
         "route_desc": "",
@@ -420,7 +430,7 @@
         "route_text_color": "FFFFFF"
     },
     {
-        "route_id": 52,
+        "route_id": 49,
         "route_short_name": 57,
         "route_long_name": "GARE DU NORD - HOPITAL MILITAIRE",
         "route_desc": "",
@@ -430,7 +440,7 @@
         "route_text_color": "FFFFFF"
     },
     {
-        "route_id": 53,
+        "route_id": 50,
         "route_short_name": 58,
         "route_long_name": "VILVOORDE STATION - ALBERT II",
         "route_desc": "",
@@ -440,7 +450,7 @@
         "route_text_color": "FFFFFF"
     },
     {
-        "route_id": 54,
+        "route_id": 51,
         "route_short_name": 59,
         "route_long_name": "HOPITAL ETTERBEEK-IXELLES - BORDET STATION",
         "route_desc": "",
@@ -450,7 +460,7 @@
         "route_text_color": "FFFFFF"
     },
     {
-        "route_id": 55,
+        "route_id": 52,
         "route_short_name": 60,
         "route_long_name": "AMBIORIX - UCCLE CALEVOET",
         "route_desc": "",
@@ -460,7 +470,7 @@
         "route_text_color": "000000"
     },
     {
-        "route_id": 56,
+        "route_id": 53,
         "route_short_name": 61,
         "route_long_name": "GARE DU NORD - MONTGOMERY",
         "route_desc": "",
@@ -480,7 +490,7 @@
         "route_text_color": "000000"
     },
     {
-        "route_id": 57,
+        "route_id": 54,
         "route_short_name": 63,
         "route_long_name": "GARE CENTRALE - CIMETIERE DE BRUXELLES",
         "route_desc": "",
@@ -490,7 +500,7 @@
         "route_text_color": "000000"
     },
     {
-        "route_id": 59,
+        "route_id": 56,
         "route_short_name": 64,
         "route_long_name": "PORTE DE NAMUR - BORDET STATION",
         "route_desc": "",
@@ -500,7 +510,7 @@
         "route_text_color": "FFFFFF"
     },
     {
-        "route_id": 60,
+        "route_id": 57,
         "route_short_name": 65,
         "route_long_name": "GARE CENTRALE - MACHELEN",
         "route_desc": "",
@@ -510,7 +520,7 @@
         "route_text_color": "000000"
     },
     {
-        "route_id": 61,
+        "route_id": 58,
         "route_short_name": 66,
         "route_long_name": "GARE CENTRALE - PEAGE",
         "route_desc": "",
@@ -520,7 +530,7 @@
         "route_text_color": "FFFFFF"
     },
     {
-        "route_id": 15,
+        "route_id": 59,
         "route_short_name": 69,
         "route_long_name": "SCHAERBEEK GARE - JULES BORDET",
         "route_desc": "",
@@ -530,27 +540,7 @@
         "route_text_color": "FFFFFF"
     },
     {
-        "route_id": 33,
-        "route_short_name": 70,
-        "route_long_name": "ALBERT - HOMBORCH",
-        "route_desc": "",
-        "route_type": 3,
-        "route_url": "",
-        "route_color": "FFDC01",
-        "route_text_color": "000000"
-    },
-    {
-        "route_id": 62,
-        "route_short_name": 70,
-        "route_long_name": "HEROS - HOMBORCH",
-        "route_desc": "",
-        "route_type": 3,
-        "route_url": "",
-        "route_color": "FFDC01",
-        "route_text_color": "000000"
-    },
-    {
-        "route_id": 63,
+        "route_id": 60,
         "route_short_name": 71,
         "route_long_name": "DE BROUCKERE - DELTA",
         "route_desc": "",
@@ -560,7 +550,7 @@
         "route_text_color": "FFFFFF"
     },
     {
-        "route_id": 64,
+        "route_id": 61,
         "route_short_name": 72,
         "route_long_name": "ULB - ADEPS",
         "route_desc": "",
@@ -570,7 +560,7 @@
         "route_text_color": "000000"
     },
     {
-        "route_id": 65,
+        "route_id": 62,
         "route_short_name": 73,
         "route_long_name": "CERIA - GARE DU MIDI",
         "route_desc": "",
@@ -580,7 +570,7 @@
         "route_text_color": "000000"
     },
     {
-        "route_id": 50,
+        "route_id": 45,
         "route_short_name": 74,
         "route_long_name": "UCCLE-STALLE - CLEMENCE EVERARD",
         "route_desc": "",
@@ -590,7 +580,7 @@
         "route_text_color": "FFFFFF"
     },
     {
-        "route_id": 66,
+        "route_id": 63,
         "route_short_name": 75,
         "route_long_name": "HEROS - BON AIR",
         "route_desc": "",
@@ -600,7 +590,7 @@
         "route_text_color": "000000"
     },
     {
-        "route_id": 67,
+        "route_id": 65,
         "route_short_name": 76,
         "route_long_name": "KRAAINEM - OPPEM",
         "route_desc": "",
@@ -610,7 +600,7 @@
         "route_text_color": "000000"
     },
     {
-        "route_id": 68,
+        "route_id": 66,
         "route_short_name": 77,
         "route_long_name": "KRAAINEM - HIPPODROME",
         "route_desc": "",
@@ -620,7 +610,7 @@
         "route_text_color": "FFFFFF"
     },
     {
-        "route_id": 69,
+        "route_id": 68,
         "route_short_name": 78,
         "route_long_name": "HUMANITE - GARE DU MIDI",
         "route_desc": "",
@@ -630,7 +620,7 @@
         "route_text_color": "FFFFFF"
     },
     {
-        "route_id": 70,
+        "route_id": 69,
         "route_short_name": 79,
         "route_long_name": "KRAAINEM - SCHUMAN",
         "route_desc": "",
@@ -640,7 +630,7 @@
         "route_text_color": "FFFFFF"
     },
     {
-        "route_id": 58,
+        "route_id": 55,
         "route_short_name": 80,
         "route_long_name": "PORTE DE NAMUR - HAREN",
         "route_desc": "",
@@ -650,7 +640,7 @@
         "route_text_color": "FFFFFF"
     },
     {
-        "route_id": 37,
+        "route_id": 35,
         "route_short_name": 81,
         "route_long_name": "MARIUS RENARD - MONTGOMERY",
         "route_desc": "",
@@ -670,7 +660,7 @@
         "route_text_color": "000000"
     },
     {
-        "route_id": 71,
+        "route_id": 70,
         "route_short_name": 83,
         "route_long_name": "GARE DE BERCHEM - VAL MARIA",
         "route_desc": "",
@@ -680,7 +670,7 @@
         "route_text_color": "000000"
     },
     {
-        "route_id": 72,
+        "route_id": 71,
         "route_short_name": 86,
         "route_long_name": "MACHTENS - BOCKSTAEL",
         "route_desc": "",
@@ -700,7 +690,7 @@
         "route_text_color": "FFFFFF"
     },
     {
-        "route_id": 73,
+        "route_id": 72,
         "route_short_name": 88,
         "route_long_name": "DE BROUCKERE - UZ-VUB",
         "route_desc": "",
@@ -710,7 +700,7 @@
         "route_text_color": "FFFFFF"
     },
     {
-        "route_id": 41,
+        "route_id": 64,
         "route_short_name": 89,
         "route_long_name": "WESTLAND SHOPPING - GARE CENTRALE",
         "route_desc": "",
@@ -720,7 +710,7 @@
         "route_text_color": "000000"
     },
     {
-        "route_id": 74,
+        "route_id": 73,
         "route_short_name": 90,
         "route_long_name": "JACQUES BREL - PETERBOS",
         "route_desc": "",
@@ -730,7 +720,7 @@
         "route_text_color": "000000"
     },
     {
-        "route_id": 75,
+        "route_id": 74,
         "route_short_name": 92,
         "route_long_name": "SCHAERBEEK GARE - FORT-JACO",
         "route_desc": "",
@@ -740,7 +730,7 @@
         "route_text_color": "FFFFFF"
     },
     {
-        "route_id": 77,
+        "route_id": 76,
         "route_short_name": 93,
         "route_long_name": "STADE - LEGRAND",
         "route_desc": "",
@@ -750,7 +740,7 @@
         "route_text_color": "FFFFFF"
     },
     {
-        "route_id": 78,
+        "route_id": 77,
         "route_short_name": 95,
         "route_long_name": "GRAND-PLACE - WIENER",
         "route_desc": "",
@@ -760,7 +750,7 @@
         "route_text_color": "FFFFFF"
     },
     {
-        "route_id": 76,
+        "route_id": 75,
         "route_short_name": 97,
         "route_long_name": "LOUISE - DIEWEG",
         "route_desc": "",
@@ -770,9 +760,9 @@
         "route_text_color": "FFFFFF"
     },
     {
-        "route_id": 94,
+        "route_id": 96,
         "route_short_name": 98,
-        "route_long_name": "KRAAINEM - LONG-CHÊNE",
+        "route_long_name": "PARKING C - HEYSEL",
         "route_desc": "",
         "route_type": 3,
         "route_url": "",
@@ -780,27 +770,7 @@
         "route_text_color": "FFFFFF"
     },
     {
-        "route_id": 95,
-        "route_short_name": "M5",
-        "route_long_name": "ERASME - HERRMANN-DEBROUX",
-        "route_desc": "",
-        "route_type": 3,
-        "route_url": "",
-        "route_color": "F6A90B",
-        "route_text_color": "FFFFFF"
-    },
-    {
-        "route_id": 93,
-        "route_short_name": "T7",
-        "route_long_name": "VANDERKINDERE - HEYSEL",
-        "route_desc": "",
-        "route_type": 3,
-        "route_url": "",
-        "route_color": "EFE048",
-        "route_text_color": "000000"
-    },
-    {
-        "route_id": 92,
+        "route_id": 91,
         "route_short_name": "T19",
         "route_long_name": "GROOT-BIJGAARDEN - DE WAND",
         "route_desc": "",
@@ -810,9 +780,9 @@
         "route_text_color": "FFFFFF"
     },
     {
-        "route_id": 98,
-        "route_short_name": "T51",
-        "route_long_name": "STADE - VAN HAELEN",
+        "route_id": 67,
+        "route_short_name": "T44",
+        "route_long_name": "MONTGOMERY - TERVUREN STATION",
         "route_desc": "",
         "route_type": 3,
         "route_url": "",
@@ -820,19 +790,9 @@
         "route_text_color": "000000"
     },
     {
-        "route_id": 97,
-        "route_short_name": "T55",
-        "route_long_name": "DA VINCI - ROGIER",
-        "route_desc": "",
-        "route_type": 3,
-        "route_url": "",
-        "route_color": "E3BA12",
-        "route_text_color": "000000"
-    },
-    {
-        "route_id": 91,
-        "route_short_name": "T81",
-        "route_long_name": "MARIUS RENARD - MONTGOMERY",
+        "route_id": 92,
+        "route_short_name": "B53",
+        "route_long_name": "BASTOGNE - KAREL BOGAERD",
         "route_desc": "",
         "route_type": 3,
         "route_url": "",
@@ -840,7 +800,7 @@
         "route_text_color": "FFFFFF"
     },
     {
-        "route_id": 47,
+        "route_id": 90,
         "route_short_name": "T82",
         "route_long_name": "GARE DE BERCHEM - DROGENBOS",
         "route_desc": "",
@@ -850,7 +810,7 @@
         "route_text_color": "000000"
     },
     {
-        "route_id": 96,
+        "route_id": 93,
         "route_short_name": "T92",
         "route_long_name": "SCHAERBEEK GARE - FORT-JACO",
         "route_desc": "",
@@ -860,7 +820,7 @@
         "route_text_color": "FFFFFF"
     },
     {
-        "route_id": 79,
+        "route_id": 78,
         "route_short_name": "N04",
         "route_long_name": "GARE CENTRALE - CIMETIERE DE BRUXELLES",
         "route_desc": "",
@@ -870,7 +830,7 @@
         "route_text_color": "FFFFFF"
     },
     {
-        "route_id": 81,
+        "route_id": 80,
         "route_short_name": "N05",
         "route_long_name": "GARE CENTRALE - KRAAINEM",
         "route_desc": "",
@@ -880,7 +840,7 @@
         "route_text_color": "FFFFFF"
     },
     {
-        "route_id": 80,
+        "route_id": 79,
         "route_short_name": "N06",
         "route_long_name": "GARE CENTRALE - MUSEE DU TRAM",
         "route_desc": "",
@@ -890,7 +850,7 @@
         "route_text_color": "FFFFFF"
     },
     {
-        "route_id": 83,
+        "route_id": 82,
         "route_short_name": "N08",
         "route_long_name": "GARE CENTRALE - WIENER",
         "route_desc": "",
@@ -900,7 +860,7 @@
         "route_text_color": "000000"
     },
     {
-        "route_id": 82,
+        "route_id": 81,
         "route_short_name": "N09",
         "route_long_name": "GARE CENTRALE - HERRMANN-DEBROUX",
         "route_desc": "",
@@ -910,7 +870,7 @@
         "route_text_color": "FFFFFF"
     },
     {
-        "route_id": 84,
+        "route_id": 83,
         "route_short_name": "N10",
         "route_long_name": "GARE CENTRALE - FORT-JACO",
         "route_desc": "",
@@ -920,7 +880,7 @@
         "route_text_color": "000000"
     },
     {
-        "route_id": 86,
+        "route_id": 85,
         "route_short_name": "N11",
         "route_long_name": "GARE CENTRALE - HOMBORCH",
         "route_desc": "",
@@ -930,7 +890,7 @@
         "route_text_color": "FFFFFF"
     },
     {
-        "route_id": 85,
+        "route_id": 84,
         "route_short_name": "N12",
         "route_long_name": "GARE CENTRALE - STALLE P",
         "route_desc": "",
@@ -940,7 +900,7 @@
         "route_text_color": "FFFFFF"
     },
     {
-        "route_id": 87,
+        "route_id": 86,
         "route_short_name": "N13",
         "route_long_name": "GARE CENTRALE - WESTLAND SHOPPING",
         "route_desc": "",
@@ -950,7 +910,7 @@
         "route_text_color": "FFFFFF"
     },
     {
-        "route_id": 88,
+        "route_id": 87,
         "route_short_name": "N16",
         "route_long_name": "GARE CENTRALE - GARE DE BERCHEM",
         "route_desc": "",
@@ -960,7 +920,7 @@
         "route_text_color": "FFFFFF"
     },
     {
-        "route_id": 89,
+        "route_id": 88,
         "route_short_name": "N18",
         "route_long_name": "GARE CENTRALE - HEYSEL",
         "route_desc": "",
@@ -970,7 +930,7 @@
         "route_text_color": "FFFFFF"
     },
     {
-        "route_id": 90,
+        "route_id": 89,
         "route_short_name": 240,
         "route_long_name": "CERIA - FOREST NATIONAL",
         "route_desc": "",
@@ -978,5 +938,25 @@
         "route_url": "",
         "route_color": "F3C300",
         "route_text_color": "000000"
+    },
+    {
+        "route_id": 95,
+        "route_short_name": 245,
+        "route_long_name": "HEYSEL - DE BROUCKERE",
+        "route_desc": "",
+        "route_type": 3,
+        "route_url": "",
+        "route_color": "E43C2E",
+        "route_text_color": "FFFFFF"
+    },
+    {
+        "route_id": 94,
+        "route_short_name": 246,
+        "route_long_name": "HEYSEL - MONTGOMERY",
+        "route_desc": "",
+        "route_type": 3,
+        "route_url": "",
+        "route_color": "306196",
+        "route_text_color": "FFFFFF"
     }
 ]
