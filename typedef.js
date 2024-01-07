@@ -43,7 +43,8 @@
 /**
  * @typedef {Object} Result
  * A Result is what will be shown to the player after making a guess.
- * @property {String} stop_name the guessed stop's name
+ * @property {String} stop_name the guessed stop's translated name
+ * @property {Stop} stop the guessed Stop object
  * @property {Number} distance the distance between the guessed stop and the secret one
  * @property {String} direction the direction the secret stop is related to the guessed stop.
  * If undefined, it means they're equivalent.

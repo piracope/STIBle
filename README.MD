@@ -134,6 +134,6 @@ runs on came from the [STIB's API](https://opendata.stib-mivb.be/store/data).
 
 ## License
 
-Copyright (c) 2022 piracope, REXAGONE, Hatsena and contributors
+Copyright (c) 2024 piracope, REXAGONE, Hatsena and contributors
 
 Licensed under the [AGPLv3 license](COPYING).

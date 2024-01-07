@@ -69,6 +69,7 @@ const game = {
         if (guessedStop?.stop_name === secret.stop_name) {
             return {
                 stop_name: guessedStop.stop_name,
+                stop: guessedStop,
                 distance: 0,
                 percentage: 1,
                 direction: "✅",
@@ -80,6 +81,7 @@ const game = {
 
         return {
             stop_name: guessedStop.stop_name,
+            stop: guessedStop,
             distance: distance,
             percentage: (Geo.MAXIMUM_DISTANCE - distance) / Geo.MAXIMUM_DISTANCE,
             direction: Geo.getDirection(vector),
