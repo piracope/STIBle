@@ -1790,7 +1790,7 @@
     {
         "stop_id": 1205,
         "stop_code": "",
-        "stop_name": "WILLEMYNS",
+        "stop_name": "PETERBOS",
         "stop_desc": "",
         "stop_lat": 50.839247,
         "stop_lon": 4.296546,
@@ -1802,7 +1802,7 @@
     {
         "stop_id": 1206,
         "stop_code": "",
-        "stop_name": "PETERBOS",
+        "stop_name": "MEHDI BOUDA",
         "stop_desc": "",
         "stop_lat": 50.842438,
         "stop_lon": 4.2962,
@@ -2114,7 +2114,7 @@
     {
         "stop_id": 1259,
         "stop_code": "",
-        "stop_name": "WILLEMYNS",
+        "stop_name": "PETERBOS",
         "stop_desc": "",
         "stop_lat": 50.83809,
         "stop_lon": 4.295876,
@@ -10886,7 +10886,7 @@
     {
         "stop_id": 2536,
         "stop_code": "",
-        "stop_name": "PETERBOS",
+        "stop_name": "MEHDI BOUDA",
         "stop_desc": "",
         "stop_lat": 50.843418,
         "stop_lon": 4.295787,
