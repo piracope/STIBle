@@ -93,11 +93,11 @@ giving me a PR with eerything already done.
 
 This is the story of three people :
 [@REXAG0NE](https://www.twitter.com/rexag0ne) (REXA)
-[@Hatsenaa](https://www.twitter.com/hatsenaa) (Hatsena)
+[AthunBrean](https://bsky.app/profile/athunbrean.bsky.social) (AthunBrean)
 and me.
 
 So one day, the STIB Twitter account tweets a rebus, where you had to guess the
-name of the stop. Hatsena replied with something in the lines of "lmao imagine
+name of the stop. AthunBrean replied with something in the lines of "lmao imagine
 a STIB wordle", to which REXA replied "that'd be cool, but we'd need a dev". And
 after posting an adequately timed "hi", I slaved my nights away to make this !
 
@@ -115,9 +115,9 @@ I know who you are, where you are, and I am approaching rapidly. Start running.
 
 + Development : piracope
 
-+ Hosting : [@REXAG0NE](https://www.twitter.com/rexag0ne) and Elitios
++ Hosting : [@REXAG0NE](https://www.twitter.com/rexag0ne) and [Elitios](https://elitios.net)
 
-+ Original idea : [@Hatsenaa](https://www.twitter.com/hatsenaa)
++ Original idea : [AthunBrean](https://bsky.app/profile/athunbrean.bsky.social)
 
 + Original idea's main inspiration : [WORLDLE](https://worldle.teuteuf.fr) by
 [@teuteuf](https://www.twitter.com/teuteuf)
@@ -134,6 +134,6 @@ runs on came from the [STIB's API](https://opendata.stib-mivb.be/store/data).
 
 ## License
 
-Copyright (c) 2024 piracope, REXAGONE, Hatsena and contributors
+Copyright (c) 2025 piracope, REXAGONE, AthunBrean and contributors
 
 Licensed under the [AGPLv3 license](COPYING).
